@@ -1645,32 +1645,32 @@ h4{
   --tw-bg-opacity: 0.75;
 }
 
-.bg-\[url\(\'\/src\/assets\/about\/bg\/hero-banner\.jpg\'\)\]{
-  background-image: url('/src/assets/about/bg/hero-banner.jpg');
+.bg-\[url\(\'\/assets\/about\/bg\/hero-banner\.jpg\'\)\]{
+  background-image: url('/assets/about/bg/hero-banner.jpg');
 }
 
-.bg-\[url\(\'\/src\/assets\/about\/bg\/roadmap\.png\'\)\]{
-  background-image: url('/src/assets/about/bg/roadmap.png');
+.bg-\[url\(\'\/assets\/about\/bg\/roadmap\.png\'\)\]{
+  background-image: url('/assets/about/bg/roadmap.png');
 }
 
-.bg-\[url\(\'\/src\/assets\/about\/bg\/why-us\.jpg\'\)\]{
-  background-image: url('/src/assets/about/bg/why-us.jpg');
+.bg-\[url\(\'\/assets\/about\/bg\/why-us\.jpg\'\)\]{
+  background-image: url('/assets/about/bg/why-us.jpg');
 }
 
-.bg-\[url\(\'\/src\/assets\/contact\/contact-bg\.jpg\'\)\]{
-  background-image: url('/src/assets/contact/contact-bg.jpg');
+.bg-\[url\(\'\/assets\/contact\/contact-bg\.jpg\'\)\]{
+  background-image: url('/assets/contact/contact-bg.jpg');
 }
 
-.bg-\[url\(\'\/src\/assets\/home\/bg\/home-banner\.jpg\'\)\]{
-  background-image: url('/src/assets/home/bg/home-banner.jpg');
+.bg-\[url\(\'\/assets\/home\/bg\/home-banner\.jpg\'\)\]{
+  background-image: url('/assets/home/bg/home-banner.jpg');
 }
 
-.bg-\[url\(\'\/src\/assets\/license\/bg\/hero-banner\.jpg\'\)\]{
-  background-image: url('/src/assets/license/bg/hero-banner.jpg');
+.bg-\[url\(\'\/assets\/license\/bg\/hero-banner\.jpg\'\)\]{
+  background-image: url('/assets/license/bg/hero-banner.jpg');
 }
 
-.bg-\[url\(\'\/src\/assets\/service\/bg\/hero-banner\.jpg\'\)\]{
-  background-image: url('/src/assets/service/bg/hero-banner.jpg');
+.bg-\[url\(\'\/assets\/service\/bg\/hero-banner\.jpg\'\)\]{
+  background-image: url('/assets/service/bg/hero-banner.jpg');
 }
 
 .bg-none{
@@ -2614,8 +2614,8 @@ h4{
     border-right-width: 1px;
   }
 
-  .md\:bg-\[url\(\'\/src\/assets\/home\/bg\/home-banner\.jpg\'\)\]{
-    background-image: url('/src/assets/home/bg/home-banner.jpg');
+  .md\:bg-\[url\(\'\/assets\/home\/bg\/home-banner\.jpg\'\)\]{
+    background-image: url('/assets/home/bg/home-banner.jpg');
   }
 
   .md\:bg-none{
