@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-manrope;
+  }
+  body {
+    @apply antialiased;
+  }
+  h1 {
+    @apply text-white font-extrabold text-5xl xl:text-8xl;
+  }
+  h2 {
+    @apply font-bold text-4xl xl:text-7xl;
+  }
+  h3 {
+    @apply text-4xl xl:text-5xl 2xl:text-6xl font-extrabold;
+  }
+  h4 {
+    @apply text-2xl xl:text-4xl 2xl:text-5xl font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-gradient h-12 flex items-center justify-center px-6 py-4 text-white text-base font-bold hover:bg-gradient-to-r from-primary-700 to-primary-700 transition-[background-image] ease-linear duration-300;
+  }
+  .btn-secondary {
+    @apply bg-white h-12 flex items-center justify-center px-6 py-4 text-primary text-base font-bold hover:bg-gradient-to-r from-primary-700 to-primary-700 transition-[background-image] ease-linear duration-300;
+  }
+  .btn-outline {
+    @apply bg-transparent border border-primary-50 h-12 flex items-center justify-center px-6 py-4 text-white text-base font-bold hover:bg-primary-gradient hover:border-transparent transition-[background-image] ease-linear duration-300;
+  }
+  .nav-item {
+    @apply p-4 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary-700 hover:bg-gray-100/10 ease-linear duration-300;
+  }
+}

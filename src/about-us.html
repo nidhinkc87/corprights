@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="fixed top-0 inset-x-0 w-full bg-white/[4%] backdrop-blur-[14px] z-[10]">
+        <div class="container pt-8 pb-4 lg:pt-0 lg:pb-0">
+            <div class="flex justify-between items-center">
+                <a href="index.html">
+                    <div>
+                        <img src="/src/assets/logo/logo.png" alt="" class="w-[128.67px] lg:w-auto" />
+                    </div>
+                </a>
+
+                <nav class="hidden lg:block">
+                    <ul class="flex items-center gap-4">
+                        <li class="relative py-8 group cursor-pointer">
+                            <a href="services.html" class="nav-item"> Services </a>
+                        </li>
+
+                        <li class="relative py-8 group cursor-pointer">
+                            <a href="licenses.html" class="nav-item"> Licences </a>
+                        </li>
+
+                        <li class="relative py-8 group cursor-pointer">
+                            <a href="about-us.html" class="nav-item"> About </a>
+                        </li>
+
+                        <li class="relative py-8 group cursor-pointer">
+                            <a href="blogs.html" class="nav-item"> Blogs </a>
+                        </li>
+
+                        <li class="relative py-8 group cursor-pointer">
+                            <a href="contact-us.html" class="nav-item"> Contact Us </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="cost-calculator.html" class="btn-primary px-10 hidden lg:flex">
+                    Cost Calculator
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- hero -->
+    <section
+        class="pt-[89px] bg-center bg-[url('/src/assets/about/bg/hero-banner.jpg')] bg-no-repeat bg-cover relative">
+        <div class="h-[calc(100vh-87px)] container grid">
+            <div class="lg:max-w-lg xl:max-w-4xl self-center text-center md:text-start">
+                <h1>
+                    Enabling Your Business Ideas in
+                    <span class="text-transparent bg-clip-text bg-primary-gradient">Saudi Arabia.</span>
+                </h1>
+
+                <p class="text-base md:text-3xl font-normal text-gray-200 mt-7">
+                    Corprights is more than just a business consultant - we are
+                    strategic partners helping your business grow and develop.
+                </p>
+
+                <div class="mt-10 flex flex-col md:flex-row gap-6 max-w-[80%] md:max-w-full mx-auto">
+                    <button class="btn-primary px-14">Enquire now</button>
+
+                    <a href="tel:+976 9876543210" target="_blank">
+                        <button class="btn-outline px-5 gap-2 items-center w-full">
+                            +976 9876543210
+
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.6333 15.1668C10.8799 15.1668 10.0866 14.9868 9.26659 14.6402C8.46659 14.3002 7.65992 13.8335 6.87325 13.2668C6.09325 12.6935 5.33992 12.0535 4.62659 11.3535C3.91992 10.6402 3.27992 9.88683 2.71325 9.1135C2.13992 8.3135 1.67992 7.5135 1.35325 6.74016C1.00659 5.9135 0.833252 5.1135 0.833252 4.36016C0.833252 3.84016 0.926585 3.34683 1.10659 2.88683C1.29325 2.4135 1.59325 1.9735 1.99992 1.5935C2.51325 1.08683 3.09992 0.833496 3.72659 0.833496C3.98659 0.833496 4.25325 0.893496 4.47992 1.00016C4.73992 1.12016 4.95992 1.30016 5.11992 1.54016L6.66659 3.72016C6.80659 3.9135 6.91325 4.10016 6.98659 4.28683C7.07325 4.48683 7.11992 4.68683 7.11992 4.88016C7.11992 5.1335 7.04659 5.38016 6.90659 5.6135C6.80659 5.7935 6.65325 5.98683 6.45992 6.18016L6.00659 6.6535C6.01325 6.6735 6.01992 6.68683 6.02659 6.70016C6.10659 6.84016 6.26659 7.08016 6.57325 7.44016C6.89992 7.8135 7.20659 8.1535 7.51325 8.46683C7.90659 8.8535 8.23325 9.16016 8.53992 9.4135C8.91992 9.7335 9.16659 9.8935 9.31325 9.96683L9.29992 10.0002L9.78659 9.52016C9.99325 9.3135 10.1933 9.16016 10.3866 9.06016C10.7533 8.8335 11.2199 8.7935 11.6866 8.98683C11.8599 9.06016 12.0466 9.16016 12.2466 9.30016L14.4599 10.8735C14.7066 11.0402 14.8866 11.2535 14.9933 11.5068C15.0933 11.7602 15.1399 11.9935 15.1399 12.2268C15.1399 12.5468 15.0666 12.8668 14.9266 13.1668C14.7866 13.4668 14.6133 13.7268 14.3933 13.9668C14.0133 14.3868 13.5999 14.6868 13.1199 14.8802C12.6599 15.0668 12.1599 15.1668 11.6333 15.1668ZM3.72659 1.8335C3.35992 1.8335 3.01992 1.9935 2.69325 2.3135C2.38659 2.60016 2.17325 2.9135 2.03992 3.2535C1.89992 3.60016 1.83325 3.96683 1.83325 4.36016C1.83325 4.98016 1.97992 5.6535 2.27325 6.34683C2.57325 7.0535 2.99325 7.78683 3.52659 8.52016C4.05992 9.2535 4.66659 9.96683 5.33325 10.6402C5.99992 11.3002 6.71992 11.9135 7.45992 12.4535C8.17992 12.9802 8.91992 13.4068 9.65325 13.7135C10.7933 14.2002 11.8599 14.3135 12.7399 13.9468C13.0799 13.8068 13.3799 13.5935 13.6533 13.2868C13.8066 13.1202 13.9266 12.9402 14.0266 12.7268C14.1066 12.5602 14.1466 12.3868 14.1466 12.2135C14.1466 12.1068 14.1266 12.0002 14.0733 11.8802C14.0533 11.8402 14.0133 11.7668 13.8866 11.6802L11.6733 10.1068C11.5399 10.0135 11.4199 9.94683 11.3066 9.90016C11.1599 9.84016 11.0999 9.78016 10.8733 9.92016C10.7399 9.98683 10.6199 10.0868 10.4866 10.2202L9.97992 10.7202C9.71992 10.9735 9.31992 11.0335 9.01325 10.9202L8.83325 10.8402C8.55992 10.6935 8.23992 10.4668 7.88659 10.1668C7.56659 9.8935 7.21992 9.5735 6.79992 9.16016C6.47325 8.82683 6.14659 8.4735 5.80659 8.08016C5.49325 7.7135 5.26659 7.40016 5.12659 7.14016L5.04659 6.94016C5.00659 6.78683 4.99325 6.70016 4.99325 6.60683C4.99325 6.36683 5.07992 6.1535 5.24659 5.98683L5.74659 5.46683C5.87992 5.3335 5.97992 5.20683 6.04659 5.0935C6.09992 5.00683 6.11992 4.9335 6.11992 4.86683C6.11992 4.8135 6.09992 4.7335 6.06659 4.6535C6.01992 4.54683 5.94659 4.42683 5.85325 4.30016L4.30659 2.1135C4.23992 2.02016 4.15992 1.9535 4.05992 1.90683C3.95325 1.86016 3.83992 1.8335 3.72659 1.8335ZM9.29992 10.0068L9.19325 10.4602L9.37325 9.9935C9.33992 9.98683 9.31325 9.9935 9.29992 10.0068Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero -->
+
+    <!-- about -->
+    <section class="pt-[58px] xl:pt-[62px] pb-16 lg:pb-20 2xl:pb-[106px]">
+        <div class="container">
+            <div
+                class="grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2 2xl:grid-cols-[1fr_minmax(0,0.8fr)] lg:gap-x-20">
+                <div class="self-start">
+                    <div>
+                        <h3
+                            class="xl:max-w-2xl text-3xl xl:text-5xl 2xl:text-6xl text-transparent bg-clip-text bg-primary-gradient">
+                            We’re crafting the project planning tool for teams that care
+                            about quality.
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="space-y-10 xl:space-y-14">
+                    <p class="text-base xl:text-2xl font-normal text-gray-400">
+                        Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                        suspendisse viverra egestas sapien vivamus tristique hac. Nisl et
+                        amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                        viverra donec arcu. Elementum quam mauris tempor habitasse aliquet
+                        proin euismod mauris risus. Quam risus turpis elementum arcu
+                        tincidunt scelerisque euismod at. Felis orci pharetra egestas est.
+                        Porta nec etiam aenean tempus elementum integer elementum et.
+                        Elementum tincidunt neque mauris neque. Tincidunt nam tortor sed
+                        sed semper.
+                    </p>
+
+                    <p class="text-base xl:text-2xl font-normal text-gray-400">
+                        Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                        suspendisse viverra egestas sapien vivamus tristique hac. Nisl et
+                        amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                        viverra donec arcu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about -->
+
+    <!-- slider -->
+    <section class="overflow-hidden pb-16 xl:pb-[76px]">
+        <div class="w-full inline-flex flex-nowrap">
+            <ul
+                class="flex items-center justify-center md:justify-start [&_li]:mx-[5px] [&_img]:max-w-none animate-infinite-scroll">
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/1.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/2.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/1.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/2.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/1.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/2.jpg" alt="" />
+                </li>
+            </ul>
+
+            <ul class="flex items-center justify-center md:justify-start [&_li]:mx-[5px] [&_img]:max-w-none animate-infinite-scroll"
+                aria-hidden="true">
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/1.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/2.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/1.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/2.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/1.jpg" alt="" />
+                </li>
+                <li class="w-[366.67px] h-[261.9px] overflow-hidden">
+                    <img src="/src/assets/about/slider/2.jpg" alt="" />
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- slider -->
+
+    <!-- why-us -->
+    <section
+        class="bg-center bg-[url('/src/assets/about/bg/why-us.jpg')] bg-no-repeat bg-cover relative py-16 xl:py-24 2xl:py-[198px]">
+        <div class="container">
+            <div class="">
+                <h2 class="text-white">
+                    Why
+                    <span class="text-transparent bg-clip-text bg-primary-gradient">Corprights</span>
+                    in Saudi Arabia
+                </h2>
+
+                <p class="text-xl md:text-3xl font-normal text-gray-200 mt-7 lg:max-w-lg xl:max-w-4xl">
+                    vOur approach to Nearbound extends the concept of a trusted
+                    ecosystem to a global scale. We adopt the speed, efficiency and
+                    scale of digital solutions and combine it with the personal
+                    connections that are best delivered through traditional face to face
+                    relationships and interactions.
+                </p>
+
+                <p class="text-xl md:text-3xl font-normal text-gray-200 mt-4 xl:mt-9 lg:max-w-lg xl:max-w-4xl">
+                    Our approach to Nearbound extends the concept of a trusted ecosystem
+                    to a global scale. We adopt the speed, efficiency and scale of
+                    digital solutions and combine it with the personal connections that
+                    are best delivered .
+                </p>
+
+                <div class="mt-10 flex flex-col md:flex-row gap-2 md:gap-[10px] mx-auto">
+                    <div class="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start">
+                        <div>
+                            <svg width="20" height="26" viewBox="0 0 20 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="14.2856" y1="5.71411" x2="14.2856" y2="17.1427"
+                                    stroke="url(#paint0_linear_5917_12808)" stroke-width="1.63265" />
+                                <line x1="19.9998" y1="11.4281" x2="8.57121" y2="11.4281"
+                                    stroke="url(#paint1_linear_5917_12808)" stroke-width="1.63265" />
+                                <line x1="7.14278" y1="19.9998" x2="7.14278" y2="25.714"
+                                    stroke="url(#paint2_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="10" y1="22.8569" x2="4.28573" y2="22.8569"
+                                    stroke="url(#paint3_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="2.85714" y1="-0.000244123" x2="2.85714" y2="5.71403"
+                                    stroke="url(#paint4_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="5.71436" y1="2.85665" x2="8.48413e-05" y2="2.85665"
+                                    stroke="url(#paint5_linear_5917_12808)" stroke-width="0.816324" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_5917_12808" x1="12.4692" y1="5.71411" x2="7.29675"
+                                        y2="12.2803" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_5917_12808" x1="19.9998" y1="9.61182" x2="13.4336"
+                                        y2="4.43933" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_5917_12808" x1="5.73462" y1="19.9998" x2="3.9205"
+                                        y2="24.6056" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_5917_12808" x1="10" y1="21.4487" x2="5.39414"
+                                        y2="19.6346" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_5917_12808" x1="1.44897" y1="-0.000244163"
+                                        x2="-0.365149" y2="4.60562" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint5_linear_5917_12808" x1="5.71436" y1="1.44849" x2="1.10849"
+                                        y2="-0.365638" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4 xl:space-y-5">
+                            <p class="font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-primary-gradient">
+                                Lorem ipsum dolor sit
+                            </p>
+
+                            <p class="text-sm xl:text-xl font-normal text-gray-100">
+                                Lorem ipsum dolor sit amet consectetur. Lectus sed tempus enim
+                                lorem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start">
+                        <div>
+                            <svg width="20" height="26" viewBox="0 0 20 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="14.2856" y1="5.71411" x2="14.2856" y2="17.1427"
+                                    stroke="url(#paint0_linear_5917_12808)" stroke-width="1.63265" />
+                                <line x1="19.9998" y1="11.4281" x2="8.57121" y2="11.4281"
+                                    stroke="url(#paint1_linear_5917_12808)" stroke-width="1.63265" />
+                                <line x1="7.14278" y1="19.9998" x2="7.14278" y2="25.714"
+                                    stroke="url(#paint2_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="10" y1="22.8569" x2="4.28573" y2="22.8569"
+                                    stroke="url(#paint3_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="2.85714" y1="-0.000244123" x2="2.85714" y2="5.71403"
+                                    stroke="url(#paint4_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="5.71436" y1="2.85665" x2="8.48413e-05" y2="2.85665"
+                                    stroke="url(#paint5_linear_5917_12808)" stroke-width="0.816324" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_5917_12808" x1="12.4692" y1="5.71411" x2="7.29675"
+                                        y2="12.2803" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_5917_12808" x1="19.9998" y1="9.61182" x2="13.4336"
+                                        y2="4.43933" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_5917_12808" x1="5.73462" y1="19.9998" x2="3.9205"
+                                        y2="24.6056" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_5917_12808" x1="10" y1="21.4487" x2="5.39414"
+                                        y2="19.6346" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_5917_12808" x1="1.44897" y1="-0.000244163"
+                                        x2="-0.365149" y2="4.60562" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint5_linear_5917_12808" x1="5.71436" y1="1.44849" x2="1.10849"
+                                        y2="-0.365638" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4 xl:space-y-5">
+                            <p class="font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-primary-gradient">
+                                Lorem ipsum dolor sit
+                            </p>
+
+                            <p class="text-sm xl:text-xl font-normal text-gray-100">
+                                Lorem ipsum dolor sit amet consectetur. Lectus sed tempus enim
+                                lorem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start">
+                        <div>
+                            <svg width="20" height="26" viewBox="0 0 20 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="14.2856" y1="5.71411" x2="14.2856" y2="17.1427"
+                                    stroke="url(#paint0_linear_5917_12808)" stroke-width="1.63265" />
+                                <line x1="19.9998" y1="11.4281" x2="8.57121" y2="11.4281"
+                                    stroke="url(#paint1_linear_5917_12808)" stroke-width="1.63265" />
+                                <line x1="7.14278" y1="19.9998" x2="7.14278" y2="25.714"
+                                    stroke="url(#paint2_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="10" y1="22.8569" x2="4.28573" y2="22.8569"
+                                    stroke="url(#paint3_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="2.85714" y1="-0.000244123" x2="2.85714" y2="5.71403"
+                                    stroke="url(#paint4_linear_5917_12808)" stroke-width="0.816324" />
+                                <line x1="5.71436" y1="2.85665" x2="8.48413e-05" y2="2.85665"
+                                    stroke="url(#paint5_linear_5917_12808)" stroke-width="0.816324" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_5917_12808" x1="12.4692" y1="5.71411" x2="7.29675"
+                                        y2="12.2803" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_5917_12808" x1="19.9998" y1="9.61182" x2="13.4336"
+                                        y2="4.43933" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_5917_12808" x1="5.73462" y1="19.9998" x2="3.9205"
+                                        y2="24.6056" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_5917_12808" x1="10" y1="21.4487" x2="5.39414"
+                                        y2="19.6346" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_5917_12808" x1="1.44897" y1="-0.000244163"
+                                        x2="-0.365149" y2="4.60562" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint5_linear_5917_12808" x1="5.71436" y1="1.44849" x2="1.10849"
+                                        y2="-0.365638" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+
+                        <div class="space-y-4 xl:space-y-5">
+                            <p class="font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-primary-gradient">
+                                Lorem ipsum dolor sit
+                            </p>
+
+                            <p class="text-sm xl:text-xl font-normal text-gray-100">
+                                Lorem ipsum dolor sit amet consectetur. Lectus sed tempus enim
+                                lorem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- why-us -->
+
+    <!-- our-values -->
+    <section class="pt-16 xl:pt-24 2xl:pt-[134px] relative">
+        <img src="/src/assets/about/vector.png" alt=""
+            class="absolute left-0 top-1/2 -translate-y-1/2 hidden lg:block" />
+
+        <div class="container">
+            <div
+                class="grid grid-cols-1 items-start gap-y-10 lg:grid-cols-2 lg:gap-x-8 xl:grid-cols-[minmax(0,0.67fr)_2fr] 2xl:gap-x-[72px]">
+                <div></div>
+
+                <div>
+                    <p class="text-xl font-normal text-primary mb-2">What we value</p>
+
+                    <h3 class="xl:max-w-xl">
+                        Our values are the catalyst for all of our endeavors
+                    </h3>
+
+                    <p class="text-base xl:text-2xl font-normal text-gray-400 mt-3 xl:mt-4">
+                        Corprights wants to be the first choice for any business planning
+                        to expand or restructure globally. We dream of becoming an
+                        International Business Consultant handling business setups across
+                        all countries.
+                    </p>
+
+                    <div class="mt-16">
+                        <div class="border border-gray-100 grid md:grid-cols-2">
+                            <div class="p-6 md:border-r border-b border-gray-100">
+                                <img src="/src/assets/about/icons/values.svg" alt="" />
+
+                                <h6 class="text-3xl lg:text-4xl font-bold text-dark mt-5">
+                                    Mission
+                                </h6>
+
+                                <p class="text-base xl:text-2xl font-normal text-gray-400 mt-3">
+                                    We help businesses succeed by giving them practical advice
+                                    and harnessing the latest technology.
+                                </p>
+                            </div>
+
+                            <div class="p-6 border-b border-gray-100">
+                                <img src="/src/assets/about/icons/values.svg" alt="" />
+
+                                <h6 class="text-3xl lg:text-4xl font-bold text-dark mt-5">
+                                    Vision
+                                </h6>
+
+                                <p class="text-base xl:text-2xl font-normal text-gray-400 mt-3">
+                                    We help businesses succeed by giving them practical advice
+                                    and harnessing the latest technology.
+                                </p>
+                            </div>
+
+                            <div class="p-6 border-b md:border-b-0 md:border-r border-gray-100">
+                                <img src="/src/assets/about/icons/values.svg" alt="" />
+
+                                <h6 class="text-3xl lg:text-4xl font-bold text-dark mt-5">
+                                    Our Core Values
+                                </h6>
+
+                                <p class="text-base xl:text-2xl font-normal text-gray-400 mt-3">
+                                    We help businesses succeed by giving them practical advice
+                                    and harnessing the latest technology.
+                                </p>
+                            </div>
+
+                            <div class="p-6">
+                                <img src="/src/assets/about/icons/values.svg" alt="" />
+
+                                <h6 class="text-3xl lg:text-4xl font-bold text-dark mt-5">
+                                    What we delivers
+                                </h6>
+
+                                <p class="text-base xl:text-2xl font-normal text-gray-400 mt-3">
+                                    We help businesses succeed by giving them practical advice
+                                    and harnessing the latest technology.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our-values -->
+
+    <!-- roadmap -->
+    <section
+        class="py-16 xl:py-24 2xl:py-[160px] bg-top bg-[url('/src/assets/about/bg/roadmap.png')] bg-no-repeat bg-contain">
+        <div class="container grid xl:grid-cols-[.8fr,1.5fr] xl:gap-[70px]">
+            <div class="border-r border-gray-100 xl:pr-24">
+                <div class="sticky top-[90px]">
+                    <h3 class="mb-[88px] text-center">The Roadmap</h3>
+
+                    <div id="tabs" class="space-y-10">
+                        <div data-tab="2021" class="tab-item text-center">
+                            <h5 class="text-5xl font-bold text-dark">2021</h5>
+
+                            <p class="text-xl font-normal text-gray-400">Founded</p>
+                        </div>
+
+                        <div data-tab="2022" class="tab-item text-center">
+                            <h5 class="text-5xl font-bold text-dark">2022</h5>
+
+                            <p class="text-xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur.
+                            </p>
+                        </div>
+
+                        <div data-tab="2023" class="tab-item text-center">
+                            <h5 class="text-5xl font-bold text-dark">2023</h5>
+
+                            <p class="text-xl font-normal text-gray-400">
+                                Proin ornare quam viverra, egestas
+                            </p>
+                        </div>
+
+                        <div data-tab="2024" class="tab-item text-center">
+                            <h5 class="text-5xl font-bold text-dark">2024</h5>
+
+                            <p class="text-xl font-normal text-gray-400">
+                                lorem a pulvinar lobortis
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content" class="">
+                <div data-content="2021" class="tab-content space-y-8">
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                        congue dui sed quam semper pharetra. Proin dapibus turpis congue
+                        lorem sollicitudin, vitae facilisis lorem sollicitudin.
+                        Suspendisse potenti. Morbi egestas neque eros, maximus interdum
+                        neque viverra ut. Mauris ante ligula, porta sed ligula id, ornare
+                        maximus nunc. Vestibulum efficitur egestas enim, vel fringilla leo
+                        pretium ultricies. Suspendisse sed nibh eget urna scelerisque
+                        maximus. Donec semper ultricies bibendum. Maecenas rhoncus, nibh
+                        ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat
+                        ante sem id libero. Phasellus venenatis nibh nisi, sit amet
+                        maximus nunc fringilla nec. In laoreet finibus dui, ac interdum
+                        augue pellentesque vel.
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Sed malesuada, lorem a pulvinar lobortis, leo ipsum vehicula
+                        tortor, eget luctus quam tortor non augue. Vivamus vitae pretium
+                        massa, vel tincidunt eros. Donec tincidunt tortor quis congue
+                        condimentum. Duis diam nisl, sagittis at accumsan non, tristique
+                        non dolor. Integer lacinia massa erat, in feugiat lacus imperdiet
+                        quis
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Vivamus et ultrices felis, quis molestie magna. Pellentesque sit
+                        amet dui quis eros dapibus porttitor quis in metus. Curabitur quam
+                        diam, convallis at quam bibendum, egestas mattis ante. In magna
+                        lorem, porttitor ut ex quis, placerat aliquet dui. Morbi non
+                        tincidunt odio. Nunc blandit convallis congue.
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                        congue dui sed quam semper pharetra. Proin dapibus turpis congue
+                        lorem sollicitudin, vitae facilisis lorem sollicitudin.
+                        Suspendisse potenti. Morbi egestas neque eros, maximus interdum
+                        neque viverra ut. Mauris ante ligula, porta sed ligula id, ornare
+                        maximus nunc. Vestibulum efficitur egestas enim, vel fringilla leo
+                        pretium ultricies. Suspendisse sed nibh eget urna scelerisque
+                        maximus. Donec semper ultricies bibendum. Maecenas rhoncus, nibh
+                        ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat
+                        ante sem id libero. Phasellus venenatis nibh nisi, sit amet
+                        maximus nunc fringilla nec. In laoreet finibus dui, ac interdum
+                        augue pellentesque vel.
+                    </p>
+                </div>
+
+                <div data-content="2022" class="tab-content space-y-8">
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                        congue dui sed quam semper pharetra. Proin dapibus turpis congue
+                        lorem sollicitudin, vitae facilisis lorem sollicitudin.
+                        Suspendisse potenti. Morbi egestas neque eros, maximus interdum
+                        neque viverra ut. Mauris ante ligula, porta sed ligula id, ornare
+                        maximus nunc. Vestibulum efficitur egestas enim, vel fringilla leo
+                        pretium ultricies. Suspendisse sed nibh eget urna scelerisque
+                        maximus. Donec semper ultricies bibendum. Maecenas rhoncus, nibh
+                        ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat
+                        ante sem id libero. Phasellus venenatis nibh nisi, sit amet
+                        maximus nunc fringilla nec. In laoreet finibus dui, ac interdum
+                        augue pellentesque vel.
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Sed malesuada, lorem a pulvinar lobortis, leo ipsum vehicula
+                        tortor, eget luctus quam tortor non augue. Vivamus vitae pretium
+                        massa, vel tincidunt eros. Donec tincidunt tortor quis congue
+                        condimentum. Duis diam nisl, sagittis at accumsan non, tristique
+                        non dolor. Integer lacinia massa erat, in feugiat lacus imperdiet
+                        quis
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Vivamus et ultrices felis, quis molestie magna. Pellentesque sit
+                        amet dui quis eros dapibus porttitor quis in metus. Curabitur quam
+                        diam, convallis at quam bibendum, egestas mattis ante. In magna
+                        lorem, porttitor ut ex quis, placerat aliquet dui. Morbi non
+                        tincidunt odio. Nunc blandit convallis congue.
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                        congue dui sed quam semper pharetra. Proin dapibus turpis congue
+                        lorem sollicitudin, vitae facilisis lorem sollicitudin.
+                        Suspendisse potenti. Morbi egestas neque eros, maximus interdum
+                        neque viverra ut. Mauris ante ligula, porta sed ligula id, ornare
+                        maximus nunc. Vestibulum efficitur egestas enim, vel fringilla leo
+                        pretium ultricies. Suspendisse sed nibh eget urna scelerisque
+                        maximus. Donec semper ultricies bibendum. Maecenas rhoncus, nibh
+                        ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat
+                        ante sem id libero. Phasellus venenatis nibh nisi, sit amet
+                        maximus nunc fringilla nec. In laoreet finibus dui, ac interdum
+                        augue pellentesque vel.
+                    </p>
+                </div>
+
+                <div data-content="2023" class="tab-content space-y-8">
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                        congue dui sed quam semper pharetra. Proin dapibus turpis congue
+                        lorem sollicitudin, vitae facilisis lorem sollicitudin.
+                        Suspendisse potenti. Morbi egestas neque eros, maximus interdum
+                        neque viverra ut. Mauris ante ligula, porta sed ligula id, ornare
+                        maximus nunc. Vestibulum efficitur egestas enim, vel fringilla leo
+                        pretium ultricies. Suspendisse sed nibh eget urna scelerisque
+                        maximus. Donec semper ultricies bibendum. Maecenas rhoncus, nibh
+                        ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat
+                        ante sem id libero. Phasellus venenatis nibh nisi, sit amet
+                        maximus nunc fringilla nec. In laoreet finibus dui, ac interdum
+                        augue pellentesque vel.
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Sed malesuada, lorem a pulvinar lobortis, leo ipsum vehicula
+                        tortor, eget luctus quam tortor non augue. Vivamus vitae pretium
+                        massa, vel tincidunt eros. Donec tincidunt tortor quis congue
+                        condimentum. Duis diam nisl, sagittis at accumsan non, tristique
+                        non dolor. Integer lacinia massa erat, in feugiat lacus imperdiet
+                        quis
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Vivamus et ultrices felis, quis molestie magna. Pellentesque sit
+                        amet dui quis eros dapibus porttitor quis in metus. Curabitur quam
+                        diam, convallis at quam bibendum, egestas mattis ante. In magna
+                        lorem, porttitor ut ex quis, placerat aliquet dui. Morbi non
+                        tincidunt odio. Nunc blandit convallis congue.
+                    </p>
+
+                    <p class="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                        congue dui sed quam semper pharetra. Proin dapibus turpis congue
+                        lorem sollicitudin, vitae facilisis lorem sollicitudin.
+                        Suspendisse potenti. Morbi egestas neque eros, maximus interdum
+                        neque viverra ut. Mauris ante ligula, porta sed ligula id, ornare
+                        maximus nunc. Vestibulum efficitur egestas enim, vel fringilla leo
+                        pretium ultricies. Suspendisse sed nibh eget urna scelerisque
+                        maximus. Donec semper ultricies bibendum. Maecenas rhoncus, nibh
+                        ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat
+                        ante sem id libero. Phasellus venenatis nibh nisi, sit amet
+                        maximus nunc fringilla nec. In laoreet finibus dui, ac interdum
+                        augue pellentesque vel.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- roadmap -->
+
+    <!-- teams -->
+    <section class="py-16 xl:py-24 2xl:py-[120px] relative bg-white">
+        <div class="container">
+            <h2 class="mx-auto text-center">Meet our leadership team</h2>
+
+            <p class="text-xl xl:text-3xl font-normal text-gray-400 mt-4 xl:mt-6 xl:max-w-5xl mx-auto text-center">
+                Our approach to Nearbound extends the concept of a trusted ecosystem
+                to a global scale. We adopt the speed, efficiency and scale of digital
+                solutions and combine it with the personal connections that are best
+                delivered through traditional face to face relationships and
+                interactions.
+            </p>
+
+            <div class="mt-10 xl:mt-16 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-[18px] lg:gap-x-4 gap-y-7">
+                <div class="space-y-8">
+                    <div>
+                        <img src="/src/assets/about/teams/1.jpg" alt="" class="w-full" />
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-dark text-xl xl:text-2xl font-bold">
+                                    Milos Vidic
+                                </p>
+
+                                <p class="text-base xl:text-xl font-normal text-gray-400 pt-1">
+                                    CEO @goatmarketing
+                                </p>
+                            </div>
+
+                            <button data-toggle="0" onclick="dataOpen()"
+                                class="toggleButton w-8 h-8 rounded-full bg-gray-200/30 flex justify-center items-center">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.3334 7.5H1.66675C1.12008 7.5 0.666748 7.04667 0.666748 6.5C0.666748 5.95333 1.12008 5.5 1.66675 5.5H12.3334C12.8801 5.5 13.3334 5.95333 13.3334 6.5C13.3334 7.04667 12.8801 7.5 12.3334 7.5Z"
+                                        fill="#706F6F" />
+                                    <path
+                                        d="M7 12.8332C6.45333 12.8332 6 12.3798 6 11.8332V1.1665C6 0.619837 6.45333 0.166504 7 0.166504C7.54667 0.166504 8 0.619837 8 1.1665V11.8332C8 12.3798 7.54667 12.8332 7 12.8332Z"
+                                        fill="#706F6F" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="data-0" class="mt-4 max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+                            <p class="text-base xl:text-2xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                                suspendisse viverra egestas sapien vivamus tristique hac. Nisl
+                                et amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                                viverra donec arcu.
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="text-base xl:text-2xl font-bold text-gray-400">
+                                    Linkedin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <img src="/src/assets/about/teams/2.jpg" alt="" class="w-full" />
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-dark text-xl xl:text-2xl font-bold">
+                                    Milos Vidic
+                                </p>
+
+                                <p class="text-base xl:text-xl font-normal text-gray-400 pt-1">
+                                    CEO @goatmarketing
+                                </p>
+                            </div>
+
+                            <button data-toggle="1" onclick="dataOpen()"
+                                class="toggleButton w-8 h-8 rounded-full bg-gray-200/30 flex justify-center items-center">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.3334 7.5H1.66675C1.12008 7.5 0.666748 7.04667 0.666748 6.5C0.666748 5.95333 1.12008 5.5 1.66675 5.5H12.3334C12.8801 5.5 13.3334 5.95333 13.3334 6.5C13.3334 7.04667 12.8801 7.5 12.3334 7.5Z"
+                                        fill="#706F6F" />
+                                    <path
+                                        d="M7 12.8332C6.45333 12.8332 6 12.3798 6 11.8332V1.1665C6 0.619837 6.45333 0.166504 7 0.166504C7.54667 0.166504 8 0.619837 8 1.1665V11.8332C8 12.3798 7.54667 12.8332 7 12.8332Z"
+                                        fill="#706F6F" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="data-1" class="mt-4 max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+                            <p class="text-base xl:text-2xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                                suspendisse viverra egestas sapien vivamus tristique hac. Nisl
+                                et amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                                viverra donec arcu.
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="text-base xl:text-2xl font-bold text-gray-400">
+                                    Linkedin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <img src="/src/assets/about/teams/3.jpg" alt="" class="w-full" />
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-dark text-xl xl:text-2xl font-bold">
+                                    Milos Vidic
+                                </p>
+
+                                <p class="text-base xl:text-xl font-normal text-gray-400 pt-1">
+                                    CEO @goatmarketing
+                                </p>
+                            </div>
+
+                            <button data-toggle="2" onclick="dataOpen()"
+                                class="toggleButton w-8 h-8 rounded-full bg-gray-200/30 flex justify-center items-center">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.3334 7.5H1.66675C1.12008 7.5 0.666748 7.04667 0.666748 6.5C0.666748 5.95333 1.12008 5.5 1.66675 5.5H12.3334C12.8801 5.5 13.3334 5.95333 13.3334 6.5C13.3334 7.04667 12.8801 7.5 12.3334 7.5Z"
+                                        fill="#706F6F" />
+                                    <path
+                                        d="M7 12.8332C6.45333 12.8332 6 12.3798 6 11.8332V1.1665C6 0.619837 6.45333 0.166504 7 0.166504C7.54667 0.166504 8 0.619837 8 1.1665V11.8332C8 12.3798 7.54667 12.8332 7 12.8332Z"
+                                        fill="#706F6F" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="data-2" class="mt-4 max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+                            <p class="text-base xl:text-2xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                                suspendisse viverra egestas sapien vivamus tristique hac. Nisl
+                                et amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                                viverra donec arcu.
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="text-base xl:text-2xl font-bold text-gray-400">
+                                    Linkedin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <img src="/src/assets/about/teams/4.jpg" alt="" class="w-full" />
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-dark text-xl xl:text-2xl font-bold">
+                                    Milos Vidic
+                                </p>
+
+                                <p class="text-base xl:text-xl font-normal text-gray-400 pt-1">
+                                    CEO @goatmarketing
+                                </p>
+                            </div>
+
+                            <button data-toggle="3" onclick="dataOpen()"
+                                class="toggleButton w-8 h-8 rounded-full bg-gray-200/30 flex justify-center items-center">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.3334 7.5H1.66675C1.12008 7.5 0.666748 7.04667 0.666748 6.5C0.666748 5.95333 1.12008 5.5 1.66675 5.5H12.3334C12.8801 5.5 13.3334 5.95333 13.3334 6.5C13.3334 7.04667 12.8801 7.5 12.3334 7.5Z"
+                                        fill="#706F6F" />
+                                    <path
+                                        d="M7 12.8332C6.45333 12.8332 6 12.3798 6 11.8332V1.1665C6 0.619837 6.45333 0.166504 7 0.166504C7.54667 0.166504 8 0.619837 8 1.1665V11.8332C8 12.3798 7.54667 12.8332 7 12.8332Z"
+                                        fill="#706F6F" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="data-3" class="mt-4 max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+                            <p class="text-base xl:text-2xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                                suspendisse viverra egestas sapien vivamus tristique hac. Nisl
+                                et amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                                viverra donec arcu.
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="text-base xl:text-2xl font-bold text-gray-400">
+                                    Linkedin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <img src="/src/assets/about/teams/5.jpg" alt="" class="w-full" />
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-dark text-xl xl:text-2xl font-bold">
+                                    Milos Vidic
+                                </p>
+
+                                <p class="text-base xl:text-xl font-normal text-gray-400 pt-1">
+                                    CEO @goatmarketing
+                                </p>
+                            </div>
+
+                            <button data-toggle="4" onclick="dataOpen()"
+                                class="toggleButton w-8 h-8 rounded-full bg-gray-200/30 flex justify-center items-center">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.3334 7.5H1.66675C1.12008 7.5 0.666748 7.04667 0.666748 6.5C0.666748 5.95333 1.12008 5.5 1.66675 5.5H12.3334C12.8801 5.5 13.3334 5.95333 13.3334 6.5C13.3334 7.04667 12.8801 7.5 12.3334 7.5Z"
+                                        fill="#706F6F" />
+                                    <path
+                                        d="M7 12.8332C6.45333 12.8332 6 12.3798 6 11.8332V1.1665C6 0.619837 6.45333 0.166504 7 0.166504C7.54667 0.166504 8 0.619837 8 1.1665V11.8332C8 12.3798 7.54667 12.8332 7 12.8332Z"
+                                        fill="#706F6F" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="data-4" class="mt-4 max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+                            <p class="text-base xl:text-2xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                                suspendisse viverra egestas sapien vivamus tristique hac. Nisl
+                                et amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                                viverra donec arcu.
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="text-base xl:text-2xl font-bold text-gray-400">
+                                    Linkedin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <img src="/src/assets/about/teams/6.jpg" alt="" class="w-full" />
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-dark text-xl xl:text-2xl font-bold">
+                                    Milos Vidic
+                                </p>
+
+                                <p class="text-base xl:text-xl font-normal text-gray-400 pt-1">
+                                    CEO @goatmarketing
+                                </p>
+                            </div>
+
+                            <button data-toggle="5" onclick="dataOpen()"
+                                class="toggleButton w-8 h-8 rounded-full bg-gray-200/30 flex justify-center items-center">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.3334 7.5H1.66675C1.12008 7.5 0.666748 7.04667 0.666748 6.5C0.666748 5.95333 1.12008 5.5 1.66675 5.5H12.3334C12.8801 5.5 13.3334 5.95333 13.3334 6.5C13.3334 7.04667 12.8801 7.5 12.3334 7.5Z"
+                                        fill="#706F6F" />
+                                    <path
+                                        d="M7 12.8332C6.45333 12.8332 6 12.3798 6 11.8332V1.1665C6 0.619837 6.45333 0.166504 7 0.166504C7.54667 0.166504 8 0.619837 8 1.1665V11.8332C8 12.3798 7.54667 12.8332 7 12.8332Z"
+                                        fill="#706F6F" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="data-5" class="mt-4 max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+                            <p class="text-base xl:text-2xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                                suspendisse viverra egestas sapien vivamus tristique hac. Nisl
+                                et amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                                viverra donec arcu.
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="text-base xl:text-2xl font-bold text-gray-400">
+                                    Linkedin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <img src="/src/assets/about/teams/7.jpg" alt="" class="w-full" />
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-dark text-xl xl:text-2xl font-bold">
+                                    Milos Vidic
+                                </p>
+
+                                <p class="text-base xl:text-xl font-normal text-gray-400 pt-1">
+                                    CEO @goatmarketing
+                                </p>
+                            </div>
+
+                            <button data-toggle="6" onclick="dataOpen()"
+                                class="toggleButton w-8 h-8 rounded-full bg-gray-200/30 flex justify-center items-center">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.3334 7.5H1.66675C1.12008 7.5 0.666748 7.04667 0.666748 6.5C0.666748 5.95333 1.12008 5.5 1.66675 5.5H12.3334C12.8801 5.5 13.3334 5.95333 13.3334 6.5C13.3334 7.04667 12.8801 7.5 12.3334 7.5Z"
+                                        fill="#706F6F" />
+                                    <path
+                                        d="M7 12.8332C6.45333 12.8332 6 12.3798 6 11.8332V1.1665C6 0.619837 6.45333 0.166504 7 0.166504C7.54667 0.166504 8 0.619837 8 1.1665V11.8332C8 12.3798 7.54667 12.8332 7 12.8332Z"
+                                        fill="#706F6F" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="data-6" class="mt-4 max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+                            <p class="text-base xl:text-2xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                                suspendisse viverra egestas sapien vivamus tristique hac. Nisl
+                                et amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                                viverra donec arcu.
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="text-base xl:text-2xl font-bold text-gray-400">
+                                    Linkedin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <img src="/src/assets/about/teams/8.jpg" alt="" class="w-full" />
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-dark text-xl xl:text-2xl font-bold">
+                                    Milos Vidic
+                                </p>
+
+                                <p class="text-base xl:text-xl font-normal text-gray-400 pt-1">
+                                    CEO @goatmarketing
+                                </p>
+                            </div>
+
+                            <button data-toggle="7" onclick="dataOpen()"
+                                class="toggleButton w-8 h-8 rounded-full bg-gray-200/30 flex justify-center items-center">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.3334 7.5H1.66675C1.12008 7.5 0.666748 7.04667 0.666748 6.5C0.666748 5.95333 1.12008 5.5 1.66675 5.5H12.3334C12.8801 5.5 13.3334 5.95333 13.3334 6.5C13.3334 7.04667 12.8801 7.5 12.3334 7.5Z"
+                                        fill="#706F6F" />
+                                    <path
+                                        d="M7 12.8332C6.45333 12.8332 6 12.3798 6 11.8332V1.1665C6 0.619837 6.45333 0.166504 7 0.166504C7.54667 0.166504 8 0.619837 8 1.1665V11.8332C8 12.3798 7.54667 12.8332 7 12.8332Z"
+                                        fill="#706F6F" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div id="data-7" class="mt-4 max-h-0 overflow-hidden transition-all ease-in-out duration-1000">
+                            <p class="text-base xl:text-2xl font-normal text-gray-400">
+                                Lorem ipsum dolor sit amet consectetur. Elementum et amet
+                                suspendisse viverra egestas sapien vivamus tristique hac. Nisl
+                                et amet facilisis morbi eu. Massa blandit quis aliquam ut odio
+                                viverra donec arcu.
+                            </p>
+
+                            <div class="mt-4">
+                                <p class="text-base xl:text-2xl font-bold text-gray-400">
+                                    Linkedin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- teams -->
+
+    <!-- clients & recognitions -->
+    <section class="bg-background py-[56px] lg:py-24 2xl:py-[200px] text-gray-100">
+        <div class="container">
+            <h3 class="text-center">Building the Best teams.</h3>
+
+            <p class="text-xl xl:text-3xl font-normal text-gray-400 mt-4 xl:mt-6 xl:max-w-5xl mx-auto text-center">
+                From next-gen startups to established enterprises.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-9 xl:gap-14 2xl:gap-[27px] mt-10 xl:mt-16">
+                <div class="w-[44%] md:w-[19%]">
+                    <img src="/src/assets/home/client.png" alt="Facebook" />
+                </div>
+
+                <div class="w-[44%] md:w-[19%]">
+                    <img src="/src/assets/home/client.png" alt="Facebook" />
+                </div>
+
+                <div class="w-[44%] md:w-[19%]">
+                    <img src="/src/assets/home/client.png" alt="Facebook" />
+                </div>
+
+                <div class="w-[44%] md:w-[19%]">
+                    <img src="/src/assets/home/client.png" alt="Facebook" />
+                </div>
+
+                <div class="w-[44%] md:w-[19%]">
+                    <img src="/src/assets/home/client.png" alt="Facebook" />
+                </div>
+
+                <div class="w-[44%] md:w-[19%]">
+                    <img src="/src/assets/home/client.png" alt="Facebook" />
+                </div>
+
+                <div class="w-[44%] md:w-[19%]">
+                    <img src="/src/assets/home/client.png" alt="Facebook" />
+                </div>
+
+                <div class="w-[44%] md:w-[19%]">
+                    <img src="/src/assets/home/client.png" alt="Facebook" />
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-16 xl:py-[120px]">
+            <div
+                class="flex flex-wrap justify-center relative before:content-[''] before:absolute before:w-[338px] before:lg:w-[575px] before:h-px before:left-1/2 before:-translate-x-1/2 before:top-0 before:bg-gradient-to-r before:from-transparent before:via-[#2AB061] before:to-transparent">
+            </div>
+        </div>
+
+        <div class="container">
+            <h3 class="text-center">Awards & Recognitions</h3>
+
+            <div class="flex flex-wrap justify-center gap-9 xl:gap-14 2xl:gap-[27px] mt-10 xl:mt-16">
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-9 xl:gap-14 2xl:gap-[27px] mt-10">
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+
+                <div class="w-[26%] md:w-[9%]">
+                    <img src="/src/assets/home/awards/awards.png" alt=""
+                        class="w-full opacity-40 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100 ease-linear duration-300" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- clients & recognitions -->
+
+    <!-- testimonial -->
+    <section class="py-16 xl:py-24 2xl:py-[130px] bg-white">
+        <div class="container">
+            <h2 class="xl:max-w-3xl mx-auto text-center">
+                Read what our clients are saying about us.
+            </h2>
+
+            <div class="mt-10 xl:mt-20">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <ul class="space-y-4">
+                        <li class="border border-gray-100 p-5 md:p-6 shadow-card-20dp-sm md:shadow-card-20dp">
+                            <div>
+                                <div class="flex gap-2 lg:gap-3 items-center">
+                                    <div class="w-8 h-8 lg:w-[39px] lg:h-[39px] rounded-full overflow-hidden">
+                                        <img src="/src/assets/home/blogs/1.jpg" alt="" class="object-cover" />
+                                    </div>
+
+                                    <div>
+                                        <p class="pb-1 text-lg xl:text-2xl font-bold text-dark">
+                                            Milos Vidic
+                                        </p>
+
+                                        <p class="text-sm xl:text-xl text-gray-400">
+                                            CEO @goatmarketing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="pt-3 lg:pt-6 text-sm xl:text-xl text-gray-400">
+                                    "Vas was extremely ease to work with. He's a pro at Webflow
+                                    and is always open to hearing you out and executing exactly
+                                    the way you want. I'd definitely work with him again in the
+                                    future."
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="border border-gray-100 p-5 md:p-6 shadow-card-20dp-sm md:shadow-card-20dp">
+                            <div>
+                                <div class="flex gap-2 lg:gap-3 items-center">
+                                    <div class="w-8 h-8 lg:w-[39px] lg:h-[39px] rounded-full overflow-hidden">
+                                        <img src="/src/assets/home/blogs/1.jpg" alt="" class="object-cover" />
+                                    </div>
+
+                                    <div>
+                                        <p class="pb-1 text-lg xl:text-2xl font-bold text-dark">
+                                            Milos Vidic
+                                        </p>
+
+                                        <p class="text-sm xl:text-xl text-gray-400">
+                                            CEO @goatmarketing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="pt-3 lg:pt-6 text-sm xl:text-xl text-gray-400">
+                                    "I highly recommend Vasilije. He is a hard working guy with
+                                    great ideas for big or small projects. Very flexible and
+                                    very fast. I'm very happy I found his profile and I'll
+                                    definitely hire him again for another project!"
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="border border-gray-100 p-5 md:p-6 shadow-card-20dp-sm md:shadow-card-20dp">
+                            <div>
+                                <div class="flex gap-2 lg:gap-3 items-center">
+                                    <div class="w-8 h-8 lg:w-[39px] lg:h-[39px] rounded-full overflow-hidden">
+                                        <img src="/src/assets/home/blogs/1.jpg" alt="" class="object-cover" />
+                                    </div>
+
+                                    <div>
+                                        <p class="pb-1 text-lg xl:text-2xl font-bold text-dark">
+                                            Milos Vidic
+                                        </p>
+
+                                        <p class="text-sm xl:text-xl text-gray-400">
+                                            CEO @goatmarketing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="pt-3 lg:pt-6 text-sm xl:text-xl text-gray-400">
+                                    "Vas was extremely ease to work with. He's a pro at Webflow
+                                    and is always open to hearing you out and executing exactly
+                                    the way you want. I'd definitely work with him again in the
+                                    future."
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="space-y-4">
+                        <li class="border border-gray-100 p-5 md:p-6 shadow-card-20dp-sm md:shadow-card-20dp">
+                            <div>
+                                <div class="flex gap-2 lg:gap-3 items-center">
+                                    <div class="w-8 h-8 lg:w-[39px] lg:h-[39px] rounded-full overflow-hidden">
+                                        <img src="/src/assets/home/blogs/1.jpg" alt="" class="object-cover" />
+                                    </div>
+
+                                    <div>
+                                        <p class="pb-1 text-lg xl:text-2xl font-bold text-dark">
+                                            Milos Vidic
+                                        </p>
+
+                                        <p class="text-sm xl:text-xl text-gray-400">
+                                            CEO @goatmarketing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="pt-3 lg:pt-6 text-sm xl:text-xl text-gray-400">
+                                    Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut
+                                    diam congue volutpat ipsum diam tristique magna. Commodo
+                                    nunc pellentesque facilisi posuere convallis ac at aliquet
+                                    cras. Purus a sagittis urna euismod curabitur eget nascetur
+                                    sed metus. Mauris aliquam scelerisque diam quis arcu id
+                                    facilisis pellentesque tincidunt. Vestibulum et dignissim ut
+                                    arcu. Turpis consectetur mi in tellus imperdiet tincidunt.
+                                    Ac bibendum sed adipiscing tellus. Pellentesque eu.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="border border-gray-100 p-5 md:p-6 shadow-card-20dp-sm md:shadow-card-20dp">
+                            <div>
+                                <div class="flex gap-2 lg:gap-3 items-center">
+                                    <div class="w-8 h-8 lg:w-[39px] lg:h-[39px] rounded-full overflow-hidden">
+                                        <img src="/src/assets/home/blogs/1.jpg" alt="" class="object-cover" />
+                                    </div>
+
+                                    <div>
+                                        <p class="pb-1 text-lg xl:text-2xl font-bold text-dark">
+                                            Milos Vidic
+                                        </p>
+
+                                        <p class="text-sm xl:text-xl text-gray-400">
+                                            CEO @goatmarketing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="pt-3 lg:pt-6 text-sm xl:text-xl text-gray-400">
+                                    "I highly recommend Vasilije. He is a hard working guy with
+                                    great ideas for big or small projects. Very flexible and
+                                    very fast. I'm very happy I found his profile and I'll
+                                    definitely hire him again for another project!"
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="space-y-4">
+                        <li class="border border-gray-100 p-5 md:p-6 shadow-card-20dp-sm md:shadow-card-20dp">
+                            <div>
+                                <div class="flex gap-2 lg:gap-3 items-center">
+                                    <div class="w-8 h-8 lg:w-[39px] lg:h-[39px] rounded-full overflow-hidden">
+                                        <img src="/src/assets/home/blogs/1.jpg" alt="" class="object-cover" />
+                                    </div>
+
+                                    <div>
+                                        <p class="pb-1 text-lg xl:text-2xl font-bold text-dark">
+                                            Milos Vidic
+                                        </p>
+
+                                        <p class="text-sm xl:text-xl text-gray-400">
+                                            CEO @goatmarketing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="pt-3 lg:pt-6 text-sm xl:text-xl text-gray-400">
+                                    “Working with Handmade on our website design was an
+                                    exceptional experience. As an architect, I needed a site
+                                    that not only showcased our projects beautifully but also
+                                    reflected our unique design philosophy. Handmade delivered
+                                    on all fronts.”
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="border border-gray-100 p-5 md:p-6 shadow-card-20dp-sm md:shadow-card-20dp">
+                            <div>
+                                <div class="flex gap-2 lg:gap-3 items-center">
+                                    <div class="w-8 h-8 lg:w-[39px] lg:h-[39px] rounded-full overflow-hidden">
+                                        <img src="/src/assets/home/blogs/1.jpg" alt="" class="object-cover" />
+                                    </div>
+
+                                    <div>
+                                        <p class="pb-1 text-lg xl:text-2xl font-bold text-dark">
+                                            Milos Vidic
+                                        </p>
+
+                                        <p class="text-sm xl:text-xl text-gray-400">
+                                            CEO @goatmarketing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="pt-3 lg:pt-6 text-sm xl:text-xl text-gray-400">
+                                    "True professional capable of delivering quality work within
+                                    very tight time constraints. I enjoyed receiving
+                                    constructive feedback and new ideas he brought up during the
+                                    design phase of my product. ..."
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="border border-gray-100 p-5 md:p-6 shadow-card-20dp-sm md:shadow-card-20dp">
+                            <div>
+                                <div class="flex gap-2 lg:gap-3 items-center">
+                                    <div class="w-8 h-8 lg:w-[39px] lg:h-[39px] rounded-full overflow-hidden">
+                                        <img src="/src/assets/home/blogs/1.jpg" alt="" class="object-cover" />
+                                    </div>
+
+                                    <div>
+                                        <p class="pb-1 text-lg xl:text-2xl font-bold text-dark">
+                                            Milos Vidic
+                                        </p>
+
+                                        <p class="text-sm xl:text-xl text-gray-400">
+                                            CEO @goatmarketing
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="pt-3 lg:pt-6 text-sm xl:text-xl text-gray-400">
+                                    "Vas was extremely ease to work with. He's a pro at Webflow
+                                    and is always open to hearing you out and executing exactly
+                                    the way you want. I'd definitely work with him again in the
+                                    future."
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonial -->
+
+    <!-- footer -->
+    <footer class="bg-background pb-[70px]">
+        <div class="container space-y-6 md:space-y-12 2xl:space-y-[100px]">
+            <div>
+                <div>
+                    <img src="/src/assets/home/footer-image.png" alt="" class="mx-auto pointer-events-none" />
+                </div>
+
+                <div class="flex flex-col gap-4 text-center text-gray-100 mt-6 xl:mt-14">
+                    <h2 class="text-transparent bg-clip-text bg-primary-gradient">Get Started In Minutes</h2>
+
+                    <p class="text-base xl:text-2xl font-normal xl:max-w-3xl mx-auto">
+                        Transform your business with Corprights — expert cold emailing team that boosts your company
+                        growth and
+                        expands your market reach efficiently.
+                    </p>
+
+
+                    <div class="mt-4 flex justify-center">
+                        <div class="relative w-full md:max-w-md">
+                            <form class="h-12">
+                                <input type="email" placeholder="Email" required=""
+                                    class="border !outline-gray-300 outline-[2px] border-dark bg-transparent placeholder:text-gray-100 px-5 py-2 w-full h-full" />
+
+                                <div class="absolute right-2 top-1/2 -translate-y-1/2">
+                                    <button type="submit" class="btn-primary h-[34px]">
+                                        Get started
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="flex flex-col md:flex-row justify-between border-b border-dark pb-6 md:pb-10 2xl:pb-[46px]">
+                    <div class="space-y-8 w-min">
+                        <div>
+                            <img src="/src/assets/logo/footer-logo.png" alt="" />
+                        </div>
+
+                        <p class="font-normal text-base text-gray-100">
+                            Lorem ipsum dolor sit amet consectetur. Lectus sed tempus enim
+                            lorem.
+                        </p>
+
+                        <ul class="flex gap-4 items-center">
+                            <a href="" target="_blank">
+                                <li class="p-1 hover:bg-white/20 ease-linear duration-300">
+                                    <svg width="21" height="14" viewBox="0 0 21 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.312 0.0171133H4.645C2.355 0.0171133 0.5 1.85211 0.5 4.11611V9.88411C0.5 12.1481 2.356 13.9841 4.645 13.9841H16.312C18.602 13.9841 20.457 12.1481 20.457 9.88411V4.11611C20.457 1.85211 18.601 0.0161133 16.312 0.0161133V0.0171133ZM13.509 7.28011L8.052 9.85511C8.01872 9.87114 7.98192 9.87848 7.94503 9.87647C7.90815 9.87445 7.87237 9.86313 7.84103 9.84357C7.8097 9.82401 7.78382 9.79684 7.7658 9.76459C7.74779 9.73234 7.73822 9.69605 7.738 9.65911V4.35011C7.73867 4.31299 7.74872 4.27663 7.76722 4.24444C7.78573 4.21224 7.81208 4.18526 7.84382 4.16599C7.87556 4.14673 7.91167 4.13581 7.94877 4.13425C7.98587 4.1327 8.02276 4.14057 8.056 4.15711L13.514 6.89211C13.5504 6.91024 13.5809 6.93826 13.602 6.97294C13.6232 7.00762 13.6341 7.04756 13.6336 7.08818C13.6331 7.1288 13.6211 7.16845 13.5991 7.20258C13.577 7.2367 13.5458 7.26392 13.509 7.28111V7.28011Z"
+                                            fill="#E0E0E0" />
+                                    </svg>
+                                </li>
+                            </a>
+
+                            <a href="" target="_blank">
+                                <li class="p-1 hover:bg-white/20 ease-linear duration-300">
+                                    <svg width="10" height="20" viewBox="0 0 10 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.546 3.865V6.613H0.531998V9.973H2.546V19.959H6.68V9.974H9.455C9.455 9.974 9.715 8.363 9.841 6.601H6.697V4.303C6.697 3.96 7.147 3.498 7.593 3.498H9.847V0H6.783C2.443 0 2.546 3.363 2.546 3.865Z"
+                                            fill="#E0E0E0" />
+                                    </svg>
+                                </li>
+                            </a>
+
+                            <a href="" target="_blank">
+                                <li class="p-1 hover:bg-white/20 ease-linear duration-300">
+                                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M20 1.90716C19.2504 2.23454 18.4565 2.4492 17.644 2.54416C18.4968 2.0434 19.138 1.24927 19.448 0.310164C18.64 0.780492 17.7587 1.11177 16.841 1.29016C16.4545 0.88537 15.9897 0.563551 15.4748 0.344342C14.9598 0.125133 14.4056 0.0131294 13.846 0.0151639C11.58 0.0151639 9.743 1.82516 9.743 4.05516C9.743 4.37116 9.779 4.68016 9.849 4.97516C8.22358 4.89786 6.63212 4.48257 5.17617 3.7558C3.72022 3.02903 2.43176 2.00674 1.393 0.754164C1.02883 1.36857 0.837415 2.06994 0.839 2.78416C0.839697 3.45213 1.00683 4.10939 1.32529 4.69656C1.64375 5.28372 2.1035 5.78228 2.663 6.14716C2.01248 6.12616 1.37602 5.95249 0.805 5.64016V5.69016C0.805 7.64816 2.22 9.28116 4.095 9.65316C3.74261 9.74666 3.37958 9.79406 3.015 9.79416C2.75 9.79416 2.493 9.76916 2.242 9.71916C2.51008 10.5271 3.02311 11.2315 3.70982 11.7345C4.39653 12.2375 5.22284 12.5142 6.074 12.5262C4.61407 13.6507 2.82182 14.2582 0.979 14.2532C0.647 14.2532 0.321 14.2332 0 14.1972C1.88125 15.3879 4.06259 16.0184 6.289 16.0152C13.836 16.0152 17.962 9.85816 17.962 4.51916L17.948 3.99616C18.7529 3.42983 19.4481 2.72201 20 1.90716Z"
+                                            fill="#E0E0E0" />
+                                    </svg>
+                                </li>
+                            </a>
+
+                            <a href="" target="_blank">
+                                <li class="p-1 hover:bg-white/20 ease-linear duration-300">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.017 2H7.947C6.37015 2.00185 4.85844 2.62914 3.74353 3.74424C2.62862 4.85933 2.00159 6.37115 2 7.948L2 16.018C2.00185 17.5948 2.62914 19.1066 3.74424 20.2215C4.85933 21.3364 6.37115 21.9634 7.948 21.965H16.018C17.5948 21.9631 19.1066 21.3359 20.2215 20.2208C21.3364 19.1057 21.9634 17.5938 21.965 16.017V7.947C21.9631 6.37015 21.3359 4.85844 20.2208 3.74353C19.1057 2.62862 17.5938 2.00159 16.017 2V2ZM19.957 16.017C19.957 16.5344 19.8551 17.0468 19.6571 17.5248C19.4591 18.0028 19.1689 18.4371 18.803 18.803C18.4371 19.1689 18.0028 19.4591 17.5248 19.6571C17.0468 19.8551 16.5344 19.957 16.017 19.957H7.947C6.90222 19.9567 5.90032 19.5415 5.16165 18.8026C4.42297 18.0638 4.008 17.0618 4.008 16.017V7.947C4.00827 6.90222 4.42349 5.90032 5.16235 5.16165C5.90122 4.42297 6.90322 4.008 7.948 4.008H16.018C17.0628 4.00827 18.0647 4.42349 18.8034 5.16235C19.542 5.90122 19.957 6.90322 19.957 7.948V16.018V16.017Z"
+                                            fill="#E0E0E0" />
+                                        <path
+                                            d="M11.9821 6.81885C10.6135 6.82096 9.3016 7.36563 8.33397 8.33345C7.36633 9.30127 6.82192 10.6133 6.82007 11.9818C6.82166 13.3508 7.36609 14.6632 8.33397 15.6312C9.30185 16.5993 10.6142 17.144 11.9831 17.1458C13.3522 17.1443 14.6647 16.5997 15.6328 15.6316C16.6009 14.6635 17.1455 13.3509 17.1471 11.9818C17.145 10.6129 16.6 9.30073 15.6318 8.33304C14.6635 7.36535 13.351 6.82117 11.9821 6.81985V6.81885ZM11.9821 15.1378C11.1453 15.1378 10.3428 14.8054 9.75115 14.2138C9.15947 13.6221 8.82707 12.8196 8.82707 11.9828C8.82707 11.1461 9.15947 10.3436 9.75115 9.75193C10.3428 9.16025 11.1453 8.82785 11.9821 8.82785C12.8188 8.82785 13.6213 9.16025 14.213 9.75193C14.8047 10.3436 15.1371 11.1461 15.1371 11.9828C15.1371 12.8196 14.8047 13.6221 14.213 14.2138C13.6213 14.8054 12.8188 15.1378 11.9821 15.1378Z"
+                                            fill="#E0E0E0" />
+                                        <path
+                                            d="M17.1559 8.09509C17.8391 8.09509 18.3929 7.54127 18.3929 6.85809C18.3929 6.17492 17.8391 5.62109 17.1559 5.62109C16.4728 5.62109 15.9189 6.17492 15.9189 6.85809C15.9189 7.54127 16.4728 8.09509 17.1559 8.09509Z"
+                                            fill="#E0E0E0" />
+                                    </svg>
+                                </li>
+                            </a>
+
+                            <a href="" target="_blank">
+                                <li class="p-1 hover:bg-white/20 ease-linear duration-300">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.959 13.7189V21.0979H17.681V14.2129C17.681 12.4829 17.062 11.3029 15.514 11.3029C14.332 11.3029 13.628 12.0989 13.319 12.8679C13.206 13.1429 13.177 13.5259 13.177 13.9109V21.0979H8.897C8.897 21.0979 8.955 9.43788 8.897 8.22888H13.177V10.0529L13.149 10.0949H13.177V10.0529C13.745 9.17788 14.76 7.92688 17.033 7.92688C19.848 7.92688 21.959 9.76688 21.959 13.7189ZM4.421 2.02588C2.958 2.02588 2 2.98588 2 4.24888C2 5.48388 2.93 6.47288 4.365 6.47288H4.393C5.886 6.47288 6.813 5.48388 6.813 4.24888C6.787 2.98588 5.887 2.02588 4.422 2.02588H4.421ZM2.254 21.0979H6.532V8.22888H2.254V21.0979Z"
+                                            fill="#E0E0E0" />
+                                    </svg>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6 lg:gap-12 2xl:gap-16">
+                        <div>
+                            <h6 class="text-white p-4">Quick Links</h6>
+
+                            <ul class="text-gray-100">
+                                <a href="index.html"
+                                    class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Home
+                                    </li>
+                                </a>
+
+                                <a href="about-us.html"
+                                    class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        About Us
+                                    </li>
+                                </a>
+
+                                <a href="services.html"
+                                    class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Services
+                                    </li>
+                                </a>
+
+                                <a href="licenses.html"
+                                    class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Licenses
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6 class="text-white p-4">Company</h6>
+
+                            <ul class="text-gray-100">
+                                <a href="blogs.html"
+                                    class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Blog
+                                    </li>
+                                </a>
+
+                                <a href="contact-us.html"
+                                    class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Contact Us
+                                    </li>
+                                </a>
+
+                                <a href="" class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Careers
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6 class="text-white p-4">Get in Touch</h6>
+
+                            <ul class="text-gray-100">
+                                <a href="" class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        About
+                                    </li>
+                                </a>
+
+                                <a href="" class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Term of use
+                                    </li>
+                                </a>
+
+                                <a href="" class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Privacy Policy
+                                    </li>
+                                </a>
+
+                                <a href="" class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Feedback
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-6 md:pt-10 2xl:pt-[50px]">
+                    <div class="flex flex-col lg:flex-row justify-center lg:justify-between">
+                        <div class="flex items-center justify-center text-gray-100">
+                            <p class="text-base font-normal text-gray-100 p-3 text-center">© Corprights 2024 | All
+                                Rights Reserved</p>
+
+                            <ul class="text-gray-100 hidden md:flex">
+                                <a href="" class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Privacy Policy
+                                    </li>
+                                </a>
+
+                                <a href="" class="text-base font-normal hover:text-primary ease-linear duration-300">
+                                    <li class="p-4 w-fit hover:bg-gray-100/10 ease-linear duration-300">
+                                        Terms & Uses
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+
+                        <p class="text-base font-normal text-gray-100 flex items-center justify-center gap-2">Designed
+                            with <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.3 1.70859C14.8125 1.40859 14.325 1.22109 13.7625 1.10859C13.425 1.03359 13.0875 0.996094 12.7125 0.996094C12.5625 0.996094 12.4125 0.996094 12.225 1.03359C10.9875 1.14609 9.825 1.70859 8.9625 2.64609C8.1 1.74609 6.9375 1.14609 5.7 1.03359C5.2125 0.996094 4.6875 0.996094 4.1625 1.10859C3.7125 1.22109 3.1875 1.40859 2.7 1.70859C1.1625 2.60859 0.1875 4.29609 0.1875 6.09609C0.1875 10.8961 8.4375 16.4461 8.775 16.7086L9 16.8586L9.225 16.7086C9.5625 16.4836 17.8125 10.8211 17.8125 6.13359C17.8125 4.29609 16.8375 2.60859 15.3 1.70859ZM5.5875 2.53359L5.5125 3.28359C4.4625 3.20859 3.5625 3.65859 3 4.55859L2.3625 4.14609C3.0375 3.02109 4.275 2.42109 5.5875 2.53359ZM6.75 13.2211C4.9875 11.6836 3 9.84609 2.0625 7.63359L2.775 7.33359C3.6375 9.39609 5.55 11.1586 7.275 12.6211L6.75 13.2211Z"
+                                    fill="white" />
+                            </svg>
+
+                            by <span class="font-bold text-white"> Pixbit Solutions.com</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- JavaScript -->
+    <script>
+        document.querySelectorAll(".toggleButton").forEach((button) => {
+            button.addEventListener("click", function () {
+                const index = this.getAttribute("data-toggle");
+                const revealData = document.getElementById(`data-${index}`);
+
+                revealData.classList.toggle("max-h-0");
+                revealData.classList.toggle("max-h-[1000px]");
+            });
+        });
+
+        const sections = document.querySelectorAll(".tab-content");
+        const tabs = document.querySelectorAll(".tab-item");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const tabId = entry.target.getAttribute("data-content");
+                        tabs.forEach((tab) => {
+                            if (tab.getAttribute("data-tab") === tabId) {
+                                tab.classList.add("opacity-100");
+                                tab.classList.remove("opacity-30");
+                            } else {
+                                tab.classList.remove("opacity-100");
+                                tab.classList.add("opacity-30");
+                            }
+                        });
+                    }
+                });
+            },
+            {
+                root: null,
+                threshold: 0.5,
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+    </script>
+    <!-- JavaScript -->
+</body>
+
+</html>
