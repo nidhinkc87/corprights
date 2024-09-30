@@ -259,75 +259,928 @@
     <!-- benefits -->
 
     <!-- working-stages -->
-    <!-- <section class="relative pb-16 2xl:pb-20">
+    <section class="relative pb-16 2xl:pb-20">
         <div class="container">
-            <div class="">
-                <div class="mt-10 flex flex-col md:flex-row gap-4 md:gap-8 mx-auto py-[10px]">
-                    <div class="flex-none w-1/4">
-                        <h4>How it works</h4>
+            <div class="max-md:hidden mt-10 flex flex-col md:flex-row gap-4 md:gap-8 mx-auto py-[10px]">
+                <div class="flex-none w-1/4">
+                    <h4>How it works</h4>
 
-                        <div class="mt-8 xl:mt-12 relative">
-                            <div class="grid grid-cols-[auto_1fr]">
-                                <div class="absolute w-[1px] border-l border-gray-100 h-full z-[-1]">
-                                    <div class="bg-primary w-[2px] h-[10%] -ml-[1px] transition-[height]"
-                                        id="scrollLine"></div>
+                    <div class="mt-8 xl:mt-12 relative flex flex-col group">
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-1"
+                            aria-label="stage-1" data-stage-id="1">
+                            <div
+                                class="absolute w-[1px] border-l-[2.5px] border-gray-100 h-full inset-x-2 top-[11px] z-[-1]">
+                                <div class="bg-primary w-[2px] stage-left-border h-full -ml-[2px] transition-[height]"
+                                    id="scrollLine" data-stage-id="1">
                                 </div>
+                            </div>
 
-                                <div class="text-end flex flex-col items-end">
-                                    <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
-                                        Stage 1
-                                    </h6>
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-primary font-bold !leading-[1]">
+                                Stage 1
+                            </h6>
+                        </div>
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-2"
+                            aria-label="stage-2" data-stage-id="2">
+                            <div
+                                class="absolute w-[1px] border-l-[2.5px] border-gray-100 h-full inset-x-2 top-[11px] z-[-1]">
+                                <div class="bg-primary w-[2px] h-0 -ml-[2px] transition-[height] stage-left-border"
+                                    id="scrollLine" data-stage-id="2">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-gray-200 font-bold !leading-[1]">
+                                Stage 2
+                            </h6>
+                        </div>
+
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-3"
+                            aria-label="stage-3" data-stage-id="3">
+                            <div
+                                class="absolute w-[1px] border-l-[2.5px] border-gray-100 h-full inset-x-2 top-[11px] z-[-1]">
+                                <div class="bg-primary w-[2px] h-0 -ml-[2px] transition-[height] stage-left-border"
+                                    id="scrollLine" data-stage-id="3">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-gray-200 font-bold !leading-[1]">
+                                Stage 3
+                            </h6>
+                        </div>
+
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-4"
+                            aria-label="stage-4" data-stage-id="4">
+                            <div
+                                class="absolute w-[1px] border-l-[2.5px] border-gray-100 h-full inset-x-2 top-[11px] z-[-1]">
+                                <div class="bg-primary w-[2px] h-0 -ml-[2px] transition-[height] stage-left-border"
+                                    id="scrollLine" data-stage-id="4">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-gray-200 font-bold !leading-[1]">
+                                Stage 4
+                            </h6>
+                        </div>
+
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-5"
+                            aria-label="stage-5" data-stage-id="5">
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-gray-200 font-bold !leading-[1]">
+                                Stage 5
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-3/4">
+                    <div id="stage-1-content" class="block stage-content">
+                        <div
+                            class="flex items-center justify-center gap-x-[10px] w-fit px-3 rounded-full h-10 border border-gray-100 mb-8">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.50016 11.8733H1.8335C1.56016 11.8733 1.3335 11.6467 1.3335 11.3733C1.3335 11.1 1.56016 10.8733 1.8335 10.8733H8.50016C8.7735 10.8733 9.00016 11.1 9.00016 11.3733C9.00016 11.6533 8.7735 11.8733 8.50016 11.8733Z"
+                                    fill="url(#paint0_linear_6209_904)" />
+                                <path
+                                    d="M7.01986 15.1667H3.31982C1.85982 15.1667 1.33984 14.6533 1.33984 13.2V10.4667C1.33984 9.01333 1.85982 8.5 3.31982 8.5H7.01986C8.47986 8.5 8.99984 9.01333 8.99984 10.4667V13.2067C8.99984 14.6533 8.47986 15.1667 7.01986 15.1667ZM3.31315 9.5C2.40648 9.5 2.33317 9.57333 2.33317 10.4667V13.2067C2.33317 14.1 2.40648 14.1733 3.31315 14.1733H7.01318C7.91985 14.1733 7.99316 14.1 7.99316 13.2067V10.4667C7.99316 9.57333 7.91985 9.5 7.01318 9.5H3.31315Z"
+                                    fill="url(#paint1_linear_6209_904)" />
+                                <path
+                                    d="M10.5 15.1667C10.32 15.1667 10.1533 15.0667 10.0666 14.9133C9.97996 14.7533 9.97997 14.5667 10.0733 14.4067L10.7733 13.24C10.9133 13.0067 11.22 12.9267 11.46 13.0667C11.7 13.2067 11.7733 13.5133 11.6333 13.7533L11.4533 14.0533C13.2933 13.62 14.6733 11.9667 14.6733 9.99333C14.6733 9.72 14.9 9.49333 15.1733 9.49333C15.4467 9.49333 15.6733 9.72 15.6733 9.99333C15.6667 12.8467 13.3466 15.1667 10.5 15.1667Z"
+                                    fill="url(#paint2_linear_6209_904)" />
+                                <path
+                                    d="M1.8335 6.49999C1.56016 6.49999 1.3335 6.27333 1.3335 5.99999C1.3335 3.15333 3.6535 0.833328 6.50016 0.833328C6.68016 0.833328 6.84685 0.933329 6.93351 1.08666C7.02018 1.24666 7.02017 1.43333 6.92684 1.59333L6.22685 2.75999C6.08685 2.99333 5.78016 3.07333 5.54016 2.93333C5.30016 2.79333 5.22682 2.48666 5.36682 2.24666L5.54683 1.94666C3.70683 2.37999 2.32682 4.03333 2.32682 6.00666C2.33349 6.27333 2.10683 6.49999 1.8335 6.49999Z"
+                                    fill="url(#paint3_linear_6209_904)" />
+                                <path
+                                    d="M12.8335 7.83333C10.9068 7.83333 9.3335 6.26666 9.3335 4.33333C9.3335 2.39999 10.9002 0.833328 12.8335 0.833328C14.7668 0.833328 16.3335 2.39999 16.3335 4.33333C16.3335 6.26666 14.7602 7.83333 12.8335 7.83333ZM12.8335 1.83333C11.4535 1.83333 10.3335 2.95333 10.3335 4.33333C10.3335 5.71333 11.4535 6.83333 12.8335 6.83333C14.2135 6.83333 15.3335 5.71333 15.3335 4.33333C15.3335 2.95333 14.2135 1.83333 12.8335 1.83333Z"
+                                    fill="url(#paint4_linear_6209_904)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_6209_904" x1="1.3335" y1="11.8733" x2="6.91347"
+                                        y2="14.8221" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_6209_904" x1="1.33984" y1="15.1667" x2="8.42739"
+                                        y2="15.728" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_6209_904" x1="10.0024" y1="15.1667" x2="15.2575"
+                                        y2="15.5287" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_6209_904" x1="1.3335" y1="6.49999" x2="6.58236"
+                                        y2="6.86163" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_6209_904" x1="9.3335" y1="7.83333" x2="15.8202"
+                                        y2="8.28044" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <p class="text-base text-primary font-bold">Stage 1</p>
+                        </div>
+
+                        <div class="space-y-[26px] xl:space-y-14">
+                            <h3 class="max-xl:text-2xl 2xl:leading-[58px]">
+                                Lorem ipsum dolor sit amet consectetur. Sollicitudin nulla at.
+                            </h3>
+
+                            <div class="grid md:grid-cols-2 gap-[26px] md:gap-x-10 md:gap-y-12">
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">1</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
                                 </div>
 
                                 <div>
-                                    <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">2</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">3</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">4</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-card p-[18px] xl:p-8 flex flex-col w-3/4">
+                    <div id="stage-2-content" class="hidden stage-content">
                         <div
-                            class="w-16 h-16 2xl:w-[72px] 2xl:h-[72px] flex items-center justify-center bg-primary-100 mb-8">
-                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            class="flex items-center justify-center gap-x-[10px] w-fit px-3 rounded-full h-10 border border-gray-100 mb-8">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_5622_38531)">
-                                    <path
-                                        d="M21.2499 20.0003H20.5381V10.3727C20.5381 10.1426 20.3516 9.95605 20.1215 9.95605H17.1215C16.8913 9.95605 16.7048 10.1426 16.7048 10.3727V20.0003H15.4571V14.1531C15.4571 13.923 15.2706 13.7365 15.0405 13.7365H12.0405C11.8103 13.7365 11.6238 13.923 11.6238 14.1531V20.0003H10.3761V17.2698C10.3761 17.0397 10.1896 16.8532 9.95946 16.8532C9.72934 16.8532 9.5428 17.0397 9.5428 17.2698V20.0003H7.37613V10.7894H9.5428V13.5198C9.5428 13.75 9.72934 13.9365 9.95946 13.9365C10.1896 13.9365 10.3761 13.75 10.3761 13.5198V10.3727C10.3761 10.1426 10.1896 9.95605 9.95946 9.95605H6.95946C6.72934 9.95605 6.54279 10.1426 6.54279 10.3727V20.0003H5.29513V14.1531C5.29513 13.923 5.10859 13.7365 4.87846 13.7365H1.87846C1.64834 13.7365 1.46179 13.923 1.46179 14.1531V20.0003H0.749919C0.519794 20.0003 0.333252 20.1869 0.333252 20.417C0.333252 20.6471 0.519794 20.8337 0.749919 20.8337H21.2499C21.48 20.8337 21.6666 20.6471 21.6666 20.417C21.6666 20.1869 21.48 20.0003 21.2499 20.0003ZM2.29504 20.0003V14.5698H4.46171V20.0003H2.29504ZM12.4571 20.0003V14.5698H14.6238V20.0003H12.4571ZM17.5381 20.0003V10.7894H19.7048V20.0003H17.5381Z"
-                                        fill="#2BB162" />
-                                    <path
-                                        d="M3.37829 10.0813C4.43513 10.0813 5.29496 9.22149 5.29496 8.16466C5.29496 7.78708 5.18475 7.43495 4.99546 7.13787L7.43254 4.70083C7.72959 4.89012 8.08175 5.00033 8.45934 5.00033C8.83692 5.00033 9.18904 4.89012 9.48609 4.70087L11.9236 7.13837C11.734 7.43558 11.6237 7.78795 11.6237 8.16583C11.6237 9.22266 12.4835 10.0825 13.5403 10.0825C14.5972 10.0825 15.457 9.22266 15.457 8.16583C15.457 7.78795 15.3466 7.43558 15.1571 7.13837L17.5946 4.70087C17.8916 4.89016 18.2438 5.00033 18.6213 5.00033C19.6782 5.00033 20.538 4.14049 20.538 3.08366C20.538 2.02683 19.6782 1.16699 18.6213 1.16699C17.5645 1.16699 16.7047 2.02683 16.7047 3.08366C16.7047 3.46187 16.8152 3.81449 17.005 4.11187L14.5678 6.54912C14.2706 6.35958 13.9182 6.2492 13.5403 6.2492C13.1625 6.2492 12.8101 6.35958 12.5129 6.54912L10.0756 4.11187C10.2655 3.81453 10.376 3.46187 10.376 3.0837C10.376 2.02687 9.51617 1.16703 8.45934 1.16703C7.4025 1.16703 6.54267 2.02687 6.54267 3.0837C6.54267 3.46187 6.65321 3.81453 6.84305 4.11187L4.4065 6.54837C4.10913 6.35853 3.7565 6.24799 3.37834 6.24799C2.3215 6.24799 1.46167 7.10783 1.46167 8.16466C1.46167 9.22149 2.32146 10.0813 3.37829 10.0813ZM18.6214 2.00033C19.2187 2.00033 19.7047 2.48633 19.7047 3.08366C19.7047 3.68099 19.2187 4.16699 18.6214 4.16699C18.024 4.16699 17.538 3.68099 17.538 3.08366C17.538 2.48633 18.024 2.00033 18.6214 2.00033ZM14.6237 8.16583C14.6237 8.76316 14.1377 9.24916 13.5403 9.24916C12.943 9.24916 12.457 8.76316 12.457 8.16583C12.457 7.56849 12.943 7.08249 13.5403 7.08249C14.1377 7.08249 14.6237 7.56849 14.6237 8.16583ZM8.45934 2.00033C9.05667 2.00033 9.54267 2.48633 9.54267 3.08366C9.54267 3.68099 9.05667 4.16699 8.45934 4.16699C7.862 4.16699 7.376 3.68099 7.376 3.08366C7.376 2.48633 7.86196 2.00033 8.45934 2.00033ZM3.37829 7.08133C3.97563 7.08133 4.46163 7.56733 4.46163 8.16466C4.46163 8.76199 3.97563 9.24799 3.37829 9.24799C2.78096 9.24799 2.29496 8.76199 2.29496 8.16466C2.29496 7.56733 2.78096 7.08133 3.37829 7.08133Z"
-                                        fill="#2BB162" />
-                                    <path
-                                        d="M9.95964 14.978C9.85005 14.978 9.74255 15.0226 9.66505 15.1001C9.58755 15.1776 9.54297 15.2847 9.54297 15.3947C9.54297 15.5043 9.58755 15.6118 9.66505 15.6893C9.74255 15.7668 9.85005 15.8114 9.95964 15.8114C10.0692 15.8114 10.1767 15.7668 10.2542 15.6893C10.3317 15.6118 10.3763 15.5043 10.3763 15.3947C10.3763 15.2851 10.3317 15.1776 10.2542 15.1001C10.1767 15.0226 10.0692 14.978 9.95964 14.978Z"
-                                        fill="#2BB162" />
-                                </g>
+                                <path
+                                    d="M7.99967 11.873H1.33301C1.05967 11.873 0.833008 11.6464 0.833008 11.373C0.833008 11.0997 1.05967 10.873 1.33301 10.873H7.99967C8.27301 10.873 8.49967 11.0997 8.49967 11.373C8.49967 11.653 8.27301 11.873 7.99967 11.873Z"
+                                    fill="url(#paint0_linear_5281_6604)" />
+                                <path
+                                    d="M6.51986 15.1667H2.81982C1.35982 15.1667 0.839844 14.6533 0.839844 13.2V10.4667C0.839844 9.01333 1.35982 8.5 2.81982 8.5H6.51986C7.97986 8.5 8.49984 9.01333 8.49984 10.4667V13.2067C8.49984 14.6533 7.97986 15.1667 6.51986 15.1667ZM2.81315 9.5C1.90648 9.5 1.83317 9.57333 1.83317 10.4667V13.2067C1.83317 14.1 1.90648 14.1733 2.81315 14.1733H6.51318C7.41985 14.1733 7.49316 14.1 7.49316 13.2067V10.4667C7.49316 9.57333 7.41985 9.5 6.51318 9.5H2.81315Z"
+                                    fill="url(#paint1_linear_5281_6604)" />
+                                <path
+                                    d="M10.0005 15.1665C9.82047 15.1665 9.65378 15.0665 9.56712 14.9132C9.48045 14.7532 9.48046 14.5665 9.57379 14.4065L10.2738 13.2398C10.4138 13.0065 10.7205 12.9265 10.9605 13.0665C11.2005 13.2065 11.2738 13.5132 11.1338 13.7532L10.9538 14.0532C12.7938 13.6198 14.1738 11.9665 14.1738 9.99316C14.1738 9.71983 14.4005 9.49316 14.6738 9.49316C14.9471 9.49316 15.1738 9.71983 15.1738 9.99316C15.1671 12.8465 12.8471 15.1665 10.0005 15.1665Z"
+                                    fill="url(#paint2_linear_5281_6604)" />
+                                <path
+                                    d="M1.33301 6.49967C1.05967 6.49967 0.833008 6.27301 0.833008 5.99967C0.833008 3.15301 3.15301 0.833008 5.99967 0.833008C6.17967 0.833008 6.34636 0.933009 6.43302 1.08634C6.51969 1.24634 6.51968 1.43301 6.42635 1.59301L5.72636 2.75967C5.58636 2.99301 5.27967 3.07301 5.03967 2.93301C4.79967 2.79301 4.72633 2.48634 4.86633 2.24634L5.04635 1.94634C3.20635 2.37967 1.82633 4.03301 1.82633 6.00634C1.833 6.27301 1.60634 6.49967 1.33301 6.49967Z"
+                                    fill="url(#paint3_linear_5281_6604)" />
+                                <path
+                                    d="M12.333 7.83301C10.4063 7.83301 8.83301 6.26634 8.83301 4.33301C8.83301 2.39967 10.3997 0.833008 12.333 0.833008C14.2663 0.833008 15.833 2.39967 15.833 4.33301C15.833 6.26634 14.2597 7.83301 12.333 7.83301ZM12.333 1.83301C10.953 1.83301 9.83301 2.95301 9.83301 4.33301C9.83301 5.71301 10.953 6.83301 12.333 6.83301C13.713 6.83301 14.833 5.71301 14.833 4.33301C14.833 2.95301 13.713 1.83301 12.333 1.83301Z"
+                                    fill="url(#paint4_linear_5281_6604)" />
                                 <defs>
-                                    <clipPath id="clip0_5622_38531">
-                                        <rect width="21.3333" height="21.3333" fill="white"
-                                            transform="translate(0.333252 0.333496)" />
-                                    </clipPath>
+                                    <linearGradient id="paint0_linear_5281_6604" x1="0.833008" y1="11.873" x2="6.41298"
+                                        y2="14.8218" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_5281_6604" x1="0.839844" y1="15.1667" x2="7.92739"
+                                        y2="15.728" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_5281_6604" x1="9.50293" y1="15.1665" x2="14.758"
+                                        y2="15.5286" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_5281_6604" x1="0.833008" y1="6.49967" x2="6.08187"
+                                        y2="6.86131" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_5281_6604" x1="8.83301" y1="7.83301" x2="15.3197"
+                                        y2="8.28012" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
                                 </defs>
                             </svg>
+
+
+                            <p class="text-base text-primary font-bold">Stage 2</p>
                         </div>
 
-                        <div>
-                            <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
-                                Access To Hyper-Qualified Opportunities
-                            </h6>
+                        <div class="space-y-[26px] xl:space-y-14">
+                            <h3 class="max-xl:text-2xl 2xl:leading-[58px]">
+                                Lorem ipsum dolor sit amet consectetur. Sollicitudin nulla at.
+                            </h3>
 
-                            <p class="text-base xl:text-xl font-normal text-gray-400 pt-5">
-                                Lorem ipsum dolor sit amet consectetur. Mauris sed risus
-                                viverra id non dolor praesent est.
-                            </p>
+                            <div class="grid md:grid-cols-2 gap-[26px] md:gap-x-10 md:gap-y-12">
+                                <div class="space-y-[26px] xl:space-y-12">
+                                    <div>
+                                        <div class="flex items-center gap-x-[10px]">
+                                            <div class="h-6 w-6 bg-primary-gradient text-center">
+                                                <span class="text-white font-bold text-base">1</span>
+                                            </div>
+
+                                            <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                                Lorem ipsum dolor sit
+                                            </h6>
+                                        </div>
+
+                                        <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor
+                                            sit
+                                            amet
+                                            consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                            Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere
+                                            netus
+                                            pellentesque
+                                            pulvinar consequat. </p>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex items-center gap-x-[10px]">
+                                            <div class="h-6 w-6 bg-primary-gradient text-center">
+                                                <span class="text-white font-bold text-base">2</span>
+                                            </div>
+
+                                            <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                                Lorem ipsum dolor sit
+                                            </h6>
+                                        </div>
+
+                                        <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor
+                                            sit
+                                            amet
+                                            consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                            Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere
+                                            netus
+                                            pellentesque
+                                            pulvinar consequat. </p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <img src="/src/assets/service/stages/stage-2.png" alt=""
+                                        class="hidden md:block pointer-events-none" />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                    <div id="stage-3-content" class="hidden stage-content">
+                        <div
+                            class="flex items-center justify-center gap-x-[10px] w-fit px-3 rounded-full h-10 border border-gray-100 mb-8">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.99967 11.873H1.33301C1.05967 11.873 0.833008 11.6464 0.833008 11.373C0.833008 11.0997 1.05967 10.873 1.33301 10.873H7.99967C8.27301 10.873 8.49967 11.0997 8.49967 11.373C8.49967 11.653 8.27301 11.873 7.99967 11.873Z"
+                                    fill="url(#paint0_linear_5281_6674)" />
+                                <path
+                                    d="M6.51986 15.1667H2.81982C1.35982 15.1667 0.839844 14.6533 0.839844 13.2V10.4667C0.839844 9.01333 1.35982 8.5 2.81982 8.5H6.51986C7.97986 8.5 8.49984 9.01333 8.49984 10.4667V13.2067C8.49984 14.6533 7.97986 15.1667 6.51986 15.1667ZM2.81315 9.5C1.90648 9.5 1.83317 9.57333 1.83317 10.4667V13.2067C1.83317 14.1 1.90648 14.1733 2.81315 14.1733H6.51318C7.41985 14.1733 7.49316 14.1 7.49316 13.2067V10.4667C7.49316 9.57333 7.41985 9.5 6.51318 9.5H2.81315Z"
+                                    fill="url(#paint1_linear_5281_6674)" />
+                                <path
+                                    d="M10.0005 15.1665C9.82047 15.1665 9.65378 15.0665 9.56712 14.9132C9.48045 14.7532 9.48046 14.5665 9.57379 14.4065L10.2738 13.2398C10.4138 13.0065 10.7205 12.9265 10.9605 13.0665C11.2005 13.2065 11.2738 13.5132 11.1338 13.7532L10.9538 14.0532C12.7938 13.6198 14.1738 11.9665 14.1738 9.99316C14.1738 9.71983 14.4005 9.49316 14.6738 9.49316C14.9471 9.49316 15.1738 9.71983 15.1738 9.99316C15.1671 12.8465 12.8471 15.1665 10.0005 15.1665Z"
+                                    fill="url(#paint2_linear_5281_6674)" />
+                                <path
+                                    d="M1.33301 6.49967C1.05967 6.49967 0.833008 6.27301 0.833008 5.99967C0.833008 3.15301 3.15301 0.833008 5.99967 0.833008C6.17967 0.833008 6.34636 0.933009 6.43302 1.08634C6.51969 1.24634 6.51968 1.43301 6.42635 1.59301L5.72636 2.75967C5.58636 2.99301 5.27967 3.07301 5.03967 2.93301C4.79967 2.79301 4.72633 2.48634 4.86633 2.24634L5.04635 1.94634C3.20635 2.37967 1.82633 4.03301 1.82633 6.00634C1.833 6.27301 1.60634 6.49967 1.33301 6.49967Z"
+                                    fill="url(#paint3_linear_5281_6674)" />
+                                <path
+                                    d="M12.333 7.83301C10.4063 7.83301 8.83301 6.26634 8.83301 4.33301C8.83301 2.39967 10.3997 0.833008 12.333 0.833008C14.2663 0.833008 15.833 2.39967 15.833 4.33301C15.833 6.26634 14.2597 7.83301 12.333 7.83301ZM12.333 1.83301C10.953 1.83301 9.83301 2.95301 9.83301 4.33301C9.83301 5.71301 10.953 6.83301 12.333 6.83301C13.713 6.83301 14.833 5.71301 14.833 4.33301C14.833 2.95301 13.713 1.83301 12.333 1.83301Z"
+                                    fill="url(#paint4_linear_5281_6674)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_5281_6674" x1="0.833008" y1="11.873" x2="6.41298"
+                                        y2="14.8218" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_5281_6674" x1="0.839844" y1="15.1667" x2="7.92739"
+                                        y2="15.728" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_5281_6674" x1="9.50293" y1="15.1665" x2="14.758"
+                                        y2="15.5286" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_5281_6674" x1="0.833008" y1="6.49967" x2="6.08187"
+                                        y2="6.86131" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_5281_6674" x1="8.83301" y1="7.83301" x2="15.3197"
+                                        y2="8.28012" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
 
+
+                            <p class="text-base text-primary font-bold">Stage 3</p>
+                        </div>
+
+                        <div class="space-y-[26px] xl:space-y-14">
+                            <h3 class="max-xl:text-2xl 2xl:leading-[58px]">
+                                Lorem ipsum dolor sit amet consectetur. Sollicitudin nulla at.
+                            </h3>
+
+                            <div class="grid md:grid-cols-2 gap-[26px] md:gap-x-10 md:gap-y-12">
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">1</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">2</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">3</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="stage-4-content" class="hidden stage-content">
+                        <div
+                            class="flex items-center justify-center gap-x-[10px] w-fit px-3 rounded-full h-10 border border-gray-100 mb-8">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.99967 11.873H1.33301C1.05967 11.873 0.833008 11.6464 0.833008 11.373C0.833008 11.0997 1.05967 10.873 1.33301 10.873H7.99967C8.27301 10.873 8.49967 11.0997 8.49967 11.373C8.49967 11.653 8.27301 11.873 7.99967 11.873Z"
+                                    fill="url(#paint0_linear_5281_6744)" />
+                                <path
+                                    d="M6.51986 15.1667H2.81982C1.35982 15.1667 0.839844 14.6533 0.839844 13.2V10.4667C0.839844 9.01333 1.35982 8.5 2.81982 8.5H6.51986C7.97986 8.5 8.49984 9.01333 8.49984 10.4667V13.2067C8.49984 14.6533 7.97986 15.1667 6.51986 15.1667ZM2.81315 9.5C1.90648 9.5 1.83317 9.57333 1.83317 10.4667V13.2067C1.83317 14.1 1.90648 14.1733 2.81315 14.1733H6.51318C7.41985 14.1733 7.49316 14.1 7.49316 13.2067V10.4667C7.49316 9.57333 7.41985 9.5 6.51318 9.5H2.81315Z"
+                                    fill="url(#paint1_linear_5281_6744)" />
+                                <path
+                                    d="M10.0005 15.1665C9.82047 15.1665 9.65378 15.0665 9.56712 14.9132C9.48045 14.7532 9.48046 14.5665 9.57379 14.4065L10.2738 13.2398C10.4138 13.0065 10.7205 12.9265 10.9605 13.0665C11.2005 13.2065 11.2738 13.5132 11.1338 13.7532L10.9538 14.0532C12.7938 13.6198 14.1738 11.9665 14.1738 9.99316C14.1738 9.71983 14.4005 9.49316 14.6738 9.49316C14.9471 9.49316 15.1738 9.71983 15.1738 9.99316C15.1671 12.8465 12.8471 15.1665 10.0005 15.1665Z"
+                                    fill="url(#paint2_linear_5281_6744)" />
+                                <path
+                                    d="M1.33301 6.49967C1.05967 6.49967 0.833008 6.27301 0.833008 5.99967C0.833008 3.15301 3.15301 0.833008 5.99967 0.833008C6.17967 0.833008 6.34636 0.933009 6.43302 1.08634C6.51969 1.24634 6.51968 1.43301 6.42635 1.59301L5.72636 2.75967C5.58636 2.99301 5.27967 3.07301 5.03967 2.93301C4.79967 2.79301 4.72633 2.48634 4.86633 2.24634L5.04635 1.94634C3.20635 2.37967 1.82633 4.03301 1.82633 6.00634C1.833 6.27301 1.60634 6.49967 1.33301 6.49967Z"
+                                    fill="url(#paint3_linear_5281_6744)" />
+                                <path
+                                    d="M12.333 7.83301C10.4063 7.83301 8.83301 6.26634 8.83301 4.33301C8.83301 2.39967 10.3997 0.833008 12.333 0.833008C14.2663 0.833008 15.833 2.39967 15.833 4.33301C15.833 6.26634 14.2597 7.83301 12.333 7.83301ZM12.333 1.83301C10.953 1.83301 9.83301 2.95301 9.83301 4.33301C9.83301 5.71301 10.953 6.83301 12.333 6.83301C13.713 6.83301 14.833 5.71301 14.833 4.33301C14.833 2.95301 13.713 1.83301 12.333 1.83301Z"
+                                    fill="url(#paint4_linear_5281_6744)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_5281_6744" x1="0.833008" y1="11.873" x2="6.41298"
+                                        y2="14.8218" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_5281_6744" x1="0.839844" y1="15.1667" x2="7.92739"
+                                        y2="15.728" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_5281_6744" x1="9.50293" y1="15.1665" x2="14.758"
+                                        y2="15.5286" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_5281_6744" x1="0.833008" y1="6.49967" x2="6.08187"
+                                        y2="6.86131" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_5281_6744" x1="8.83301" y1="7.83301" x2="15.3197"
+                                        y2="8.28012" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+
+                            <p class="text-base text-primary font-bold">Stage 4</p>
+                        </div>
+
+                        <div class="space-y-[26px] xl:space-y-14">
+                            <h3 class="max-xl:text-2xl 2xl:leading-[58px]">
+                                Lorem ipsum dolor sit amet consectetur. Sollicitudin nulla at.
+                            </h3>
+
+                            <div class="grid md:grid-cols-2 gap-[26px] md:gap-x-10 md:gap-y-12">
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">1</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">2</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">3</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">4</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="stage-5-content" class="hidden stage-content">
+                        <div
+                            class="flex items-center justify-center gap-x-[10px] w-fit px-3 rounded-full h-10 border border-gray-100 mb-8">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.99967 11.873H1.33301C1.05967 11.873 0.833008 11.6464 0.833008 11.373C0.833008 11.0997 1.05967 10.873 1.33301 10.873H7.99967C8.27301 10.873 8.49967 11.0997 8.49967 11.373C8.49967 11.653 8.27301 11.873 7.99967 11.873Z"
+                                    fill="url(#paint0_linear_5281_6814)" />
+                                <path
+                                    d="M6.51986 15.1667H2.81982C1.35982 15.1667 0.839844 14.6533 0.839844 13.2V10.4667C0.839844 9.01333 1.35982 8.5 2.81982 8.5H6.51986C7.97986 8.5 8.49984 9.01333 8.49984 10.4667V13.2067C8.49984 14.6533 7.97986 15.1667 6.51986 15.1667ZM2.81315 9.5C1.90648 9.5 1.83317 9.57333 1.83317 10.4667V13.2067C1.83317 14.1 1.90648 14.1733 2.81315 14.1733H6.51318C7.41985 14.1733 7.49316 14.1 7.49316 13.2067V10.4667C7.49316 9.57333 7.41985 9.5 6.51318 9.5H2.81315Z"
+                                    fill="url(#paint1_linear_5281_6814)" />
+                                <path
+                                    d="M10.0005 15.1665C9.82047 15.1665 9.65378 15.0665 9.56712 14.9132C9.48045 14.7532 9.48046 14.5665 9.57379 14.4065L10.2738 13.2398C10.4138 13.0065 10.7205 12.9265 10.9605 13.0665C11.2005 13.2065 11.2738 13.5132 11.1338 13.7532L10.9538 14.0532C12.7938 13.6198 14.1738 11.9665 14.1738 9.99316C14.1738 9.71983 14.4005 9.49316 14.6738 9.49316C14.9471 9.49316 15.1738 9.71983 15.1738 9.99316C15.1671 12.8465 12.8471 15.1665 10.0005 15.1665Z"
+                                    fill="url(#paint2_linear_5281_6814)" />
+                                <path
+                                    d="M1.33301 6.49967C1.05967 6.49967 0.833008 6.27301 0.833008 5.99967C0.833008 3.15301 3.15301 0.833008 5.99967 0.833008C6.17967 0.833008 6.34636 0.933009 6.43302 1.08634C6.51969 1.24634 6.51968 1.43301 6.42635 1.59301L5.72636 2.75967C5.58636 2.99301 5.27967 3.07301 5.03967 2.93301C4.79967 2.79301 4.72633 2.48634 4.86633 2.24634L5.04635 1.94634C3.20635 2.37967 1.82633 4.03301 1.82633 6.00634C1.833 6.27301 1.60634 6.49967 1.33301 6.49967Z"
+                                    fill="url(#paint3_linear_5281_6814)" />
+                                <path
+                                    d="M12.333 7.83301C10.4063 7.83301 8.83301 6.26634 8.83301 4.33301C8.83301 2.39967 10.3997 0.833008 12.333 0.833008C14.2663 0.833008 15.833 2.39967 15.833 4.33301C15.833 6.26634 14.2597 7.83301 12.333 7.83301ZM12.333 1.83301C10.953 1.83301 9.83301 2.95301 9.83301 4.33301C9.83301 5.71301 10.953 6.83301 12.333 6.83301C13.713 6.83301 14.833 5.71301 14.833 4.33301C14.833 2.95301 13.713 1.83301 12.333 1.83301Z"
+                                    fill="url(#paint4_linear_5281_6814)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_5281_6814" x1="0.833008" y1="11.873" x2="6.41298"
+                                        y2="14.8218" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_5281_6814" x1="0.839844" y1="15.1667" x2="7.92739"
+                                        y2="15.728" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_5281_6814" x1="9.50293" y1="15.1665" x2="14.758"
+                                        y2="15.5286" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_5281_6814" x1="0.833008" y1="6.49967" x2="6.08187"
+                                        y2="6.86131" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                    <linearGradient id="paint4_linear_5281_6814" x1="8.83301" y1="7.83301" x2="15.3197"
+                                        y2="8.28012" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#017275" />
+                                        <stop offset="1" stop-color="#2BB162" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <p class="text-base text-primary font-bold">Stage 5</p>
+                        </div>
+
+                        <div class="space-y-[26px] xl:space-y-14">
+                            <h3 class="max-xl:text-2xl 2xl:leading-[58px]">
+                                Lorem ipsum dolor sit amet consectetur. Sollicitudin nulla at.
+                            </h3>
+
+                            <div class="grid md:grid-cols-2 gap-[26px] md:gap-x-10 md:gap-y-12">
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">1</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">2</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">3</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-center gap-x-[10px]">
+                                        <div class="h-6 w-6 bg-primary-gradient text-center">
+                                            <span class="text-white font-bold text-base">4</span>
+                                        </div>
+
+                                        <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                            Lorem ipsum dolor sit
+                                        </h6>
+                                    </div>
+
+                                    <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                        amet
+                                        consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                        Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                        pellentesque
+                                        pulvinar consequat. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:hidden">
+                <h4>How it works</h4>
+
+                <div class="mt-8 xl:mt-12 relative flex flex-col group gap-6">
+                    <div class="relative">
+                        <div class="grid grid-cols-[auto_1fr] gap-3 cursor-pointer stage mb-8" id="stage-1"
+                            aria-label="stage-1" data-stage-id="1">
+                            <div
+                                class="absolute w-[1px] border-l-[2.5px] border-gray-100 h-full inset-x-2 top-[11px] z-[-1]">
+                                <div class="bg-primary w-[2px] stage-left-border -ml-[2px] transition-[height]"
+                                    id="scrollLine" data-stage-id="1">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-primary font-bold !leading-[1]">
+                                Stage 1
+                            </h6>
+                        </div>
+
+                        <div id="stage-1-content" class="block stage-content pl-8">
+                            <div class="space-y-[26px] xl:space-y-14">
+                                <h3 class="max-xl:text-2xl 2xl:leading-[58px]">
+                                    Lorem ipsum dolor sit amet consectetur. Sollicitudin nulla at.
+                                </h3>
+
+                                <div class="grid md:grid-cols-2 gap-[26px] md:gap-x-10 md:gap-y-12">
+                                    <div>
+                                        <div class="flex items-center gap-x-[10px]">
+                                            <div class="h-6 w-6 bg-primary-gradient text-center">
+                                                <span class="text-white font-bold text-base">1</span>
+                                            </div>
+
+                                            <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                                Lorem ipsum dolor sit
+                                            </h6>
+                                        </div>
+
+                                        <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                            amet
+                                            consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                            Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                            pellentesque
+                                            pulvinar consequat. </p>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex items-center gap-x-[10px]">
+                                            <div class="h-6 w-6 bg-primary-gradient text-center">
+                                                <span class="text-white font-bold text-base">2</span>
+                                            </div>
+
+                                            <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                                Lorem ipsum dolor sit
+                                            </h6>
+                                        </div>
+
+                                        <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                            amet
+                                            consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                            Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                            pellentesque
+                                            pulvinar consequat. </p>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex items-center gap-x-[10px]">
+                                            <div class="h-6 w-6 bg-primary-gradient text-center">
+                                                <span class="text-white font-bold text-base">3</span>
+                                            </div>
+
+                                            <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                                Lorem ipsum dolor sit
+                                            </h6>
+                                        </div>
+
+                                        <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                            amet
+                                            consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                            Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                            pellentesque
+                                            pulvinar consequat. </p>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex items-center gap-x-[10px]">
+                                            <div class="h-6 w-6 bg-primary-gradient text-center">
+                                                <span class="text-white font-bold text-base">4</span>
+                                            </div>
+
+                                            <h6 class="text-xl lg:text-3xl xl:text-4xl font-bold text-dark">
+                                                Lorem ipsum dolor sit
+                                            </h6>
+                                        </div>
+
+                                        <p class="text-xl font-normal text-gray-400 mt-3 xl:mt-4">Lorem ipsum dolor sit
+                                            amet
+                                            consectetur. Mauris sed risus viverra id non dolor praesent est.
+                                            Natoque feugiat euismod adipiscing interdum vitae tristique. Posuere netus
+                                            pellentesque
+                                            pulvinar consequat. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden">
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-2"
+                            aria-label="stage-2" data-stage-id="2">
+                            <div
+                                class="absolute w-[1px] border-l-[2.5px] border-gray-100 h-full inset-x-2 top-[11px] z-[-1]">
+                                <div class="bg-primary w-[2px] h-0 -ml-[2px] transition-[height] stage-left-border"
+                                    id="scrollLine" data-stage-id="2">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-gray-200 font-bold !leading-[1]">
+                                Stage 2
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="hidden">
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-3"
+                            aria-label="stage-3" data-stage-id="3">
+                            <div
+                                class="absolute w-[1px] border-l-[2.5px] border-gray-100 h-full inset-x-2 top-[11px] z-[-1]">
+                                <div class="bg-primary w-[2px] h-0 -ml-[2px] transition-[height] stage-left-border"
+                                    id="scrollLine" data-stage-id="3">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-gray-200 font-bold !leading-[1]">
+                                Stage 3
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="hidden">
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-4"
+                            aria-label="stage-4" data-stage-id="4">
+                            <div
+                                class="absolute w-[1px] border-l-[2.5px] border-gray-100 h-full inset-x-2 top-[11px] z-[-1]">
+                                <div class="bg-primary w-[2px] h-0 -ml-[2px] transition-[height] stage-left-border"
+                                    id="scrollLine" data-stage-id="4">
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-gray-200 font-bold !leading-[1]">
+                                Stage 4
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="hidden">
+                        <div class="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage" id="stage-5"
+                            aria-label="stage-5" data-stage-id="5">
+                            <div>
+                                <div class="bg-primary w-[18px] h-[18px] rounded-full"></div>
+                            </div>
+
+                            <h6 class="text-xl xl:text-2xl text-gray-200 font-bold !leading-[1]">
+                                Stage 5
+                            </h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- working-stages -->
 
     <!-- download banner -->
@@ -1261,6 +2114,46 @@
                 parent.classList.add("xl:pb-4");
             }
         }
+
+        const stages = document.querySelectorAll('.stage');
+        const contentEls = document.querySelectorAll('.stage-content');
+        const leftBorderEls = document.querySelectorAll('.stage-left-border');
+
+        stages.forEach((el, index) => {
+            el.addEventListener('click', (e) => {
+                const id = el.getAttribute('data-stage-id');
+
+                const h6 = document.querySelectorAll('.stage h6');
+                console.log(h6);
+                h6.forEach((h6El, i) => {
+                    if (i <= index) {
+                        h6El.classList.replace('text-gray-200', 'text-primary');
+                    } else {
+                        h6El.classList.replace('text-primary', 'text-gray-200')
+                    }
+                })
+
+                leftBorderEls.forEach((els) => {
+                    const currentId = els.getAttribute('data-stage-id');
+                    if (parseInt(currentId) <= parseInt(id)) {
+                        els.classList.replace('h-0', 'h-full');
+                    } else {
+                        els.classList.replace('h-full', 'h-0')
+                    }
+                })
+
+                contentEls.forEach((contentEl) => {
+                    if (contentEl.getAttribute('id') == `stage-${id}-content`) {
+                        contentEl.classList.replace('hidden', 'block')
+                    } else {
+                        contentEl.classList.replace('block', 'hidden')
+                    }
+                })
+            })
+        })
+
+
+
     </script>
     <!-- JavaScript -->
 </body>
