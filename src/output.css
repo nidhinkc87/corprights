@@ -1745,10 +1745,6 @@ h4{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-white\/\[4\%\]{
-  background-color: rgb(255 255 255 / 4%);
-}
-
 .bg-opacity-75{
   --tw-bg-opacity: 0.75;
 }
@@ -1960,11 +1956,6 @@ h4{
   padding-bottom: 1.5rem;
 }
 
-.py-8{
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-\[10px\]{
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1992,6 +1983,10 @@ h4{
 
 .pb-1{
   padding-bottom: 0.25rem;
+}
+
+.pb-10{
+  padding-bottom: 2.5rem;
 }
 
 .pb-16{
@@ -2050,6 +2045,10 @@ h4{
   padding-top: 6rem;
 }
 
+.pt-28{
+  padding-top: 7rem;
+}
+
 .pt-3{
   padding-top: 0.75rem;
 }
@@ -2086,16 +2085,12 @@ h4{
   padding-top: 89px;
 }
 
-.pt-28{
-  padding-top: 7rem;
+.pt-\[72px\]{
+  padding-top: 72px;
 }
 
-.pb-12{
-  padding-bottom: 3rem;
-}
-
-.pb-10{
-  padding-bottom: 2.5rem;
+.pt-\[2px\]{
+  padding-top: 2px;
 }
 
 .text-left{
@@ -3022,10 +3017,6 @@ h4{
     display: block;
   }
 
-  .lg\:flex{
-    display: flex;
-  }
-
   .lg\:hidden{
     display: none;
   }
@@ -3181,16 +3172,8 @@ h4{
     padding-bottom: 1.5rem;
   }
 
-  .lg\:pb-0{
-    padding-bottom: 0px;
-  }
-
   .lg\:pb-20{
     padding-bottom: 5rem;
-  }
-
-  .lg\:pt-0{
-    padding-top: 0px;
   }
 
   .lg\:pt-10{
@@ -3259,10 +3242,6 @@ h4{
 
   .xl\:col-span-5{
     grid-column: span 5 / span 5;
-  }
-
-  .xl\:col-span-6{
-    grid-column: span 6 / span 6;
   }
 
   .xl\:col-span-8{
@@ -3343,6 +3322,14 @@ h4{
 
   .xl\:mt-\[70px\]{
     margin-top: 70px;
+  }
+
+  .xl\:-mt-\[50\%\]{
+    margin-top: -50%;
+  }
+
+  .xl\:-mt-\[58\%\]{
+    margin-top: -58%;
   }
 
   .xl\:block{
@@ -3475,6 +3462,10 @@ h4{
     gap: 3.5rem;
   }
 
+  .xl\:gap-4{
+    gap: 1rem;
+  }
+
   .xl\:gap-5{
     gap: 1.25rem;
   }
@@ -3485,10 +3476,6 @@ h4{
 
   .xl\:gap-\[70px\]{
     gap: 70px;
-  }
-
-  .xl\:gap-4{
-    gap: 1rem;
   }
 
   .xl\:space-y-12 > :not([hidden]) ~ :not([hidden]){
@@ -3729,6 +3716,10 @@ h4{
 
   .\32xl\:mt-16{
     margin-top: 4rem;
+  }
+
+  .\32xl\:-mt-\[80\%\]{
+    margin-top: -80%;
   }
 
   .\32xl\:h-\[72px\]{
