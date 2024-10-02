@@ -1646,10 +1646,6 @@ h4{
   border-left-width: 2.5px;
 }
 
-.border-r{
-  border-right-width: 1px;
-}
-
 .border-none{
   border-style: none;
 }
@@ -1792,6 +1788,34 @@ h4{
 
 .bg-primary-gradient{
   background-image: linear-gradient(93.94deg, #017275 6.45%, #2BB162 93.55%);
+}
+
+.bg-\[url\(\'assets\/about\/bg\/hero-banner\.jpg\'\)\]{
+  background-image: url('assets/about/bg/hero-banner.jpg');
+}
+
+.bg-\[url\(\'assets\/about\/bg\/roadmap\.png\'\)\]{
+  background-image: url('assets/about/bg/roadmap.png');
+}
+
+.bg-\[url\(\'assets\/about\/bg\/why-us\.jpg\'\)\]{
+  background-image: url('assets/about/bg/why-us.jpg');
+}
+
+.bg-\[url\(\'assets\/contact\/contact-bg\.jpg\'\)\]{
+  background-image: url('assets/contact/contact-bg.jpg');
+}
+
+.bg-\[url\(\'assets\/home\/bg\/home-banner\.jpg\'\)\]{
+  background-image: url('assets/home/bg/home-banner.jpg');
+}
+
+.bg-\[url\(\'assets\/license\/bg\/hero-banner\.jpg\'\)\]{
+  background-image: url('assets/license/bg/hero-banner.jpg');
+}
+
+.bg-\[url\(\'assets\/service\/bg\/hero-banner\.jpg\'\)\]{
+  background-image: url('assets/service/bg/hero-banner.jpg');
 }
 
 .bg-contain{
@@ -2030,8 +2054,8 @@ h4{
   padding-left: 1rem;
 }
 
-.pl-5{
-  padding-left: 1.25rem;
+.pl-6{
+  padding-left: 1.5rem;
 }
 
 .pl-8{
@@ -2102,10 +2126,6 @@ h4{
   padding-top: 89px;
 }
 
-.pl-6{
-  padding-left: 1.5rem;
-}
-
 .text-left{
   text-align: left;
 }
@@ -2116,10 +2136,6 @@ h4{
 
 .text-start{
   text-align: start;
-}
-
-.text-end{
-  text-align: end;
 }
 
 .font-righteous{
@@ -2745,10 +2761,6 @@ h4{
 }
 
 @media not all and (min-width: 768px){
-  .max-md\:-mt-\[17px\]{
-    margin-top: -17px;
-  }
-
   .max-md\:-mt-\[18px\]{
     margin-top: -18px;
   }
@@ -2990,6 +3002,10 @@ h4{
     background-image: none;
   }
 
+  .md\:bg-\[url\(\'assets\/home\/bg\/home-banner\.jpg\'\)\]{
+    background-image: url('assets/home/bg/home-banner.jpg');
+  }
+
   .md\:p-6{
     padding: 1.5rem;
   }
@@ -3115,6 +3131,10 @@ h4{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-\[\.8fr\2c 1\.5fr\]{
+    grid-template-columns: .8fr 1.5fr;
+  }
+
   .lg\:grid-cols-\[1fr_minmax\(0\2c 0\.8fr\)\]{
     grid-template-columns: 1fr minmax(0,0.8fr);
   }
@@ -3133,6 +3153,10 @@ h4{
 
   .lg\:gap-12{
     gap: 3rem;
+  }
+
+  .lg\:gap-14{
+    gap: 3.5rem;
   }
 
   .lg\:gap-3{
@@ -3164,6 +3188,10 @@ h4{
 
   .lg\:border-l{
     border-left-width: 1px;
+  }
+
+  .lg\:border-r{
+    border-right-width: 1px;
   }
 
   .lg\:px-12{
@@ -3228,6 +3256,10 @@ h4{
 
   .lg\:pb-20{
     padding-bottom: 5rem;
+  }
+
+  .lg\:pr-14{
+    padding-right: 3.5rem;
   }
 
   .lg\:pt-10{
@@ -3470,10 +3502,6 @@ h4{
 
   .xl\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .xl\:grid-cols-\[\.8fr\2c 1\.5fr\]{
-    grid-template-columns: .8fr 1.5fr;
   }
 
   .xl\:grid-cols-\[minmax\(0\2c 0\.67fr\)_1fr\]{
