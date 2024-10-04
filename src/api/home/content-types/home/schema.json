@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.home-banner"
+    },
+    "opportunity_count": {
+      "type": "integer",
+      "required": true
+    },
+    "opportunity_times": {
+      "type": "integer",
+      "required": true
+    },
+    "opportunity_percent": {
+      "type": "integer",
+      "required": true
+    },
+    "feature_cards": {
+      "displayName": "HomeCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.home-card"
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
+    },
+    "awards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::award.award"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    }
+  }
+}

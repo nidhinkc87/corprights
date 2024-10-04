@@ -23,11 +23,6 @@
       "allowedTypes": [
         "images"
       ]
-    },
-    "show_in_home": {
-      "type": "boolean",
-      "default": false,
-      "required": true
     }
   }
 }

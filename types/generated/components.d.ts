@@ -122,6 +122,34 @@ export interface CustomPhraseBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomHomeCard extends Struct.ComponentSchema {
+  collectionName: 'components_custom_home_cards';
+  info: {
+    displayName: 'HomeCard';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface CustomHomeBanner extends Struct.ComponentSchema {
+  collectionName: 'components_custom_home_banners';
+  info: {
+    displayName: 'HomeBanner';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    highlight_text: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    button_text: Schema.Attribute.String & Schema.Attribute.Required;
+    button_link: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface CustomBenefit extends Struct.ComponentSchema {
   collectionName: 'components_custom_benefits';
   info: {
@@ -147,6 +175,8 @@ declare module '@strapi/strapi' {
       'custom.stage': CustomStage;
       'custom.process': CustomProcess;
       'custom.phrase-block': CustomPhraseBlock;
+      'custom.home-card': CustomHomeCard;
+      'custom.home-banner': CustomHomeBanner;
       'custom.benefit': CustomBenefit;
     }
   }
