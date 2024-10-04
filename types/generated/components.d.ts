@@ -1,5 +1,56 @@
 import type { Struct, Schema } from '@strapi/strapi';
 
+export interface CustomStage extends Struct.ComponentSchema {
+  collectionName: 'components_custom_stages';
+  info: {
+    displayName: 'Stage';
+    icon: 'plus';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
+    cards: Schema.Attribute.Component<'elements.feature-tile', true>;
+  };
+}
+
+export interface CustomProcess extends Struct.ComponentSchema {
+  collectionName: 'components_custom_processes';
+  info: {
+    displayName: 'Process';
+    icon: 'filter';
+    description: '';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
+    cards: Schema.Attribute.Component<'elements.feature-tile', true>;
+  };
+}
+
+export interface CustomPhraseBlock extends Struct.ComponentSchema {
+  collectionName: 'components_custom_phrase_blocks';
+  info: {
+    displayName: 'PhraseBlock';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    feature: Schema.Attribute.Component<'elements.phrase', true>;
+  };
+}
+
+export interface CustomBenefit extends Struct.ComponentSchema {
+  collectionName: 'components_custom_benefits';
+  info: {
+    displayName: 'Benefit';
+    icon: 'chartPie';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    cards: Schema.Attribute.Component<'elements.feature-tile', true>;
+  };
+}
+
 export interface ElementsPhrase extends Struct.ComponentSchema {
   collectionName: 'components_elements_phrases';
   info: {
@@ -72,70 +123,19 @@ export interface ElementsBanner extends Struct.ComponentSchema {
   };
 }
 
-export interface CustomStage extends Struct.ComponentSchema {
-  collectionName: 'components_custom_stages';
-  info: {
-    displayName: 'Stage';
-    icon: 'plus';
-  };
-  attributes: {
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    image: Schema.Attribute.Media<'images'>;
-    cards: Schema.Attribute.Component<'elements.feature-tile', true>;
-  };
-}
-
-export interface CustomProcess extends Struct.ComponentSchema {
-  collectionName: 'components_custom_processes';
-  info: {
-    displayName: 'Process';
-    icon: 'filter';
-    description: '';
-  };
-  attributes: {
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    description: Schema.Attribute.Text;
-    cards: Schema.Attribute.Component<'elements.feature-tile', true>;
-  };
-}
-
-export interface CustomPhraseBlock extends Struct.ComponentSchema {
-  collectionName: 'components_custom_phrase_blocks';
-  info: {
-    displayName: 'PhraseBlock';
-    icon: 'bulletList';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    feature: Schema.Attribute.Component<'elements.phrase', true>;
-  };
-}
-
-export interface CustomBenefit extends Struct.ComponentSchema {
-  collectionName: 'components_custom_benefits';
-  info: {
-    displayName: 'Benefit';
-    icon: 'chartPie';
-  };
-  attributes: {
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    cards: Schema.Attribute.Component<'elements.feature-tile', true>;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'custom.stage': CustomStage;
+      'custom.process': CustomProcess;
+      'custom.phrase-block': CustomPhraseBlock;
+      'custom.benefit': CustomBenefit;
       'elements.phrase': ElementsPhrase;
       'elements.markdown-tile': ElementsMarkdownTile;
       'elements.markdown-content-block': ElementsMarkdownContentBlock;
       'elements.feature-tile': ElementsFeatureTile;
       'elements.feature-image-tile': ElementsFeatureImageTile;
       'elements.banner': ElementsBanner;
-      'custom.stage': CustomStage;
-      'custom.process': CustomProcess;
-      'custom.phrase-block': CustomPhraseBlock;
-      'custom.benefit': CustomBenefit;
     }
   }
 }
