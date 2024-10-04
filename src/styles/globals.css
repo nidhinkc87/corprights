@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0, 0%, 100%;
+  --foreground: 0 0% 9%;
+
+  --primary: 137 57% 46%;
+  --primary-50: 137 81% 95%;
+  --primary-100: 137 72% 86%;
+  --primary-600: 137 65% 37%;
+  --primary-700: 137 63% 30%;
+  --primary-800: 137 59% 27%;
+
+  --secondary: 182 98% 23%;
+
+  --dark: 0 0% 20%;
+  --white: 0 0% 100%;
+
+  --gray-100: 0 0% 88%;
+  --gray-200: 0 0% 74%;
+  --gray-300: 0 0% 60%;
+  --gray-400: 0 0% 44%;
+  --gray-500: 0 0% 31%;
+  --gray-600: 0 0% 20%;
+
+  --card: 0 0% 98%;
+  --success: 137 65% 50%;
+  --warning: 42 66% 56%;
+  --error: 0 81% 62%;
+  --input: 0 0% 81%;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+  h1 {
+    @apply text-white font-extrabold text-5xl xl:text-8xl;
+  }
+  h2 {
+    @apply font-bold text-4xl xl:text-7xl;
+  }
+  h3 {
+    @apply text-4xl xl:text-5xl 2xl:text-6xl font-extrabold;
+  }
+  h4 {
+    @apply text-2xl xl:text-4xl 2xl:text-5xl font-bold;
+  }
+}
