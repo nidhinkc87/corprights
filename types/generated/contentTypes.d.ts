@@ -485,6 +485,35 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiAwardAward extends Struct.CollectionTypeSchema {
+  collectionName: 'awards';
+  info: {
+    singularName: 'award';
+    pluralName: 'awards';
+    displayName: 'Award';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    show_in_home: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::award.award'>;
+  };
+}
+
 export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   collectionName: 'blogs';
   info: {
@@ -548,6 +577,34 @@ export interface ApiBlogCategoryBlogCategory
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::blog-category.blog-category'
+    >;
+  };
+}
+
+export interface ApiClientLogoClientLogo extends Struct.CollectionTypeSchema {
+  collectionName: 'client_logos';
+  info: {
+    singularName: 'client-logo';
+    pluralName: 'client-logos';
+    displayName: 'ClientLogo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::client-logo.client-logo'
     >;
   };
 }
@@ -617,6 +674,44 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::license.license'
+    >;
+  };
+}
+
+export interface ApiRoadMapRoadMap extends Struct.CollectionTypeSchema {
+  collectionName: 'road_maps';
+  info: {
+    singularName: 'road-map';
+    pluralName: 'road-maps';
+    displayName: 'RoadMap';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    year: Schema.Attribute.String & Schema.Attribute.Required;
+    subtitle: Schema.Attribute.String & Schema.Attribute.Required;
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::road-map.road-map'
     >;
   };
 }
@@ -1100,10 +1195,13 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::award.award': ApiAwardAward;
       'api::blog.blog': ApiBlogBlog;
       'api::blog-category.blog-category': ApiBlogCategoryBlogCategory;
+      'api::client-logo.client-logo': ApiClientLogoClientLogo;
       'api::faq.faq': ApiFaqFaq;
       'api::license.license': ApiLicenseLicense;
+      'api::road-map.road-map': ApiRoadMapRoadMap;
       'api::service.service': ApiServiceService;
       'api::team.team': ApiTeamTeam;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
