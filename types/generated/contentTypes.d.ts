@@ -552,12 +552,123 @@ export interface ApiBlogCategoryBlogCategory
   };
 }
 
+export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
+  collectionName: 'faqs';
+  info: {
+    singularName: 'faq';
+    pluralName: 'faqs';
+    displayName: 'Faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+    answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'>;
+  };
+}
+
+export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
+  collectionName: 'licenses';
+  info: {
+    singularName: 'license';
+    pluralName: 'licenses';
+    displayName: 'License';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    related_licenses: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::license.license'
+    >;
+    related_faqs: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'>;
+    banner: Schema.Attribute.Component<'elements.banner', false>;
+    overview: Schema.Attribute.Component<'elements.markdown-tile', false>;
+    benefit: Schema.Attribute.Component<'custom.benefit', false>;
+    eligibility: Schema.Attribute.Component<'custom.phrase-block', false>;
+    process: Schema.Attribute.Component<'custom.process', false>;
+    doc_requirement: Schema.Attribute.Component<'custom.process', true>;
+    requirement: Schema.Attribute.Component<
+      'elements.markdown-content-block',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::license.license'
+    >;
+  };
+}
+
+export interface ApiServiceService extends Struct.CollectionTypeSchema {
+  collectionName: 'services';
+  info: {
+    singularName: 'service';
+    pluralName: 'services';
+    displayName: 'Service';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    show_in_home: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    related_services: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service.service'
+    >;
+    related_faqs: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'>;
+    banner: Schema.Attribute.Component<'elements.banner', false>;
+    overview: Schema.Attribute.Component<'elements.markdown-tile', false>;
+    benefit: Schema.Attribute.Component<'custom.benefit', false>;
+    stage: Schema.Attribute.Component<'custom.stage', true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service.service'
+    >;
+  };
+}
+
 export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
   collectionName: 'testimonials';
   info: {
     singularName: 'testimonial';
     pluralName: 'testimonials';
     displayName: 'Testimonial';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -567,6 +678,9 @@ export interface ApiTestimonialTestimonial extends Struct.CollectionTypeSchema {
     designation: Schema.Attribute.String & Schema.Attribute.Required;
     profile_image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     testimonial: Schema.Attribute.Text & Schema.Attribute.Required;
+    disabled: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -959,6 +1073,9 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog.blog': ApiBlogBlog;
       'api::blog-category.blog-category': ApiBlogCategoryBlogCategory;
+      'api::faq.faq': ApiFaqFaq;
+      'api::license.license': ApiLicenseLicense;
+      'api::service.service': ApiServiceService;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;

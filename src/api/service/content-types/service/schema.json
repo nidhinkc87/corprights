@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "show_in_home": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "related_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    },
+    "related_faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.banner"
+    },
+    "overview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.markdown-tile"
+    },
+    "benefit": {
+      "displayName": "Benefit",
+      "type": "component",
+      "repeatable": false,
+      "component": "custom.benefit"
+    },
+    "stage": {
+      "displayName": "Stage",
+      "type": "component",
+      "repeatable": true,
+      "component": "custom.stage"
+    }
+  }
+}

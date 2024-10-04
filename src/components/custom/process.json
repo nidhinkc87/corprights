@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_custom_processes",
+  "info": {
+    "displayName": "Process",
+    "icon": "filter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-tile"
+    }
+  }
+}

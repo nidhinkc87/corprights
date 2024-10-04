@@ -4,7 +4,8 @@
   "info": {
     "singularName": "testimonial",
     "pluralName": "testimonials",
-    "displayName": "Testimonial"
+    "displayName": "Testimonial",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,15 +21,20 @@
       "required": true
     },
     "profile_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "testimonial": {
       "type": "text",
+      "required": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false,
       "required": true
     }
   }

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_custom_phrase_blocks",
+  "info": {
+    "displayName": "PhraseBlock",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "feature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.phrase"
+    }
+  }
+}

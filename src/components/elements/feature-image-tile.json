@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_feature_image_tiles",
+  "info": {
+    "displayName": "FeatureImageTile"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

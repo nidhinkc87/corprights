@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_custom_stages",
+  "info": {
+    "displayName": "Stage",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-tile"
+    }
+  }
+}

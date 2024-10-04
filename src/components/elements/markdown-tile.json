@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_markdown_tiles",
+  "info": {
+    "displayName": "MarkdownTile"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

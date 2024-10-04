@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_phrases",
+  "info": {
+    "displayName": "Phrase"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

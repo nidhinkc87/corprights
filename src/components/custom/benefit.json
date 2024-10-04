@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_custom_benefits",
+  "info": {
+    "displayName": "Benefit",
+    "icon": "chartPie"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-tile"
+    }
+  }
+}
