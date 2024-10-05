@@ -1,9 +1,10 @@
+import { Button } from "@/components/ui/Button";
+import CurrentYear from "@/components/common/CurrentYear";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import footerImage from "@/assets/home/footer-image.png";
 import footerLogo from "@/assets/logo/footer-logo.png";
-import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 
 const quickLinks = [
   { href: "/", name: "Home" },
@@ -30,8 +31,6 @@ const companyLinks = [
 ];
 
 function Footer() {
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
   return (
     <footer className="bg-foreground pb-[70px]">
       <div className="container space-y-6 md:space-y-12 2xl:space-y-[100px]">
@@ -273,7 +272,8 @@ function Footer() {
             <div className="flex flex-col lg:flex-row justify-center lg:justify-between">
               <div className="flex items-center justify-center text-gray-100">
                 <p className="text-base font-normal text-gray-100 p-3 text-center">
-                  © Corprights {currentYear} | All Rights Reserved
+                  Copyrights © {<CurrentYear />} All Rights Reserved By
+                  Corprights
                 </p>
 
                 <ul className="text-gray-100 hidden md:flex">
