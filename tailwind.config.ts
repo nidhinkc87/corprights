@@ -90,6 +90,10 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
       },
+      fontFamily: {
+        manrope: ["Manrope-VariableFont_wght"],
+        righteous: ["Righteous-Regular"],
+      },
       backgroundImage: {
         "primary-gradient":
           "linear-gradient(93.94deg, #017275 6.45%, #2BB162 93.55%)",
