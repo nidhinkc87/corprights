@@ -24,6 +24,8 @@ function Index() {
           className="hidden md:block absolute w-full h-full bottom-0 -z-10"
         />
       </div>
+
+      <GlobalClients />
     </>
   );
 }
