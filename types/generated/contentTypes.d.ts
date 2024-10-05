@@ -779,6 +779,7 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
       'elements.markdown-content-block',
       false
     >;
+    description: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -858,6 +859,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     overview: Schema.Attribute.Component<'elements.markdown-tile', false>;
     benefit: Schema.Attribute.Component<'custom.benefit', false>;
     stage: Schema.Attribute.Component<'custom.stage', true>;
+    description: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

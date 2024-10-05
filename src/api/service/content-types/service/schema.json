@@ -56,6 +56,9 @@
       "type": "component",
       "repeatable": true,
       "component": "custom.stage"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }

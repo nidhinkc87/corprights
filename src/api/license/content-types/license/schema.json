@@ -64,6 +64,9 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.markdown-content-block"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
