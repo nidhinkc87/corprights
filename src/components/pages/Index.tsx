@@ -3,6 +3,8 @@ import React from "react";
 
 import heroBanner from "@/assets/home/bg/home-banner.jpg";
 import heroBg from "@/assets/home/bg/light-gradient.png";
+import FeatureCardSection from "@/components/sections/Home/FeatureCardSection";
+import GlobalClients from "@/components/sections/Home/GlobalClients";
 import Hero from "@/components/sections/Home/Hero";
 import Overview from "@/components/sections/Home/Overview";
 
@@ -26,6 +28,8 @@ function Index() {
       </div>
 
       <GlobalClients />
+
+      <FeatureCardSection />
     </>
   );
 }
