@@ -24,6 +24,7 @@
   --gray-400: 0 0% 44%;
   --gray-500: 0 0% 31%;
   --gray-600: 0 0% 20%;
+  --gray-700: 220 12% 43%;
 
   --card: 0 0% 98%;
   --success: 137 65% 50%;
@@ -54,11 +55,13 @@
 }
 
 @font-face {
-  font-family: 'Manrope-VariableFont_wght';
-  src: local('Manrope-VariableFont_wght'), url(../assets/fonts/Manrope-VariableFont_wght.ttf) format('truetype');
+  font-family: "Manrope-VariableFont_wght";
+  src: local("Manrope-VariableFont_wght"),
+    url(../assets/fonts/Manrope-VariableFont_wght.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: 'Righteous-Regular';
-  src: local('Righteous-Regular'), url(../assets/fonts/Righteous-Regular.ttf) format('truetype');
+  font-family: "Righteous-Regular";
+  src: local("Righteous-Regular"),
+    url(../assets/fonts/Righteous-Regular.ttf) format("truetype");
 }

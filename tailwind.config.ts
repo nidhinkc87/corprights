@@ -64,6 +64,7 @@ const config: Config = {
           400: "hsl(var(--gray-400))",
           500: "hsl(var(--gray-500))",
           600: "hsl(var(--gray-600))",
+          700: "hsl(var(--gray-700))",
         },
         dark: "hsl(var(--dark))",
         white: "hsl(var(--white))",

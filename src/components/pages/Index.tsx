@@ -10,6 +10,7 @@ import Faq from "@/components/sections/pages/home/Faq";
 import FeatureCardSection from "@/components/sections/pages/home/FeatureCardSection";
 import GlobalClients from "@/components/sections/pages/home/GlobalClients";
 import Overview from "@/components/sections/pages/home/Overview";
+import Services from "@/components/sections/pages/home/Services";
 
 function Index() {
   return (
@@ -33,6 +34,8 @@ function Index() {
       <GlobalClients />
 
       <FeatureCardSection />
+
+      <Services />
 
       <CostCalculator />
 
