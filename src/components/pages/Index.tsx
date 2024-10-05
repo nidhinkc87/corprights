@@ -3,13 +3,13 @@ import React from "react";
 
 import heroBanner from "@/assets/home/bg/home-banner.jpg";
 import heroBg from "@/assets/home/bg/light-gradient.png";
-import BrochureBanner from "@/components/sections/Home/BrochureBanner";
-import CostCalculator from "@/components/sections/Home/CostCalculator";
-import Faq from "@/components/sections/Home/Faq";
-import FeatureCardSection from "@/components/sections/Home/FeatureCardSection";
-import GlobalClients from "@/components/sections/Home/GlobalClients";
-import Hero from "@/components/sections/Home/Hero";
-import Overview from "@/components/sections/Home/Overview";
+import Hero from "@/components/sections/pages/home/Hero";
+import BrochureBanner from "@/components/sections/pages/home/BrochureBanner";
+import CostCalculator from "@/components/sections/pages/home/CostCalculator";
+import Faq from "@/components/sections/pages/home/Faq";
+import FeatureCardSection from "@/components/sections/pages/home/FeatureCardSection";
+import GlobalClients from "@/components/sections/pages/home/GlobalClients";
+import Overview from "@/components/sections/pages/home/Overview";
 
 function Index() {
   return (

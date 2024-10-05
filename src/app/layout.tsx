@@ -1,8 +1,8 @@
 import "@/styles/globals.css";
 
-import Footer from "@/components/sections/Footer/Footer";
-import Header from "@/components/sections/Header/Header";
+import Footer from "@/components/sections/layout/footer/Footer";
 import type { Metadata } from "next";
+import Header from "@/components/sections/layout/header/Header";
 
 export const metadata: Metadata = {
   title: "Corprights",

@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import  { useState } from "react";
 import LogoImg from "@/assets/logo/logo.png";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import Navbar from "@/components/sections/Header/Navbar";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/sections/layout/header/Navbar";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
