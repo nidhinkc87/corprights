@@ -764,6 +764,7 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
     related_licenses: Schema.Attribute.Relation<
       'oneToMany',
       'api::license.license'
@@ -779,7 +780,6 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
       'elements.markdown-content-block',
       false
     >;
-    description: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -847,6 +847,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
+    description: Schema.Attribute.Text;
     show_in_home: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
@@ -859,7 +860,6 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     overview: Schema.Attribute.Component<'elements.markdown-tile', false>;
     benefit: Schema.Attribute.Component<'custom.benefit', false>;
     stage: Schema.Attribute.Component<'custom.stage', true>;
-    description: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

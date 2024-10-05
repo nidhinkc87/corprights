@@ -20,6 +20,9 @@
       "type": "uid",
       "required": true
     },
+    "description": {
+      "type": "text"
+    },
     "related_licenses": {
       "type": "relation",
       "relation": "oneToMany",
@@ -64,9 +67,7 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.markdown-content-block"
-    },
-    "description": {
-      "type": "text"
     }
+
   }
 }
