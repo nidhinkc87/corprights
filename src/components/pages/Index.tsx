@@ -3,6 +3,7 @@ import React from "react";
 
 import heroBanner from "@/assets/home/bg/home-banner.jpg";
 import heroBg from "@/assets/home/bg/light-gradient.png";
+import BrochureBanner from "@/components/sections/Home/BrochureBanner";
 import CostCalculator from "@/components/sections/Home/CostCalculator";
 import Faq from "@/components/sections/Home/Faq";
 import FeatureCardSection from "@/components/sections/Home/FeatureCardSection";
@@ -36,6 +37,8 @@ function Index() {
       <CostCalculator />
 
       <Faq />
+
+      <BrochureBanner />
     </>
   );
 }
