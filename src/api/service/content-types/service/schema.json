@@ -19,9 +19,17 @@
     "slug": {
       "type": "uid",
       "required": true
-    },  
+    },
     "description": {
       "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     },
     "show_in_home": {
       "type": "boolean",

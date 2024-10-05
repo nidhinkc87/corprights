@@ -765,6 +765,7 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     related_licenses: Schema.Attribute.Relation<
       'oneToMany',
       'api::license.license'
@@ -848,6 +849,7 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     show_in_home: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
