@@ -61,13 +61,13 @@ type ImageAttributes = {
   provider_metadata: string | null;
 } & EntityAttributes;
 
-type Image = {} & Entity<ImageAttributes>;
+type Image = {} & ImageAttributes;
 
 type MetaSocial = {
   socialNetwork: string;
   title: string;
   description: string;
-  image: StrapiResponse<Image>;
+  image: Image;
   url: string;
   type: string;
   siteName: string;
@@ -76,7 +76,7 @@ type MetaSocial = {
 type StrapiMetaData = {
   metaTitle: string;
   metaDescription: string;
-  metaImage: StrapiResponse<Image>;
+  metaImage: Image;
   canonicalURL: string;
   metaRobots: string;
   structuredData: string;
@@ -101,4 +101,4 @@ type VideoAttributes = {
   updatedAt: string;
 } & EntityAttributes;
 
-type Video = {} & Entity<VideoAttributes>;
+type Video = {} & VideoAttributes;
