@@ -7,6 +7,10 @@ interface LicenseAttributes {
   banner: Banner;
   overview: Overview;
   benefit: Benefit;
+  requirement: Requirement;
+  doc_requirement: DocRequirement;
+  eligibility: Eligibility;
+  process: Process;
   related_licenses: License[];
   related_faqs: Faq[];
 }
