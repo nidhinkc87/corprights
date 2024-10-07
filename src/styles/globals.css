@@ -48,11 +48,8 @@
   h4 {
     @apply text-2xl xl:text-4xl 2xl:text-5xl font-bold;
   }
-}
-
-@layer components {
-  .nav-item {
-    @apply flex justify-between gap-x-2 items-center px-4 py-4 xl:py-2 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary hover:bg-gray-100/10 ease-linear duration-300;
+  ::-webkit-scrollbar {
+    width: 0px  !important;
   }
 }
 
