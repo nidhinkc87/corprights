@@ -1,16 +1,23 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import React from "react";
 
 import heroBanner from "@/assets/home/bg/home-banner.jpg";
 import heroBg from "@/assets/home/bg/light-gradient.png";
-import Hero from "@/components/sections/pages/home/Hero";
 import BrochureBanner from "@/components/sections/pages/home/BrochureBanner";
 import CostCalculator from "@/components/sections/pages/home/CostCalculator";
 import Faq from "@/components/sections/pages/home/Faq";
 import FeatureCardSection from "@/components/sections/pages/home/FeatureCardSection";
 import GlobalClients from "@/components/sections/pages/home/GlobalClients";
+import Hero from "@/components/sections/pages/home/Hero";
 import Overview from "@/components/sections/pages/home/Overview";
 import Services from "@/components/sections/pages/home/Services";
+
+const Testimonials = dynamic(
+  () => import("@/components/sections/pages/home/Testimonials"),
+  {
+    ssr: false,
+  }
+);
 
 function Index() {
   return (
@@ -42,6 +49,8 @@ function Index() {
       <Faq />
 
       <BrochureBanner />
+
+      <Testimonials />
     </>
   );
 }

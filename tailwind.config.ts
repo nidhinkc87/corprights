@@ -95,6 +95,12 @@ const config: Config = {
         manrope: ["Manrope-VariableFont_wght"],
         righteous: ["Righteous-Regular"],
       },
+      boxShadow: {
+        "card-20dp": "0px 24.29px 29.15px 0px #32324712",
+        "card-20dp-sm": "0px 20.64px 24.77px 0px #32324712",
+        "card-16dp": "0px 14.58px 19.43px 0px hsba(240, 30%, 28%, 0.08)",
+        "card-9dp": "0px 9.72px 9.72px 0px hsba(240, 30%, 28%, 0.08)",
+      },
       backgroundImage: {
         "primary-gradient":
           "linear-gradient(93.94deg, #017275 6.45%, #2BB162 93.55%)",
