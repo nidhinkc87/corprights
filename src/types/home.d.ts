@@ -8,6 +8,7 @@ interface HomePageAttributes extends EntityAttributes {
   feature_cards: FeatureCard[];
   faqs: Faq[];
   services: Service[];
+  awards: Award[];
 }
 
 type HomePage = {} & HomePageAttributes;

@@ -1,7 +1,9 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
+import { getStrapiURL } from "@/api";
 import heroBg from "@/assets/home/bg/light-gradient.png";
+import Awards from "@/components/sections/pages/home/Awards";
 import BrochureBanner from "@/components/sections/pages/home/BrochureBanner";
 import CostCalculator from "@/components/sections/pages/home/CostCalculator";
 import Faq from "@/components/sections/pages/home/Faq";
@@ -10,7 +12,6 @@ import GlobalClients from "@/components/sections/pages/home/GlobalClients";
 import Hero from "@/components/sections/pages/home/Hero";
 import Overview from "@/components/sections/pages/home/Overview";
 import Services from "@/components/sections/pages/home/Services";
-import { getStrapiURL } from "@/api";
 import HighlightTitle from "@/components/ui/HighlightTitle";
 
 const Testimonials = dynamic(
@@ -58,23 +59,27 @@ function Index({ homePage }: IndexProps) {
 
       <GlobalClients />
 
-      {homePage.feature_cards && homePage.feature_cards.length > 0 && (
+      {homePage?.feature_cards && homePage?.feature_cards?.length > 0 && (
         <FeatureCardSection features={homePage?.feature_cards} />
       )}
 
-      {homePage.services && homePage.services.length > 0 && (
+      {homePage?.services && homePage?.services?.length > 0 && (
         <Services services={homePage?.services} />
       )}
 
       <CostCalculator />
 
-      {homePage.faqs && homePage.faqs.length > 0 && (
+      {homePage?.faqs && homePage?.faqs.length > 0 && (
         <Faq faqs={homePage?.faqs} />
       )}
 
       <BrochureBanner />
 
       <Testimonials />
+
+      {homePage?.awards && homePage?.awards?.length > 0 && (
+        <Awards awards={homePage?.awards} />
+      )}
     </>
   );
 }

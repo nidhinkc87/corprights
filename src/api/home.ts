@@ -11,6 +11,7 @@ export async function getHomePageData() {
         "feature_cards.image",
         "faqs",
         "awards",
+        "awards.image",
         "blogs",
         "services",
         "services.image",
