@@ -1,5 +1,5 @@
-import React, { PropsWithChildren } from "react";
 import Image, { StaticImageData } from "next/image";
+import React, { PropsWithChildren } from "react";
 
 interface StaticRequire {
   default: StaticImageData;
@@ -31,7 +31,7 @@ export const BackgroundImage = ({
         fill
         style={{ objectFit: "cover", zIndex: -1 }}
         alt={alt ?? ""}
-        placeholder="blur"
+        placeholder={typeof src === "string" ? "empty" : "blur"}
       />
       {children}
     </div>

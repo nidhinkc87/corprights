@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
 import business1 from "@/assets/home/business/1.jpg";
 import business2 from "@/assets/home/business/2.jpg";
 import business3 from "@/assets/home/business/3.jpg";
@@ -76,7 +75,7 @@ const FeatureCardSection = () => {
                       y2="16.9591"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#017275" />
+                      <stop stopColor="#017275" />
                       <stop offset="1" stopColor="#2BB162" />
                     </linearGradient>
                   </defs>
@@ -186,8 +185,8 @@ const FeatureCardSection = () => {
                       y2="16.9591"
                       gradientUnits="userSpaceOnUse"
                     >
-                      <stop stop-color="#017275" />
-                      <stop offset="1" stop-color="#2BB162" />
+                      <stop stopColor="#017275" />
+                      <stop offset="1" stopColor="#2BB162" />
                     </linearGradient>
                   </defs>
                 </svg>
