@@ -1,26 +1,23 @@
+"use client";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-import scaleLogo from "@/assets/home/client.png";
-import descriptLogo from "@/assets/home/descript-client-logo.png";
-import mercuryLogo from "@/assets/home/mercury-client-logo.png";
-
-const clientLogos = [
-  {
-    name: "mercury",
-    image: mercuryLogo,
-  },
-  {
-    name: "scale",
-    image: scaleLogo,
-  },
-  {
-    name: "descript",
-    image: descriptLogo,
-  },
-];
+import { useEffect, useState } from "react";
+import { getClientLogo } from "@/api/clients-logo";
+import { getStrapiURL } from "@/api";
 
 const ClientsMarquee = () => {
+  const [clientLogos, setClientLogos] = useState<ClientLogo[]>();
+
+  useEffect(() => {
+    getClientLogo().then((res) => {
+      setClientLogos(res.data);
+    });
+  }, []);
+
+  if (clientLogos?.length === 0) {
+    return <></>;
+  }
   return (
     <Marquee autoFill>
       {clientLogos?.map((client, index) => (
@@ -29,12 +26,12 @@ const ClientsMarquee = () => {
           className="mx-8 rounded-xl overflow-hidden  w-[121.16px] xl:w-[245.56px] flex justify-center items-center"
         >
           <Image
-            src={client.image}
-            alt={client?.name}
+            src={getStrapiURL(client.image.url)}
+            alt={client?.title}
             width={245.56}
             height={76.4}
-            className="w-full invert"
-            sizes="245.56px"
+            className="w-full"
+            sizes="25vw"
           />
         </div>
       ))}

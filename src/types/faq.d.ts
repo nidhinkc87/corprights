@@ -1,7 +1,8 @@
 interface FaqAttributes extends EntityAttributes {
   id: number;
+  documentId: string;
   question: string;
   answer: string;
 }
 
-type Faq = {} & Entity<FaqAttributes>;
+type Faq = {} & FaqAttributes;

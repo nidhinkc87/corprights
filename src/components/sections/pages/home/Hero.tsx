@@ -28,6 +28,7 @@ const Hero = ({ title, description, bannerImg }: HeroProps) => {
             </div>
           </div>
         </div>
+        <div className="absolute inset-0 w-full h-full bg-black/60 -z-[1]"></div>
       </BackgroundImage>
     </section>
   );

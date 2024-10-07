@@ -6,25 +6,11 @@ import {
 } from "@/components/ui/Accordion";
 import React from "react";
 
-const faq = [
-  {
-    question: "What services does your company provide?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. Eleifend sed eget dui in morbi dui vel quam tempor. Urna sollicitudin commodo pretium vitae nunc. Lorem tortor vel consectetur porta varius consequat quis lectus. Libero in facilisis malesuada quis auctor felis quis.",
-  },
-  {
-    question: " How can I contact your company for inquiries?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. Eleifend sed eget dui in morbi dui vel quam tempor. Urna sollicitudin commodo pretium vitae nunc. Lorem tortor vel consectetur porta varius consequat quis lectus. Libero in facilisis malesuada quis auctor felis quis.",
-  },
-  {
-    question: "What is your pricing structure?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur. Eleifend sed eget dui in morbi dui vel quam tempor. Urna sollicitudin commodo pretium vitae nunc. Lorem tortor vel consectetur porta varius consequat quis lectus. Libero in facilisis malesuada quis auctor felis quis.",
-  },
-];
+interface FaqProps {
+  faqs: Faq[];
+}
 
-const Faq = () => {
+const Faq = ({ faqs }: FaqProps) => {
   return (
     <section className="py-16 xl:py-24 2xl:py-[130px]">
       <div className="container">
@@ -43,18 +29,18 @@ const Faq = () => {
 
           <div>
             <Accordion type="single" collapsible className="w-full">
-              {faq.map((faq, index) => (
+              {faqs?.map((faq, index) => (
                 <AccordionItem
                   key={`faq-item-${index}`}
                   value={`faq-item-${index}`}
                   className="border-gray-100"
                 >
                   <AccordionTrigger className="p-3 xl:p-6 data-[state=open]:bg-card hover:bg-card ">
-                    {faq.question}
+                    {faq?.question}
                   </AccordionTrigger>
 
                   <AccordionContent className="px-3 xl:px-6 pt-2 pb-1 xl:pb-6 overflow-hidden text-gray-400 bg-card text-xl font-normal max-h-[500px] ">
-                    {faq.answer}
+                    {faq?.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}

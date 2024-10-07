@@ -4,7 +4,11 @@ import React from "react";
 import serviceImg from "@/assets/home/bg/service.png";
 import ServicesMarquee from "@/components/elements/home/ServicesMarquee";
 
-function Services() {
+interface ServicesProps {
+  services: Service[];
+}
+
+function Services({ services }: ServicesProps) {
   return (
     <section className="py-16 xl:py-24 2xl:py-[130px] relative">
       <Image
@@ -44,7 +48,7 @@ function Services() {
 
           <div className="lg:w-1/2">
             <div className="w-full flex flex-col max-h-[375.21px] xl:max-h-[554px] flex-nowrap [mask-image:_linear-gradient(to_top,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-              <ServicesMarquee />
+              <ServicesMarquee services={services} />
             </div>
           </div>
         </div>

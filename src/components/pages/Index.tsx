@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
-import heroBanner from "@/assets/home/bg/home-banner.jpg";
 import heroBg from "@/assets/home/bg/light-gradient.png";
 import BrochureBanner from "@/components/sections/pages/home/BrochureBanner";
 import CostCalculator from "@/components/sections/pages/home/CostCalculator";
@@ -11,6 +10,8 @@ import GlobalClients from "@/components/sections/pages/home/GlobalClients";
 import Hero from "@/components/sections/pages/home/Hero";
 import Overview from "@/components/sections/pages/home/Overview";
 import Services from "@/components/sections/pages/home/Services";
+import { getStrapiURL } from "@/api";
+import HighlightTitle from "@/components/ui/HighlightTitle";
 
 const Testimonials = dynamic(
   () => import("@/components/sections/pages/home/Testimonials"),
@@ -19,17 +20,34 @@ const Testimonials = dynamic(
   }
 );
 
-function Index() {
+interface IndexProps {
+  homePage: HomePage;
+}
+
+function Index({ homePage }: IndexProps) {
+  const heroTitle = (
+    <h1>
+      <HighlightTitle
+        title={homePage?.banner?.title}
+        highlightText={homePage?.banner?.highlight_text}
+      />
+    </h1>
+  );
+
   return (
     <>
-      <div className="relative">
+      <div className="relative pt-[72px] xl:pt-[105px]">
         <Hero
           title={heroTitle}
-          description="Your Partner in Success: Quality Service, Trusted Expertise"
-          bannerImg={heroBanner}
+          description={homePage?.banner?.description}
+          bannerImg={getStrapiURL(homePage?.banner?.image?.url)}
         />
 
-        <Overview />
+        <Overview
+          opportunityCount={homePage?.opportunity_count}
+          opportunityPercent={homePage?.opportunity_percent}
+          opportunityTimes={homePage?.opportunity_times}
+        />
 
         <Image
           src={heroBg}
@@ -40,13 +58,19 @@ function Index() {
 
       <GlobalClients />
 
-      <FeatureCardSection />
+      {homePage.feature_cards && homePage.feature_cards.length > 0 && (
+        <FeatureCardSection features={homePage?.feature_cards} />
+      )}
 
-      <Services />
+      {homePage.services && homePage.services.length > 0 && (
+        <Services services={homePage?.services} />
+      )}
 
       <CostCalculator />
 
-      <Faq />
+      {homePage.faqs && homePage.faqs.length > 0 && (
+        <Faq faqs={homePage?.faqs} />
+      )}
 
       <BrochureBanner />
 
@@ -54,14 +78,5 @@ function Index() {
     </>
   );
 }
-
-const heroTitle = (
-  <h1>
-    Simplify Your Business Formation in{" "}
-    <span className="text-transparent bg-clip-text bg-primary-gradient">
-      Saudi Arabia.
-    </span>
-  </h1>
-);
 
 export default Index;

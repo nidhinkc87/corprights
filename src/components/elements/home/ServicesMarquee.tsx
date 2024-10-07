@@ -3,42 +3,10 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import ServiceMarqueeItem from "./ServiceMarqueeItem";
 
-import modalHero from "@/assets/home/modal-header.jpg";
-
-const services = [
-  {
-    name: "Venture Capital and Incubator",
-    image: modalHero,
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu. Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu.",
-  },
-  {
-    name: "Business Setup",
-    image: modalHero,
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu. Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu.",
-  },
-  {
-    name: "Business License",
-    image: modalHero,
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu. Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu.",
-  },
-  {
-    name: "GRO Services",
-    image: modalHero,
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu. Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu.",
-  },
-  {
-    name: "Employee Management",
-    image: modalHero,
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu. Lorem ipsum dolor sit amet consectetur. Morbi penatibus ut diam congue volutpat ipsum diam tristique magna. Commodo nunc pellentesque facilisi posuere convallis ac at aliquet cras. Purus a sagittis urna euismod curabitur eget nascetur sed metus. Mauris aliquam scelerisque diam quis arcu id facilisis pellentesque tincidunt. Vestibulum et dignissim ut arcu. Turpis consectetur mi in tellus imperdiet tincidunt. Ac bibendum sed adipiscing tellus. Pellentesque eu.",
-  },
-];
-
-const ServicesMarquee = () => {
+interface ServicesMarqueeProps {
+  services: Service[];
+}
+const ServicesMarquee = ({ services }: ServicesMarqueeProps) => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

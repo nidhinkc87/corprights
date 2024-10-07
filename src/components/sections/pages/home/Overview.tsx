@@ -5,7 +5,17 @@ import visionSaudiLogo from "@/assets/home/vision-saudi-logo.png";
 import investSaudi from "@/assets/home/invest-saudi.png";
 import review from "@/assets/home/review.png";
 
-const Overview = () => {
+interface OverviewProps {
+  opportunityCount: number;
+  opportunityTimes: number;
+  opportunityPercent: number;
+}
+
+const Overview = ({
+  opportunityCount,
+  opportunityPercent,
+  opportunityTimes,
+}: OverviewProps) => {
   return (
     <section className="pt-12 xl:pt-24 2xl:pt-[104px] 2xl:pb-16 relative">
       <div className="container mx-auto">
@@ -54,7 +64,7 @@ const Overview = () => {
         <div className="flex flex-col md:flex-row justify-between">
           <div className="">
             <h6 className="text-9xl 2xl:text-10xl font-righteous text-transparent bg-clip-text bg-primary-gradient">
-              900
+              {opportunityCount}
             </h6>
 
             <p className="text-base xl:text-3xl font-bold text-dark mt-3">
@@ -68,7 +78,7 @@ const Overview = () => {
 
           <div className="">
             <h6 className="text-9xl 2xl:text-10xl font-righteous text-transparent bg-clip-text bg-primary-gradient">
-              3x
+              {opportunityTimes}x
             </h6>
 
             <p className="text-base xl:text-3xl font-bold text-dark mt-3">
@@ -82,7 +92,7 @@ const Overview = () => {
 
           <div className="">
             <h6 className="text-9xl 2xl:text-10xl font-righteous text-transparent bg-clip-text bg-primary-gradient">
-              21%
+              {opportunityPercent}%
             </h6>
 
             <p className="text-base xl:text-3xl font-bold text-dark mt-3">
