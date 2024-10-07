@@ -6,6 +6,8 @@ interface BenefitProps {
 }
 
 export default function Benefit({ benefit, className }: BenefitProps) {
+  if (!benefit) return <></>;
+
   return (
     <section
       className={cn(

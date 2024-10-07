@@ -1,6 +1,6 @@
 import { getServiceBySlug, getServicesByLimit } from "@/api/service";
 
-import ServiceSection from "@/components/sections/service/ServiceSection";
+import ServiceSection from "@/components/pages/ServiceSection";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
