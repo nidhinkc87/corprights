@@ -13,6 +13,7 @@ export async function getHomePageData() {
         "awards",
         "awards.image",
         "blogs",
+        "blogs.image",
         "services",
         "services.image",
       ],

@@ -10,6 +10,7 @@ import Faq from "@/components/sections/pages/home/Faq";
 import FeatureCardSection from "@/components/sections/pages/home/FeatureCardSection";
 import GlobalClients from "@/components/sections/pages/home/GlobalClients";
 import Hero from "@/components/sections/pages/home/Hero";
+import LatestBlogs from "@/components/sections/pages/home/LatestBlogs";
 import Overview from "@/components/sections/pages/home/Overview";
 import Services from "@/components/sections/pages/home/Services";
 import HighlightTitle from "@/components/ui/HighlightTitle";
@@ -79,6 +80,10 @@ function Index({ homePage }: IndexProps) {
 
       {homePage?.awards && homePage?.awards?.length > 0 && (
         <Awards awards={homePage?.awards} />
+      )}
+
+      {homePage?.blogs && homePage?.blogs?.length > 0 && (
+        <LatestBlogs blogs={homePage?.blogs} />
       )}
     </>
   );
