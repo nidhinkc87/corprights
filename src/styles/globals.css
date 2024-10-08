@@ -55,13 +55,16 @@
 }
 
 @font-face {
-  font-family: "Manrope-VariableFont_wght";
-  src: local("Manrope-VariableFont_wght"),
-    url(../assets/fonts/Manrope-VariableFont_wght.ttf) format("truetype");
+  font-family: 'Manrope-VariableFont_wght';
+  src: local('Manrope-VariableFont_wght'), url(../assets/fonts/Manrope-VariableFont_wght.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 200 800;
 }
 
 @font-face {
-  font-family: "Righteous-Regular";
-  src: local("Righteous-Regular"),
-    url(../assets/fonts/Righteous-Regular.ttf) format("truetype");
+  font-family: 'Righteous-Regular';
+  src: local('Righteous-Regular'), url(../assets/fonts/Righteous-Regular.ttf) format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
