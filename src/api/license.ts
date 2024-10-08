@@ -14,3 +14,54 @@ export async function getLicensesByLimit(page?: number, limit?: number) {
     }
   );
 }
+
+export async function getLicenseBySlug(slug: string) {
+  return await fetchAPI<Array<License>>(
+    `/licenses`,
+    {
+      populate: {
+        banner: {
+          populate: {
+            image: true,
+          },
+        },
+        overview: true,
+        benefit: {
+          populate: {
+            cards: true,
+          },
+        },
+        requirement: {
+          populate: {
+            cards: true,
+          },
+        },
+        doc_requirement: {
+          populate: {
+            cards: true,
+          },
+        },
+        eligibility: {
+          populate: { feature: true },
+        },
+        process: {
+          populate: {
+            cards: true,
+          },
+        },
+        related_faqs: true,
+        related_licenses: {
+          populate: {
+            image: true,
+          },
+        },
+      },
+      filters: {
+        slug: {
+          $eq: slug,
+        },
+      },
+    },
+    { next: { tags: ["license"] } }
+  );
+}
