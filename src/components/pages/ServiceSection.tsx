@@ -1,6 +1,7 @@
 import Benefit from "@/components/sections/common/Benefit";
 import BookingBanner from "@/components/sections/common/BookingBanner";
-import DownloadBanner from "@/components/sections/common/DownloadBanner";
+import BrochureBanner from "@/components/sections/pages/home/BrochureBanner";
+import Faq from "@/components/sections/pages/home/Faq";
 import HeroSection from "@/components/sections/common/HeroSection";
 import Overview from "@/components/sections/common/Overview";
 import RelatedCards from "@/components/sections/common/RelatedCards";
@@ -21,7 +22,7 @@ export default function ServiceSection({ service }: ServiceSectionProps) {
 
       <Stages stages={service?.stage} />
 
-      <DownloadBanner docLink="" />
+      <BrochureBanner />
 
       {service?.related_services?.length > 0 && (
         <RelatedCards services={service?.related_services} />
@@ -29,7 +30,9 @@ export default function ServiceSection({ service }: ServiceSectionProps) {
 
       <BookingBanner className="pt-16 2xl:pt-20" />
 
-      {service?.related_faqs?.length > 0 && <>Faq</>}
+      {service?.related_faqs?.length > 0 && (
+        <Faq faqs={service?.related_faqs} />
+      )}
     </>
   );
 }

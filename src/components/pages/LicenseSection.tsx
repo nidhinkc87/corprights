@@ -1,11 +1,13 @@
 import Benefit from "@/components/sections/common/Benefit";
+import BrochureBanner from "@/components/sections/pages/home/BrochureBanner";
 import DocsSection from "@/components/sections/common/DocsSection";
-import DownloadBanner from "@/components/sections/common/DownloadBanner";
 import Eligibility from "@/components/sections/common/Eligibility";
+import Faq from "@/components/sections/pages/home/Faq";
 import HeroSection from "@/components/sections/common/HeroSection";
 import Overview from "@/components/sections/common/Overview";
 import RelatedCards from "@/components/sections/common/RelatedCards";
 import RequirementSection from "@/components/sections/common/RequirementSection";
+import Testimonials from "@/components/sections/pages/home/Testimonials";
 import dynamic from "next/dynamic";
 
 const ApplicationProcess = dynamic(
@@ -36,14 +38,20 @@ export default function LicenseSection({ license }: LicenseSectionProps) {
       <RequirementSection requirement={license?.requirement} />
 
       {license?.related_licenses?.length > 0 && (
-        <RelatedCards services={license?.related_licenses} isService={false} />
+        <RelatedCards
+          services={license?.related_licenses}
+          isService={false}
+          className="pb-16 2xl:pb-20"
+        />
       )}
 
-      <DownloadBanner docLink="" />
+      <BrochureBanner />
 
-      {license?.related_faqs?.length > 0 && <>Faq</>}
+      {license?.related_faqs?.length > 0 && (
+        <Faq faqs={license?.related_faqs} />
+      )}
 
-      <>testimonials</>
+      <Testimonials />
     </>
   );
 }
