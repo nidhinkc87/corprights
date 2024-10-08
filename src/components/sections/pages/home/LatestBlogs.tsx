@@ -32,7 +32,7 @@ const LatestBlogs = ({ blogs }: LatestBlogsProps) => {
                   width={224}
                   height={224}
                   alt={blog?.title}
-                  className="w-full aspect-square self-center"
+                  className="w-full h-full"
                 />
               </div>
 

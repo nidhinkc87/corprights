@@ -1,15 +1,24 @@
 import { BackgroundImage } from "@/components/ui/BackgroundImage";
 import { Button } from "@/components/ui/Button";
 import { StaticImageData } from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface HeroProps {
   title: React.ReactNode;
   description: string;
   bannerImg: StaticImageData | string;
+  buttonText: string;
+  buttonLink: string;
 }
 
-const Hero = ({ title, description, bannerImg }: HeroProps) => {
+const Hero = ({
+  title,
+  description,
+  bannerImg,
+  buttonText,
+  buttonLink,
+}: HeroProps) => {
   return (
     <section className="pt-[89px] lg:pt-[106px] container mx-auto relative">
       <BackgroundImage src={bannerImg} alt="hero-banner">
@@ -23,7 +32,7 @@ const Hero = ({ title, description, bannerImg }: HeroProps) => {
               </p>
 
               <Button className="mx-auto mt-10 px-8">
-                Book a free Consultation
+                <Link href={buttonLink}>{buttonText}</Link>
               </Button>
             </div>
           </div>

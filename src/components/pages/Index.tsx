@@ -43,6 +43,8 @@ function Index({ homePage }: IndexProps) {
           title={heroTitle}
           description={homePage?.banner?.description}
           bannerImg={getStrapiURL(homePage?.banner?.image?.url)}
+          buttonLink={homePage?.banner?.button_link}
+          buttonText={homePage?.banner?.button_text}
         />
 
         <Overview
