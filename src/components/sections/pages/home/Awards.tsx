@@ -19,7 +19,7 @@ const Awards = ({ awards }: AwardsProps) => {
                 width={108.8}
                 height={108.8}
                 alt={award.title}
-                className="w-full"
+                className="w-full ease-linear duration-300 grayscale hover:grayscale-0"
               />
             </div>
           ))}
