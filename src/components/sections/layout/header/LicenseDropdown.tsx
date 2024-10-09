@@ -54,7 +54,7 @@ export default function LicenseDropdown() {
 
   return (
     <li className="relative xl:py-8 group cursor-pointer">
-      <span className="flex justify-between gap-x-2 items-center px-4 py-4 xl:py-2 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
+      <span className="flex justify-between gap-x-2 items-center px-4 py-4 xl:py-2 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary hover:bg-gray-100/10 ease-linear duration-300 rounded-[24px]">
         Licences
         <svg
           className="group-hover:rotate-180 ease-in-out duration-200"
@@ -77,11 +77,11 @@ export default function LicenseDropdown() {
           {licenses.map((license) => (
             <li
               key={license?.id}
-              className="relative group/child cursor-pointer p-4 hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]"
+              className="relative group/child cursor-pointer p-4 hover:bg-gray-100/10 ease-linear duration-300 rounded-[24px]"
             >
               <Link
                 href={`/licenses/${license?.slug}`}
-                className="text-base font-bold text-dark group-hover/child:text-primary ease-linear duration-300 py-4 rounded-[45px]"
+                className="text-base font-bold text-dark group-hover/child:text-primary ease-linear duration-300 py-4 rounded-[24px]"
               >
                 {license?.title}
               </Link>

@@ -21,9 +21,10 @@ const Navbar = ({ isMenuOpen }: NavbarProps) => {
   const pathname = usePathname();
   return (
     <nav
-      className={`${
+      className={cn(
+        "flex-col max-xl:absolute inset-x-0 top-[71px] bg-white xl:bg-transparent w-full xl:w-fit h-[calc(100vh-71px)] xl:h-auto max-xl:overflow-y-auto",
         isMenuOpen ? "block" : "hidden xl:block"
-      } flex-col max-xl:absolute inset-x-0 top-[71px] bg-white xl:bg-transparent w-full xl:w-fit h-[calc(100vh-71px)] xl:h-auto max-xl:overflow-y-auto`}
+      )}
       id="toggle-menu"
     >
       <ul className="max-xl:container flex-1 flex flex-col xl:flex-row xl:items-center xl:gap-4 pt-6 xl:pt-0">
@@ -36,7 +37,7 @@ const Navbar = ({ isMenuOpen }: NavbarProps) => {
             <Link
               href={path?.path}
               className={cn(
-                "flex justify-between gap-x-2 items-center px-4 py-4 xl:py-2 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]",
+                "flex justify-between gap-x-2 items-center px-4 py-4 xl:py-2 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary hover:bg-gray-100/10 ease-linear duration-300 rounded-[24px]",
                 pathname === path?.path && "bg-gray-100/10 text-primary"
               )}
             >
@@ -45,7 +46,7 @@ const Navbar = ({ isMenuOpen }: NavbarProps) => {
           </li>
         ))}
 
-        <Button variant="default" asChild className="px-10 xl:hidden mx-4 mt-2">
+        <Button asChild className="px-10 xl:hidden mx-4 mt-2">
           <Link href="/cost-calculator">Cost Calculator</Link>
         </Button>
       </ul>

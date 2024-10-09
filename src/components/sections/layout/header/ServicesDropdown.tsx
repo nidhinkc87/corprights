@@ -54,7 +54,7 @@ export default function ServicesDropdown() {
 
   return (
     <li className="relative xl:py-8 group cursor-pointer">
-      <span className="flex justify-between gap-x-2 items-center px-4 py-4 xl:py-2 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px] peer">
+      <span className="flex justify-between gap-x-2 items-center px-4 py-4 xl:py-2 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary hover:bg-gray-100/10 ease-linear duration-300 rounded-[24px] peer">
         Services
         <svg
           className="group-hover:rotate-180 ease-in-out duration-200"
@@ -77,7 +77,7 @@ export default function ServicesDropdown() {
           {services?.map((service) => (
             <li
               key={service?.id}
-              className="relative group/child cursor-pointer p-4 hover:bg-gray-100/10 rounded-[45px] ease-linear duration-300"
+              className="relative group/child cursor-pointer p-4 hover:bg-gray-100/10 rounded-[24px] ease-linear duration-300"
             >
               <Link
                 href={`/services/${service?.slug}`}

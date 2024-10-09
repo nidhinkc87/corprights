@@ -3,6 +3,7 @@ type StrapiResponse<Data> = {
   meta?: {
     pagination: Pagination;
   };
+  error?: string;
 };
 
 type Pagination = {

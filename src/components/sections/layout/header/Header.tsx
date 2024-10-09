@@ -1,11 +1,12 @@
 "use client";
-import Image from "next/image";
-import  { useState } from "react";
-import LogoImg from "@/assets/logo/logo.png";
-import Link from "next/link";
+
 import { Button } from "@/components/ui/Button";
-import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
+import LogoImg from "@/assets/logo/logo.png";
 import Navbar from "@/components/sections/layout/header/Navbar";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ function Header() {
   const handleToggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
-    <header className="fixed top-0 inset-x-0 w-full bg-white xl:bg-white/[4%] backdrop-blur-[14px] z-[10]">
+    <header className="fixed top-0 inset-x-0 w-full bg-white xl:bg-white/[4%] backdrop-blur-[14px] z-50">
       <div className="container pt-4 pb-4 lg:py-6 xl:pt-0 xl:pb-0">
         <div className="flex justify-between items-center">
           <Link href="/">
@@ -67,11 +68,7 @@ function Header() {
 
           <Navbar isMenuOpen={menuOpen} />
 
-          <Button
-            asChild
-            variant="default"
-            className="rounded-[6px]  px-10 hidden xl:flex"
-          >
+          <Button asChild className="px-10 hidden xl:flex">
             <Link href="#cost-calculator">Cost Calculator</Link>
           </Button>
         </div>
