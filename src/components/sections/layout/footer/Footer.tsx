@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/Button";
 import CurrentYear from "@/components/common/CurrentYear";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import footerImage from "@/assets/home/footer-image.png";
 import footerLogo from "@/assets/logo/footer-logo.png";
+import EmailSubscriptionForm from "./EmailSubscriptionForm";
 
 const quickLinks = [
   { href: "/", name: "Home" },
@@ -57,20 +57,7 @@ function Footer() {
 
             <div className="mt-4 flex justify-center">
               <div className="relative w-full md:max-w-md">
-                <form className="h-12">
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                    className="border !outline-gray-300 outline-[2px] border-dark bg-transparent placeholder:text-gray-100 px-5 py-2 w-full h-full"
-                  />
-
-                  <div className="absolute right-2 top-1/2 -translate-y-1/2">
-                    <Button type="submit" className="h-[34px]">
-                      Get started
-                    </Button>
-                  </div>
-                </form>
+                <EmailSubscriptionForm />
               </div>
             </div>
           </div>
