@@ -6,7 +6,7 @@ export default function Loading({ className }: { className?: string }) {
       className={cn(
         "inline-block h-4 w-4 rounded-full ",
         "border-2 border-solid border-current border-r-transparent align-[-0.125em] ",
-        "animate-spin-linear motion-reduce:animate-[spin_13s_linear_infinite]",
+        "animate-spin motion-reduce:animate-[spin_13s_linear_infinite]",
         className
       )}
       role="status"

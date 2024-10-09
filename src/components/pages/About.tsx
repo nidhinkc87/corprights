@@ -5,6 +5,7 @@ import OurValues from "@/components/sections/about/OurValues";
 import Overview from "@/components/sections/about/Overview";
 import Roadmap from "@/components/sections/about/Roadmap";
 import WhyUs from "@/components/sections/about/WhyUs";
+import Teams from "@/components/sections/about/Teams";
 
 const ImageSlider = dynamic(
   () => import("@/components/sections/about/ImageSlider")
@@ -29,6 +30,8 @@ const About = ({ about }: AboutProps) => {
       <OurValues />
 
       <Roadmap />
+
+      <Teams />
     </>
   );
 };
