@@ -81,7 +81,7 @@ const config: Config = {
           foreground: "hsl(var(--destructive-foreground))",
         },
         border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
+        input: "#CFCFCF3B",
         ring: "hsl(var(--ring))",
         chart: {
           "1": "hsl(var(--chart-1))",
@@ -104,6 +104,8 @@ const config: Config = {
       backgroundImage: {
         "primary-gradient":
           "linear-gradient(93.94deg, #017275 6.45%, #2BB162 93.55%)",
+        "dark-gradient":
+          "linear-gradient(180deg, #181818 0%, rgba(0, 0, 0, 0.4) 53.5%, #181818 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",
