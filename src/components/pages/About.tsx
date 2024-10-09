@@ -1,9 +1,10 @@
 import dynamic from "next/dynamic";
 
 import Hero from "@/components/sections/about/Hero";
+import OurValues from "@/components/sections/about/OurValues";
 import Overview from "@/components/sections/about/Overview";
+import Roadmap from "@/components/sections/about/Roadmap";
 import WhyUs from "@/components/sections/about/WhyUs";
-import OurValues from "../sections/about/OurValues";
 
 const ImageSlider = dynamic(
   () => import("@/components/sections/about/ImageSlider")
@@ -26,6 +27,8 @@ const About = ({ about }: AboutProps) => {
       <WhyUs />
 
       <OurValues />
+
+      <Roadmap />
     </>
   );
 };
