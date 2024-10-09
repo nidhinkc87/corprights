@@ -11,6 +11,7 @@ const OurValues = () => {
         alt="our-values-bg"
         width={459}
         height={552}
+        placeholder="blur"
         className="absolute left-0 top-1/2  -translate-y-1/2 hidden lg:block lg:w-[340px] lg:h-[438px] 2xl:w-[459px] 2xl:h-[552] -z-[1]"
       />
 

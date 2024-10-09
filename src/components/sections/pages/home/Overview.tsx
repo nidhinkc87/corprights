@@ -21,7 +21,12 @@ const Overview = ({
       <div className="container mx-auto">
         <div className="flex gap-12 2xl:gap-[72px] justify-between mb-10 2xl:mb-16">
           <div className="hidden md:block w-1/2">
-            <Image src={Img} alt="" className="w-full" />
+            <Image
+              src={Img}
+              alt="overview-image"
+              className="w-full"
+              placeholder="blur"
+            />
           </div>
 
           <div>

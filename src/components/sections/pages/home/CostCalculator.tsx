@@ -29,7 +29,15 @@ const CostCalculator = () => {
           </div>
 
           <div>
-            <Image src={costCalculator} alt="cost-calculator-img" />
+            <Image
+              src={costCalculator}
+              alt="cost-calculator-img"
+              width={538}
+              height={519}
+              placeholder="blur"
+              sizes="(max-width: 768px) 100vw,50vw"
+              className="w-full object-cover"
+            />
           </div>
         </div>
       </div>

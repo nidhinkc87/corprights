@@ -40,6 +40,7 @@ function Footer() {
               src={footerImage}
               alt="footer-image"
               className="mx-auto pointer-events-none"
+              placeholder="blur"
             />
           </div>
 

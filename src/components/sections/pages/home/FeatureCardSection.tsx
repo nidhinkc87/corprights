@@ -13,7 +13,12 @@ const FeatureCardSection = ({ features }: FeatureCardSectionProps) => {
     <section>
       <div className="container">
         <div className="mb-8 xl:mb-14">
-          <Image src={networkVector} alt="network-image" className="mx-auto" />
+          <Image
+            src={networkVector}
+            alt="network-image"
+            className="mx-auto"
+            placeholder="blur"
+          />
         </div>
 
         <div className="mx-auto text-center mb-8 xl:mb-12 2xl:mb-20">
