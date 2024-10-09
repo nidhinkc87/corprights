@@ -10,9 +10,13 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/Collapsible";
 import { cn } from "@/lib/utils";
+import { getRoadMap } from "@/api/roadmap";
+import Markdown from "react-markdown";
 
 const Roadmap = () => {
   const [visibleIndex, setVisibleIndex] = useState(0);
+
+  const [roadMap, setRoadMap] = useState<RoadMap[]>();
 
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -43,25 +47,55 @@ const Roadmap = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const fetchRoadMaps = async () => {
+      try {
+        const { data } = await getRoadMap();
+        if (!data) return;
+        setRoadMap(data as RoadMap[]);
+      } catch (error) {
+        console.log("error ", error);
+      }
+    };
+
+    fetchRoadMaps();
+  }, []);
+
   return (
     <section className="relative py-16 xl:py-24  2xl:py-[160px]">
       <div className="lg:hidden container">
         <h3 className="mb-6 text-left">The Roadmap</h3>
 
-        {roadmapTabs.map((tab, i) => (
+        {roadMap?.map((tab, i) => (
           <Collapsible
             key={`mobile-tab-${i}`}
             className="mb-4"
             defaultOpen={i === 0}
           >
             <CollapsibleTrigger className="w-full text-left py-2 flex justify-between items-center [&[data-state=open]>svg]:rotate-180">
-              <div>{tab}</div>
+              <div>
+                <h5 className="text-3xl lg:text-5xl font-bold text-dark">
+                  {tab.year}
+                </h5>
+                <p className="text-xl font-normal text-gray-400">
+                  {tab.subtitle}
+                </p>
+              </div>
 
               <ChevronDown className="w-6 h-6 shrink-0 transition-transform duration-200" />
             </CollapsibleTrigger>
 
             <CollapsibleContent>
-              <div className="py-4 space-y-4">{roadmapTabContents[i]}</div>
+              <div className="py-4 space-y-4">
+                <div
+                  className={cn(
+                    "prose-md md:prose-base xl:prose-xl font-normal text-gray-400 prose-a:no-underline prose-a:text-primary/85 hover:prose-a:text-primary",
+                    "text-base xl:text-2xl font-normal"
+                  )}
+                >
+                  <Markdown>{tab?.content}</Markdown>
+                </div>
+              </div>
             </CollapsibleContent>
           </Collapsible>
         ))}
@@ -78,7 +112,7 @@ const Roadmap = () => {
               <div className="sticky top-[90px]">
                 <h3 className="mb-[88px] text-center">The Roadmap</h3>
                 <div id="tabs" className="space-y-10">
-                  {roadmapTabs.map((tab, i) => (
+                  {roadMap?.map((tab, i) => (
                     <div
                       key={`roadmap-tabs-${i}`}
                       data-tab={`tab-${i}`}
@@ -88,14 +122,20 @@ const Roadmap = () => {
                         visibleIndex === i ? "opacity-100" : "opacity-30"
                       )}
                     >
-                      {tab}
+                      <h5 className="text-3xl md:text-5xl font-bold text-dark">
+                        {tab.year}
+                      </h5>
+
+                      <p className="text-xl font-normal text-gray-400">
+                        {tab.subtitle}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
             <div id="content" className="">
-              {roadmapTabContents.map((tab, i) => (
+              {roadMap?.map((tab, i) => (
                 <div
                   key={`roadmap-tab-contents-${i}`}
                   data-index={i}
@@ -104,7 +144,9 @@ const Roadmap = () => {
                   }}
                   className="tab-content space-y-8"
                 >
-                  {tab}
+                  <div className="text-xl text-gray-400 prose-sm md:prose-md lg:prose-lg  font-normal prose-a:no-underline prose-a:text-primary/85 hover:prose-a:text-primary ">
+                    <Markdown>{tab.content}</Markdown>
+                  </div>
                 </div>
               ))}
             </div>
@@ -116,250 +158,3 @@ const Roadmap = () => {
 };
 
 export default Roadmap;
-
-const tabContents1 = (
-  <>
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Tab1
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue dui
-      sed quam semper pharetra. Proin dapibus turpis congue lorem sollicitudin,
-      vitae facilisis lorem sollicitudin. Suspendisse potenti. Morbi egestas
-      neque eros, maximus interdum neque viverra ut. Mauris ante ligula, porta
-      sed ligula id, ornare maximus nunc. Vestibulum efficitur egestas enim, vel
-      fringilla leo pretium ultricies. Suspendisse sed nibh eget urna
-      scelerisque maximus. Donec semper ultricies bibendum. Maecenas rhoncus,
-      nibh ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat ante
-      sem id libero. Phasellus venenatis nibh nisi, sit amet maximus nunc
-      fringilla nec. In laoreet finibus dui, ac interdum augue pellentesque vel.
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Sed malesuada, lorem a pulvinar lobortis, leo ipsum vehicula tortor, eget
-      luctus quam tortor non augue. Vivamus vitae pretium massa, vel tincidunt
-      eros. Donec tincidunt tortor quis congue condimentum. Duis diam nisl,
-      sagittis at accumsan non, tristique non dolor. Integer lacinia massa erat,
-      in feugiat lacus imperdiet quis
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Vivamus et ultrices felis, quis molestie magna. Pellentesque sit amet dui
-      quis eros dapibus porttitor quis in metus. Curabitur quam diam, convallis
-      at quam bibendum, egestas mattis ante. In magna lorem, porttitor ut ex
-      quis, placerat aliquet dui. Morbi non tincidunt odio. Nunc blandit
-      convallis congue.
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue dui
-      sed quam semper pharetra. Proin dapibus turpis congue lorem sollicitudin,
-      vitae facilisis lorem sollicitudin. Suspendisse potenti. Morbi egestas
-      neque eros, maximus interdum neque viverra ut. Mauris ante ligula, porta
-      sed ligula id, ornare maximus nunc. Vestibulum efficitur egestas enim, vel
-      fringilla leo pretium ultricies. Suspendisse sed nibh eget urna
-      scelerisque maximus. Donec semper ultricies bibendum. Maecenas rhoncus,
-      nibh ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat ante
-      sem id libero. Phasellus venenatis nibh nisi, sit amet maximus nunc
-      fringilla nec. In laoreet finibus dui, ac interdum augue pellentesque vel.
-    </p>
-  </>
-);
-
-const tabContents2 = (
-  <>
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Tab2
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue dui
-      sed quam semper pharetra. Proin dapibus turpis congue lorem sollicitudin,
-      vitae facilisis lorem sollicitudin. Suspendisse potenti. Morbi egestas
-      neque eros, maximus interdum neque viverra ut. Mauris ante ligula, porta
-      sed ligula id, ornare maximus nunc. Vestibulum efficitur egestas enim, vel
-      fringilla leo pretium ultricies. Suspendisse sed nibh eget urna
-      scelerisque maximus. Donec semper ultricies bibendum. Maecenas rhoncus,
-      nibh ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat ante
-      sem id libero. Phasellus venenatis nibh nisi, sit amet maximus nunc
-      fringilla nec. In laoreet finibus dui, ac interdum augue pellentesque vel.
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Sed malesuada, lorem a pulvinar lobortis, leo ipsum vehicula tortor, eget
-      luctus quam tortor non augue. Vivamus vitae pretium massa, vel tincidunt
-      eros. Donec tincidunt tortor quis congue condimentum. Duis diam nisl,
-      sagittis at accumsan non, tristique non dolor. Integer lacinia massa erat,
-      in feugiat lacus imperdiet quis
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Vivamus et ultrices felis, quis molestie magna. Pellentesque sit amet dui
-      quis eros dapibus porttitor quis in metus. Curabitur quam diam, convallis
-      at quam bibendum, egestas mattis ante. In magna lorem, porttitor ut ex
-      quis, placerat aliquet dui. Morbi non tincidunt odio. Nunc blandit
-      convallis congue.
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue dui
-      sed quam semper pharetra. Proin dapibus turpis congue lorem sollicitudin,
-      vitae facilisis lorem sollicitudin. Suspendisse potenti. Morbi egestas
-      neque eros, maximus interdum neque viverra ut. Mauris ante ligula, porta
-      sed ligula id, ornare maximus nunc. Vestibulum efficitur egestas enim, vel
-      fringilla leo pretium ultricies. Suspendisse sed nibh eget urna
-      scelerisque maximus. Donec semper ultricies bibendum. Maecenas rhoncus,
-      nibh ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat ante
-      sem id libero. Phasellus venenatis nibh nisi, sit amet maximus nunc
-      fringilla nec. In laoreet finibus dui, ac interdum augue pellentesque vel.
-    </p>
-  </>
-);
-
-const tabContents3 = (
-  <>
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Tab3
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue dui
-      sed quam semper pharetra. Proin dapibus turpis congue lorem sollicitudin,
-      vitae facilisis lorem sollicitudin. Suspendisse potenti. Morbi egestas
-      neque eros, maximus interdum neque viverra ut. Mauris ante ligula, porta
-      sed ligula id, ornare maximus nunc. Vestibulum efficitur egestas enim, vel
-      fringilla leo pretium ultricies. Suspendisse sed nibh eget urna
-      scelerisque maximus. Donec semper ultricies bibendum. Maecenas rhoncus,
-      nibh ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat ante
-      sem id libero. Phasellus venenatis nibh nisi, sit amet maximus nunc
-      fringilla nec. In laoreet finibus dui, ac interdum augue pellentesque vel.
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Sed malesuada, lorem a pulvinar lobortis, leo ipsum vehicula tortor, eget
-      luctus quam tortor non augue. Vivamus vitae pretium massa, vel tincidunt
-      eros. Donec tincidunt tortor quis congue condimentum. Duis diam nisl,
-      sagittis at accumsan non, tristique non dolor. Integer lacinia massa erat,
-      in feugiat lacus imperdiet quis
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Vivamus et ultrices felis, quis molestie magna. Pellentesque sit amet dui
-      quis eros dapibus porttitor quis in metus. Curabitur quam diam, convallis
-      at quam bibendum, egestas mattis ante. In magna lorem, porttitor ut ex
-      quis, placerat aliquet dui. Morbi non tincidunt odio. Nunc blandit
-      convallis congue.
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue dui
-      sed quam semper pharetra. Proin dapibus turpis congue lorem sollicitudin,
-      vitae facilisis lorem sollicitudin. Suspendisse potenti. Morbi egestas
-      neque eros, maximus interdum neque viverra ut. Mauris ante ligula, porta
-      sed ligula id, ornare maximus nunc. Vestibulum efficitur egestas enim, vel
-      fringilla leo pretium ultricies. Suspendisse sed nibh eget urna
-      scelerisque maximus. Donec semper ultricies bibendum. Maecenas rhoncus,
-      nibh ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat ante
-      sem id libero. Phasellus venenatis nibh nisi, sit amet maximus nunc
-      fringilla nec. In laoreet finibus dui, ac interdum augue pellentesque vel.
-    </p>
-  </>
-);
-
-const tabContents4 = (
-  <>
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Tab4
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue dui
-      sed quam semper pharetra. Proin dapibus turpis congue lorem sollicitudin,
-      vitae facilisis lorem sollicitudin. Suspendisse potenti. Morbi egestas
-      neque eros, maximus interdum neque viverra ut. Mauris ante ligula, porta
-      sed ligula id, ornare maximus nunc. Vestibulum efficitur egestas enim, vel
-      fringilla leo pretium ultricies. Suspendisse sed nibh eget urna
-      scelerisque maximus. Donec semper ultricies bibendum. Maecenas rhoncus,
-      nibh ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat ante
-      sem id libero. Phasellus venenatis nibh nisi, sit amet maximus nunc
-      fringilla nec. In laoreet finibus dui, ac interdum augue pellentesque vel.
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Sed malesuada, lorem a pulvinar lobortis, leo ipsum vehicula tortor, eget
-      luctus quam tortor non augue. Vivamus vitae pretium massa, vel tincidunt
-      eros. Donec tincidunt tortor quis congue condimentum. Duis diam nisl,
-      sagittis at accumsan non, tristique non dolor. Integer lacinia massa erat,
-      in feugiat lacus imperdiet quis
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Vivamus et ultrices felis, quis molestie magna. Pellentesque sit amet dui
-      quis eros dapibus porttitor quis in metus. Curabitur quam diam, convallis
-      at quam bibendum, egestas mattis ante. In magna lorem, porttitor ut ex
-      quis, placerat aliquet dui. Morbi non tincidunt odio. Nunc blandit
-      convallis congue.
-    </p>
-
-    <p className="text-base lg:text-xl 2xl:text-3xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris congue dui
-      sed quam semper pharetra. Proin dapibus turpis congue lorem sollicitudin,
-      vitae facilisis lorem sollicitudin. Suspendisse potenti. Morbi egestas
-      neque eros, maximus interdum neque viverra ut. Mauris ante ligula, porta
-      sed ligula id, ornare maximus nunc. Vestibulum efficitur egestas enim, vel
-      fringilla leo pretium ultricies. Suspendisse sed nibh eget urna
-      scelerisque maximus. Donec semper ultricies bibendum. Maecenas rhoncus,
-      nibh ac gravida sollicitudin, sapien dolor feugiat ipsum, a feugiat ante
-      sem id libero. Phasellus venenatis nibh nisi, sit amet maximus nunc
-      fringilla nec. In laoreet finibus dui, ac interdum augue pellentesque vel.
-    </p>
-  </>
-);
-
-const roadmapTabContents = [
-  tabContents1,
-  tabContents2,
-  tabContents3,
-  tabContents4,
-];
-
-const tab1 = (
-  <>
-    <h5 className="text-3xl lg:text-5xl font-bold text-dark">2021</h5>
-
-    <p className="text-xl font-normal text-gray-400">Founded</p>
-  </>
-);
-
-const tab2 = (
-  <>
-    <h5 className="text-3xl lg:text-5xl font-bold text-dark">2022</h5>
-
-    <p className="text-xl font-normal text-gray-400">
-      Lorem ipsum dolor sit amet consectetur.
-    </p>
-  </>
-);
-
-const tab3 = (
-  <>
-    <h5 className="text-3xl lg:text-5xl font-bold text-dark">2023</h5>
-
-    <p className="text-xl font-normal text-gray-400">
-      Proin ornare quam viverra, egestas
-    </p>
-  </>
-);
-
-const tab4 = (
-  <>
-    <h5 className="text-3xl lg:text-5xl font-bold text-dark">2024</h5>
-
-    <p className="text-xl font-normal text-gray-400">
-      lorem a pulvinar lobortis
-    </p>
-  </>
-);
-
-const roadmapTabs = [tab1, tab2, tab3, tab4];
