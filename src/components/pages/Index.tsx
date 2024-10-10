@@ -1,8 +1,3 @@
-import dynamic from "next/dynamic";
-import Image from "next/image";
-
-import { getStrapiURL } from "@/api";
-import heroBg from "@/assets/home/bg/light-gradient.png";
 import Awards from "@/components/sections/pages/home/Awards";
 import BrochureBanner from "@/components/sections/pages/home/BrochureBanner";
 import CostCalculator from "@/components/sections/pages/home/CostCalculator";
@@ -10,10 +5,15 @@ import Faq from "@/components/sections/pages/home/Faq";
 import FeatureCardSection from "@/components/sections/pages/home/FeatureCardSection";
 import GlobalClients from "@/components/sections/pages/home/GlobalClients";
 import Hero from "@/components/sections/pages/home/Hero";
+import HighlightTitle from "@/components/ui/HighlightTitle";
+import Image from "next/image";
 import LatestBlogs from "@/components/sections/pages/home/LatestBlogs";
 import Overview from "@/components/sections/pages/home/Overview";
+import ScheduleSection from "../sections/pages/home/ScheduleSection";
 import Services from "@/components/sections/pages/home/Services";
-import HighlightTitle from "@/components/ui/HighlightTitle";
+import dynamic from "next/dynamic";
+import { getStrapiURL } from "@/api";
+import heroBg from "@/assets/home/bg/light-gradient.png";
 
 const Testimonials = dynamic(
   () => import("@/components/sections/pages/home/Testimonials"),
@@ -71,6 +71,8 @@ function Index({ homePage }: IndexProps) {
       )}
 
       <CostCalculator />
+
+      <ScheduleSection />
 
       {homePage?.faqs && homePage?.faqs.length > 0 && (
         <Faq faqs={homePage?.faqs} />

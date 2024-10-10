@@ -1,5 +1,5 @@
-import { getHomePageData } from "@/api/home";
 import Index from "@/components/pages/Index";
+import { getHomePageData } from "@/api/home";
 
 export default async function Page() {
   const homeData = await getHomePageData();
