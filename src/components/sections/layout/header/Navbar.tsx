@@ -38,7 +38,7 @@ const Navbar = ({ isMenuOpen }: NavbarProps) => {
             className="relative xl:py-8 group cursor-pointer"
           >
             <Link
-              href={path?.path}
+              href={path?.path ?? "#"}
               className={cn(
                 "flex justify-between gap-x-2 items-center px-4 py-4 xl:py-2 text-xl md:text-base font-bold text-gray-400 group-hover:text-primary hover:bg-gray-100/10 ease-linear duration-300 rounded-[24px]",
                 pathname === path?.path && "bg-gray-100/10 text-primary"

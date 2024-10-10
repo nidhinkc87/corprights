@@ -1,9 +1,9 @@
-import React from "react";
 import { BackgroundImage } from "@/components/ui/BackgroundImage";
 import { Button } from "@/components/ui/Button";
-import { getStrapiURL } from "@/api";
 import HighlightTitle from "@/components/ui/HighlightTitle";
 import Link from "next/link";
+import React from "react";
+import { getStrapiURL } from "@/api";
 
 interface HeroProps {
   banner: HomeBanner;
@@ -32,7 +32,9 @@ const Hero = ({ banner, phone }: HeroProps) => {
 
             <div className="mt-10 flex flex-col md:flex-row gap-6 max-w-[80%] md:max-w-full mx-auto">
               <Button asChild className="px-14">
-                <Link href={banner?.button_link}>{banner?.button_text}</Link>
+                <Link href={banner?.button_link ?? "#"}>
+                  {banner?.button_text}
+                </Link>
               </Button>
 
               <Button

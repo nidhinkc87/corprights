@@ -1,10 +1,10 @@
 import CurrentYear from "@/components/common/CurrentYear";
+import EmailSubscriptionForm from "./EmailSubscriptionForm";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import footerImage from "@/assets/home/footer-image.png";
 import footerLogo from "@/assets/logo/footer-logo.png";
-import EmailSubscriptionForm from "./EmailSubscriptionForm";
 
 const quickLinks = [
   { href: "/", name: "Home" },
@@ -76,7 +76,7 @@ function Footer() {
               </p>
 
               <ul className="flex gap-4 items-center">
-                <Link href="" target="_blank">
+                <Link href="#" target="_blank">
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="21"
@@ -93,7 +93,7 @@ function Footer() {
                   </li>
                 </Link>
 
-                <Link href="" target="_blank">
+                <Link href="#" target="_blank">
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="10"
@@ -110,7 +110,7 @@ function Footer() {
                   </li>
                 </Link>
 
-                <Link href="" target="_blank">
+                <Link href="#" target="_blank">
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="20"
@@ -127,7 +127,7 @@ function Footer() {
                   </li>
                 </Link>
 
-                <Link href="" target="_blank">
+                <Link href="#" target="_blank">
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="24"
@@ -152,7 +152,7 @@ function Footer() {
                   </li>
                 </Link>
 
-                <Link href="" target="_blank">
+                <Link href="#" target="_blank">
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="24"
@@ -182,7 +182,7 @@ function Footer() {
                       className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px] capitalize"
                     >
                       <Link
-                        href={quickLink.href}
+                        href={quickLink.href ?? "#"}
                         className="text-base font-normal hover:text-primary ease-linear duration-300"
                       >
                         {quickLink.name}
@@ -202,7 +202,7 @@ function Footer() {
                       className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px] capitalize"
                     >
                       <Link
-                        href={link.href}
+                        href={link.href ?? "#"}
                         className="text-base font-normal hover:text-primary ease-linear duration-300"
                       >
                         {link.name}
@@ -218,7 +218,7 @@ function Footer() {
                 <ul className="text-gray-100">
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href=""
+                      href="/about"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       About
@@ -227,7 +227,7 @@ function Footer() {
 
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href=""
+                      href="##"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       Term of use
@@ -236,7 +236,7 @@ function Footer() {
 
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href=""
+                      href="#"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       Privacy Policy
@@ -245,7 +245,7 @@ function Footer() {
 
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href=""
+                      href="#"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       Feedback
@@ -267,7 +267,7 @@ function Footer() {
                 <ul className="text-gray-100 hidden md:flex">
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href=""
+                      href="#"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       Privacy Policy
@@ -276,7 +276,7 @@ function Footer() {
 
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href=""
+                      href="#"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       Terms & Uses

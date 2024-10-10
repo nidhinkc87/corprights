@@ -37,7 +37,7 @@ export default function ServiceCard({
 
             <div className="flex self-end justify-end pt-2">
               <Link
-                href={path}
+                href={path ?? "#"}
                 className="flex items-center justify-end gap-2 px-4 py-2 w-fit"
               >
                 <p className="text-primary font-bold text-base translate-x-[21px] group-hover:translate-x-0 ease-in-out delay-100 duration-500 transition-transform">

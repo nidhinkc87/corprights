@@ -1,8 +1,8 @@
 import { BackgroundImage } from "@/components/ui/BackgroundImage";
 import { Button } from "@/components/ui/Button";
-import { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
+import { StaticImageData } from "next/image";
 
 interface HeroProps {
   title: React.ReactNode;
@@ -32,7 +32,7 @@ const Hero = ({
               </p>
 
               <Button className="mx-auto mt-10 px-8">
-                <Link href={buttonLink}>{buttonText}</Link>
+                <Link href={buttonLink ?? "#"}>{buttonText}</Link>
               </Button>
             </div>
           </div>

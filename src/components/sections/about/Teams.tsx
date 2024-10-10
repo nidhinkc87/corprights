@@ -1,18 +1,19 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
-import Markdown from "react-markdown";
 
-import { getStrapiURL } from "@/api";
-import { getTeamMembersByLimit } from "@/api/teams";
-import Loading from "@/components/elements/common/Loading";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/Collapsible";
+import React, { useEffect, useState } from "react";
+
+import Image from "next/image";
+import Link from "next/link";
+import Loading from "@/components/elements/common/Loading";
+import Markdown from "react-markdown";
+import { getStrapiURL } from "@/api";
+import { getTeamMembersByLimit } from "@/api/teams";
+import { useInView } from "react-intersection-observer";
 
 const Teams = () => {
   const { ref, inView } = useInView();
@@ -125,7 +126,7 @@ const Teams = () => {
 
                   <div className="mt-4">
                     <Link
-                      href={member.linkedin}
+                      href={member.linkedin ?? "#"}
                       className="text-base xl:text-2xl font-bold text-gray-400 hover:text-blue-600/90"
                     >
                       Linkedin
