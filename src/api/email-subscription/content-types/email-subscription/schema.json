@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "mail": {
+    "email": {
       "type": "string",
       "required": true
     },

@@ -31,6 +31,10 @@
     "description": {
       "type": "string"
     },
+    "author": {
+      "type": "string",
+      "required": true
+    },
     "content": {
       "type": "richtext",
       "required": true
@@ -52,7 +56,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::blog-category.blog-category",
-      "inversedBy": "blogs"
+      "mappedBy": "blogs"
     }
   }
 }

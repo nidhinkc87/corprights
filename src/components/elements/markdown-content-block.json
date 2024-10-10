@@ -2,7 +2,8 @@
   "collectionName": "components_elements_markdown_content_blocks",
   "info": {
     "displayName": "MarkdownContentBlock",
-    "icon": "dashboard"
+    "icon": "dashboard",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,8 +14,10 @@
     "description": {
       "type": "text"
     },
-    "content": {
-      "type": "richtext"
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-tile"
     }
   }
 }

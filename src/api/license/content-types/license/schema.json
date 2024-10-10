@@ -20,16 +20,16 @@
       "type": "uid",
       "required": true
     },
-    "description": {
+    "short_description": {
       "type": "text"
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "related_licenses": {
       "type": "relation",
@@ -68,7 +68,7 @@
     },
     "doc_requirement": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "custom.process"
     },
     "requirement": {

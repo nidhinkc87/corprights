@@ -4,7 +4,8 @@
   "info": {
     "singularName": "lead",
     "pluralName": "leads",
-    "displayName": "Lead"
+    "displayName": "Lead",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,11 +27,16 @@
       "type": "string",
       "required": true
     },
-    "service": {
-      "type": "string"
-    },
     "message": {
       "type": "text"
+    },
+    "service": {
+      "type": "enumeration",
+      "enum": [
+        "service",
+        "license",
+        "other"
+      ]
     }
   }
 }
