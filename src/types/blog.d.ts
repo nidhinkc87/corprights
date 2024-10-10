@@ -10,6 +10,7 @@ interface BlogAttributes extends EntityAttributes {
   posted_at: string;
   related_blogs: Blog[];
   blog_categories: BlogCategory[];
+  author: string;
 }
 
 type Blog = {} & BlogAttributes;

@@ -1,6 +1,7 @@
 import { getStrapiURL } from "@/api";
 import Image from "next/image";
 import { formatDate } from "date-fns";
+import Link from "next/link";
 
 interface LatestBlogsProps {
   blogs: Blog[];
@@ -22,7 +23,8 @@ const LatestBlogs = ({ blogs }: LatestBlogsProps) => {
 
         <div className="mt-10 xl:mt-16 grid md:grid-cols-2 gap-[14px] lg:gap-6">
           {blogs.map((blog, index) => (
-            <div
+            <Link
+              href={`/blogs/${blog?.slug}`}
               key={`blog-card-${index}`}
               className="grid grid-cols-5 group cursor-pointer hover:shadow-card-20dp ease-linear duration-300"
             >
@@ -50,8 +52,8 @@ const LatestBlogs = ({ blogs }: LatestBlogsProps) => {
 
                   <div className="flex justify-between">
                     <div className="flex items-center">
-                      <span className="text-xs lg:text-base font-bold text-dark">
-                        Milos Vidic
+                      <span className="text-xs lg:text-base font-bold text-dark capitalize">
+                        {blog?.author}
                       </span>
 
                       <span className="flex mx-4 w-[6px] h-[6px] bg-[#D9D9D9] rounded-full"></span>
@@ -89,7 +91,7 @@ const LatestBlogs = ({ blogs }: LatestBlogsProps) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
