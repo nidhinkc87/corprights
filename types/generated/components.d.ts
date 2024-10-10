@@ -26,11 +26,12 @@ export interface ElementsMarkdownContentBlock extends Struct.ComponentSchema {
   info: {
     displayName: 'MarkdownContentBlock';
     icon: 'dashboard';
+    description: '';
   };
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
-    content: Schema.Attribute.RichText;
+    cards: Schema.Attribute.Component<'elements.feature-tile', true>;
   };
 }
 

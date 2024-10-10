@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cost_calculator_enquiries",
+  "info": {
+    "singularName": "cost-calculator-enquiry",
+    "pluralName": "cost-calculator-enquiries",
+    "displayName": "CostCalculatorEnquiry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "nationality": {
+      "type": "enumeration",
+      "enum": [
+        "united-states",
+        "canada"
+      ],
+      "required": true
+    },
+    "message": {
+      "type": "text"
+    },
+    "company_purpose": {
+      "type": "enumeration",
+      "enum": [
+        "company-expansion",
+        "new-company"
+      ],
+      "required": true
+    },
+    "business_activity": {
+      "type": "enumeration",
+      "enum": [
+        "advertising",
+        "it-consultancy",
+        "online-education",
+        "other"
+      ],
+      "required": true
+    },
+    "jurisdiction": {
+      "type": "enumeration",
+      "enum": [
+        "w-l-l-company-qatar",
+        "qatar-financial-centre",
+        "qatar-free-zone",
+        "qatar-science-and-technology",
+        "not-sure"
+      ],
+      "required": true
+    },
+    "owners": {
+      "type": "enumeration",
+      "enum": [
+        "single",
+        "multiple",
+        "others"
+      ],
+      "required": true
+    },
+    "visa_required": {
+      "type": "boolean"
+    },
+    "office_size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "large",
+        "extra-large"
+      ],
+      "required": true
+    },
+    "business_name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

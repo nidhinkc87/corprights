@@ -553,6 +553,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     description: Schema.Attribute.String;
+    author: Schema.Attribute.String & Schema.Attribute.Required;
     content: Schema.Attribute.RichText & Schema.Attribute.Required;
     posted_at: Schema.Attribute.Date & Schema.Attribute.Required;
     reading_time: Schema.Attribute.Integer & Schema.Attribute.Required;
@@ -587,7 +588,6 @@ export interface ApiBlogCategoryBlogCategory
   };
   attributes: {
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    slug: Schema.Attribute.UID;
     blogs: Schema.Attribute.Relation<'manyToMany', 'api::blog.blog'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -632,6 +632,67 @@ export interface ApiClientLogoClientLogo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCostCalculatorEnquiryCostCalculatorEnquiry
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'cost_calculator_enquiries';
+  info: {
+    singularName: 'cost-calculator-enquiry';
+    pluralName: 'cost-calculator-enquiries';
+    displayName: 'CostCalculatorEnquiry';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    first_name: Schema.Attribute.String & Schema.Attribute.Required;
+    last_name: Schema.Attribute.String & Schema.Attribute.Required;
+    email: Schema.Attribute.String & Schema.Attribute.Required;
+    phone: Schema.Attribute.String & Schema.Attribute.Required;
+    nationality: Schema.Attribute.Enumeration<['united-states', 'canada']> &
+      Schema.Attribute.Required;
+    message: Schema.Attribute.Text;
+    company_purpose: Schema.Attribute.Enumeration<
+      ['company-expansion', 'new-company']
+    > &
+      Schema.Attribute.Required;
+    business_activity: Schema.Attribute.Enumeration<
+      ['advertising', 'it-consultancy', 'online-education', 'other']
+    > &
+      Schema.Attribute.Required;
+    jurisdiction: Schema.Attribute.Enumeration<
+      [
+        'w-l-l-company-qatar',
+        'qatar-financial-centre',
+        'qatar-free-zone',
+        'qatar-science-and-technology',
+        'not-sure',
+      ]
+    > &
+      Schema.Attribute.Required;
+    owners: Schema.Attribute.Enumeration<['single', 'multiple', 'others']> &
+      Schema.Attribute.Required;
+    visa_required: Schema.Attribute.Boolean;
+    office_size: Schema.Attribute.Enumeration<
+      ['small', 'medium', 'large', 'extra-large']
+    > &
+      Schema.Attribute.Required;
+    business_name: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::cost-calculator-enquiry.cost-calculator-enquiry'
+    >;
+  };
+}
+
 export interface ApiEmailSubscriptionEmailSubscription
   extends Struct.CollectionTypeSchema {
   collectionName: 'email_subscriptions';
@@ -645,7 +706,7 @@ export interface ApiEmailSubscriptionEmailSubscription
     draftAndPublish: true;
   };
   attributes: {
-    mail: Schema.Attribute.String & Schema.Attribute.Required;
+    email: Schema.Attribute.String & Schema.Attribute.Required;
     disabled: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
@@ -709,6 +770,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     faqs: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'>;
     awards: Schema.Attribute.Relation<'oneToMany', 'api::award.award'>;
     blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
+    services: Schema.Attribute.Relation<'oneToMany', 'api::service.service'>;
+    brochure: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -727,6 +790,7 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     singularName: 'lead';
     pluralName: 'leads';
     displayName: 'Lead';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -736,8 +800,8 @@ export interface ApiLeadLead extends Struct.CollectionTypeSchema {
     last_name: Schema.Attribute.String;
     email: Schema.Attribute.String & Schema.Attribute.Required;
     phone: Schema.Attribute.String & Schema.Attribute.Required;
-    service: Schema.Attribute.String;
     message: Schema.Attribute.Text;
+    service: Schema.Attribute.Enumeration<['service', 'license', 'other']>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -764,7 +828,7 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
-    description: Schema.Attribute.Text;
+    short_description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     related_licenses: Schema.Attribute.Relation<
       'oneToMany',
@@ -776,7 +840,7 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
     benefit: Schema.Attribute.Component<'custom.benefit', false>;
     eligibility: Schema.Attribute.Component<'custom.phrase-block', false>;
     process: Schema.Attribute.Component<'custom.process', false>;
-    doc_requirement: Schema.Attribute.Component<'custom.process', true>;
+    doc_requirement: Schema.Attribute.Component<'custom.process', false>;
     requirement: Schema.Attribute.Component<
       'elements.markdown-content-block',
       false
@@ -848,11 +912,9 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
-    description: Schema.Attribute.Text;
+    short_description: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    show_in_home: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
+    description: Schema.Attribute.RichText;
     related_services: Schema.Attribute.Relation<
       'oneToMany',
       'api::service.service'
@@ -1320,6 +1382,7 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::blog-category.blog-category': ApiBlogCategoryBlogCategory;
       'api::client-logo.client-logo': ApiClientLogoClientLogo;
+      'api::cost-calculator-enquiry.cost-calculator-enquiry': ApiCostCalculatorEnquiryCostCalculatorEnquiry;
       'api::email-subscription.email-subscription': ApiEmailSubscriptionEmailSubscription;
       'api::faq.faq': ApiFaqFaq;
       'api::home.home': ApiHomeHome;
