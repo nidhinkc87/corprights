@@ -9,7 +9,7 @@ export default function ScheduleSection() {
   if (!url) return <></>;
 
   return (
-    <section id="calendly" className="py-12 container lg:py-20">
+    <section id="calendly" className="pt-12 container lg:pt-20">
       <div className="bg-primary-gradient pt-16 max-lg:pb-10">
         <div className="flex flex-col max-lg:space-y-4 max-lg:px-6">
           <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
