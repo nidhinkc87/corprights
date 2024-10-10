@@ -10,6 +10,7 @@ interface HomePageAttributes extends EntityAttributes {
   services: Service[];
   awards: Award[];
   blogs: Blog[];
+  brochure: Image;
 }
 
 type HomePage = {} & HomePageAttributes;

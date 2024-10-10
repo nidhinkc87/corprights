@@ -1,17 +1,58 @@
+"use client";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import vector1 from "@/assets/home/bg/download-vector-1.png";
 import vector2 from "@/assets/home/bg/download-vector-1.png";
+import { getBrochure } from "@/api/brochure";
+import { getStrapiURL } from "@/api";
 
 const BrochureBanner = () => {
+  const [brochure, setBrochure] = useState<Image>();
+
+  useEffect(() => {
+    const fetchBrochure = async () => {
+      try {
+        const { data } = await getBrochure();
+        if (!data) return;
+        const home = data as HomePage;
+        setBrochure(home?.brochure);
+      } catch (error) {
+        console.log("error ", error);
+      }
+    };
+
+    fetchBrochure();
+  }, []);
+
+  const downloadBrochure = () => {
+    if (!brochure) return;
+
+    const brochureUrl = getStrapiURL(brochure?.url);
+    const link = document.createElement("a");
+    link.href = brochureUrl;
+    link.target = "_blank";
+    link.download = "";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section>
       <div className="container max-md:px-0">
         <div className="bg-primary-gradient md:mx-7 relative pt-24 pb-32">
-          <Image src={vector1} alt="" className="absolute left-0 bottom-0" />
+          <Image
+            src={vector1}
+            alt="brochure-banner-bg-1"
+            className="absolute left-0 bottom-0 -z-[1]"
+          />
 
-          <Image src={vector2} alt="" className="absolute right-0 bottom-0" />
+          <Image
+            src={vector2}
+            alt="brochure-banner-bg-1"
+            className="absolute right-0 bottom-0 -z-[1]"
+          />
 
           <div className="container">
             <div className="flex flex-col gap-4 xl:gap-5 text-center xl:max-w-4xl mx-auto text-white">
@@ -26,7 +67,11 @@ const BrochureBanner = () => {
                 Get detailed about our business ideas. Download brochure now!
               </p>
 
-              <Button variant="secondary" className="w-fit gap-3 px-8 mx-auto">
+              <Button
+                variant="secondary"
+                className="w-fit gap-3 px-8 mx-auto cursor-pointer"
+                onClick={() => downloadBrochure()}
+              >
                 <svg
                   width="20"
                   height="21"
