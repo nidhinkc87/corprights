@@ -123,7 +123,7 @@ export default function StageContent({
             )}
           >
             {stage?.cards?.map((card) => (
-              <div key={card?.id}>
+              <div key={`stage-card-${card?.id}`}>
                 <div className="flex items-center gap-x-[10px]">
                   <div className="w-6 h-6 text-center bg-primary-gradient">
                     <span className="text-base font-bold text-white">1</span>

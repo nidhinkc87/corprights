@@ -26,7 +26,7 @@ export default function Benefit({ benefit, className }: BenefitProps) {
           <div className="mt-10 flex flex-col md:flex-row gap-4 md:gap-8 mx-auto py-[10px]">
             {benefit?.cards?.map((card) => (
               <div
-                key={card?.id}
+                key={`benefit-${card?.id}`}
                 className="bg-card flex-1 p-[18px] xl:p-8 flex flex-col"
               >
                 <div className="w-16 h-16 2xl:w-[72px] 2xl:h-[72px] flex items-center justify-center bg-primary-100 mb-8">

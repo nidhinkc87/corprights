@@ -76,7 +76,7 @@ export default function ServicesDropdown() {
         <ScrollArea className="max-h-72 w-48 overflow-y-auto">
           {services?.map((service) => (
             <li
-              key={service?.id}
+              key={`service-${service?.id}`}
               className="relative group/child cursor-pointer p-4 hover:bg-gray-100/10 rounded-[24px] ease-linear duration-300"
             >
               <Link

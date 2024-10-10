@@ -85,7 +85,6 @@ export default function ContactForm() {
       .transform((value) => value.trim())
       .strict(true)
       .matches(/.*\S.*/, "Name is required")
-      .min(1, "The name needs to be at least 1 char")
       .required("Field is required"),
   });
 

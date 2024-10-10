@@ -20,7 +20,10 @@ export default function RequirementSection({
 
           <div className="lg:w-1/2">
             {requirement?.cards?.map((card) => (
-              <div key={card?.id} className="mb-6 xl:mb-10 2xl:mb-[50px]">
+              <div
+                key={`stage-card-v-${card?.id}`}
+                className="mb-6 xl:mb-10 2xl:mb-[50px]"
+              >
                 <h6 className="text-xl lg:text-4xl font-bold text-dark">
                   {card?.title}
                 </h6>

@@ -26,7 +26,7 @@ export default function Stages({ stages, className }: StagesProps) {
             <div className="relative flex flex-col mt-8 xl:mt-12 group">
               {stages?.map((stage, index) => (
                 <div
-                  key={stage.id}
+                  key={`stage-${stage?.id}`}
                   className="grid grid-cols-[auto_1fr] gap-3 relative h-20 cursor-pointer stage"
                   id={`stage-${stage.id}`}
                   onClick={() => handleStageClick(stage.id)}
@@ -67,7 +67,7 @@ export default function Stages({ stages, className }: StagesProps) {
           <div className="w-3/4">
             {stages?.map((stage, i) => (
               <StageContent
-                key={stage?.id}
+                key={`stage-content-${stage?.id}`}
                 stage={stage}
                 active={stage?.id === activeStage}
                 index={i + 1}
@@ -81,7 +81,7 @@ export default function Stages({ stages, className }: StagesProps) {
 
           {stages?.map((stage, i) => (
             <div
-              key={stage?.id}
+              key={`stage-mob--${stage?.id}`}
               className="relative flex flex-col gap-6 mt-8 xl:mt-12 group"
             >
               <div className="relative">

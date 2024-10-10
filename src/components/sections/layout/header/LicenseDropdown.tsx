@@ -76,7 +76,7 @@ export default function LicenseDropdown() {
         <ScrollArea className="max-h-72 w-48 overflow-y-auto">
           {licenses.map((license) => (
             <li
-              key={license?.id}
+              key={`license-${license?.id}`}
               className="relative group/child cursor-pointer p-4 hover:bg-gray-100/10 ease-linear duration-300 rounded-[24px]"
             >
               <Link

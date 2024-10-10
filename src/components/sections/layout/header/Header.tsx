@@ -68,7 +68,7 @@ function Header() {
           <Navbar isMenuOpen={menuOpen} />
 
           <Button asChild className="px-10 hidden xl:flex">
-            <Link href="#cost-calculator">Cost Calculator</Link>
+            <Link href="/cost-calculator">Cost Calculator</Link>
           </Button>
         </div>
       </div>

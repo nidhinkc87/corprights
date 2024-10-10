@@ -33,7 +33,10 @@ const Navbar = ({ isMenuOpen }: NavbarProps) => {
         <LicenseDropdown />
 
         {paths?.map((path) => (
-          <li key={path?.key} className="relative xl:py-8 group cursor-pointer">
+          <li
+            key={`nav-${path?.key}`}
+            className="relative xl:py-8 group cursor-pointer"
+          >
             <Link
               href={path?.path}
               className={cn(

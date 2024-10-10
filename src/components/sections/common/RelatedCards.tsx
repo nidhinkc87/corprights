@@ -30,7 +30,7 @@ export default function RelatedCards({
         <div className="grid md:grid-cols-2 gap-[10px] xl:gap-10">
           {services?.map((service) => (
             <ServiceCard
-              key={service?.id}
+              key={`service-card-${service?.id}`}
               title={service?.title}
               imgSrc={getStrapiURL(service?.image?.url)}
               description={service?.short_description}

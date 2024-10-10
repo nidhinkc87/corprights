@@ -17,7 +17,7 @@ export default function DocsSection({ docsData }: DocsSectionProps) {
         <div className="mt-8 lg:mt-10 2xl:mt-16 flex flex-col md:flex-row gap-y-6">
           {docsData?.cards?.map((card) => (
             <div
-              key={card?.id}
+              key={`doc-${card?.id}`}
               className="flex-1 px-[19px] lg:px-6 lg:border-l border-gray-100 fle flex-col"
             >
               <div className="w-14 h-14 flex items-center justify-center bg-primary-100 mb-6">

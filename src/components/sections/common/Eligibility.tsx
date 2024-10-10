@@ -17,7 +17,10 @@ export default function Eligibility({ eligibility }: EligibilityProps) {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-11 px-1 xl:px-0">
             {eligibility?.feature?.map((feat) => (
-              <div className="flex gap-4 xl:gap-5" key={feat?.id}>
+              <div
+                className="flex gap-4 xl:gap-5"
+                key={`eligibility-${feat?.id}`}
+              >
                 <div>
                   <div className="w-[18px] h-[18px] rounded-full bg-[#4BAE4F] flex items-center justify-center">
                     <svg

@@ -123,7 +123,7 @@ export default function LocationSection() {
         <div className="flex flex-col lg:flex-row gap-2 xl:gap-[10px]">
           {addresses?.map((address) => (
             <div
-              key={address?.key}
+              key={`address-${address?.key}`}
               className="flex-1 bg-white border border-gray-100 p-5 xl:p-6 flex gap-5 lg:gap-6 items-start"
             >
               <div>

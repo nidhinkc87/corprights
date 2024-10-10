@@ -84,7 +84,7 @@ const ApplicationProcess = ({ process }: ApplicationProcessProps) => {
             ref={(el) => {
               stepRefs.current[index] = el;
             }}
-            key={step.id}
+            key={`process-${step?.id}`}
             className={`relative flex items-center my-6 ${
               index % 2 === 0 ? "flex-row-reverse" : "flex-row"
             } w-full`}
