@@ -3,6 +3,11 @@
 import * as Yup from "yup";
 
 import {
+  AlertDialog,
+  AlertDialogCancel,
+  AlertDialogContent,
+} from "@/components/ui/AlertDialog";
+import {
   Select,
   SelectContent,
   SelectGroup,
@@ -14,10 +19,12 @@ import {
 import { Button } from "@/components/ui/Button";
 import { Checkbox } from "@/components/ui/Checkbox";
 import CountryPhoneInput from "@/components/elements/common/CountryPhoneInput";
+import Image from "next/image";
 import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 import { Textarea } from "@/components/ui/Textarea";
 import { addLead } from "@/api/lead";
+import gif from "@/assets/gif/success.gif";
 import { isPhoneValid } from "@/lib/phone";
 import { toast } from "react-toastify";
 import { useFormik } from "formik";
@@ -36,6 +43,8 @@ export default function ContactForm() {
   const [checked, setChecked] = useState<boolean | "indeterminate">(false);
 
   const [showConditionError, setShowConditionError] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const validationSchema = Yup.object({
     first_name: Yup.string()
@@ -119,9 +128,7 @@ export default function ContactForm() {
       }
 
       if (response?.data) {
-        toast.success(
-          "Thank you for contacting us! We’ll reach out as soon as we can."
-        );
+        setIsOpen(true);
 
         setChecked(false);
 
@@ -252,7 +259,7 @@ export default function ContactForm() {
                   value={formik?.values?.service?.toString()}
                 >
                   <SelectTrigger className="h-12" id="service">
-                    <SelectValue />
+                    <SelectValue placeholder="select service" />
                   </SelectTrigger>
 
                   <SelectContent className="bg-background border-none drop-shadow rounded-md">
@@ -322,6 +329,31 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
+
+      <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
+        <AlertDialogContent>
+          <div className="w-full flex flex-col items-center space-y-6">
+            <div className="relative aspect-square w-[18%] mt-6">
+              <Image src={gif} alt="success" className="mx-auto" fill />
+            </div>
+
+            <div className="flex flex-col items-center space-y-4 lg:space-y-6 w-full">
+              <h3 className="text-3xl xl:text-5xl font-semibold text-dark">
+                Thank you!
+              </h3>
+
+              <p className="text-xl text-gray-400 mx-auto">
+                Thank you for contacting us!
+                <br /> We&apos;ll reach out as soon as we can.
+              </p>
+
+              <AlertDialogCancel className="bg-primary-50 mt-4 text-primary h-12 flex items-center justify-center text-center w-full px-6 py-4 text-base font-bold hover:bg-primary hover:text-background">
+                Done
+              </AlertDialogCancel>
+            </div>
+          </div>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
