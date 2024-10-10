@@ -23,7 +23,7 @@ export default function RootLayout({
 
         <SmoothScroll>{children}</SmoothScroll>
 
-        <ToastContainer hideProgressBar position="bottom-right" />
+        <ToastContainer hideProgressBar position="top-right" />
 
         <Footer />
       </body>
