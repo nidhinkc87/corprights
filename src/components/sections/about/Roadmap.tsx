@@ -61,6 +61,10 @@ const Roadmap = () => {
     fetchRoadMaps();
   }, []);
 
+  if (!roadMap || roadMap?.length === 0) {
+    return <></>;
+  }
+
   return (
     <section className="relative py-16 xl:py-24  2xl:py-[160px]">
       <div className="lg:hidden container">
