@@ -50,6 +50,10 @@ function OurClients() {
     fetchClientLogos(1, 20);
   }, []);
 
+  if (!clients || clients?.length === 0) {
+    return <></>;
+  }
+
   return (
     <div className="container">
       <h3 className="text-center">Building the Best teams.</h3>
