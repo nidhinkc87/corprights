@@ -6,6 +6,7 @@ import HeroSection from "@/components/sections/common/HeroSection";
 import Overview from "@/components/sections/common/Overview";
 import RelatedCards from "@/components/sections/common/RelatedCards";
 import Stages from "@/components/sections/common/Stages";
+import Testimonials from "@/components/sections/pages/home/Testimonials";
 
 interface ServiceSectionProps {
   service: Service;
@@ -33,6 +34,8 @@ export default function ServiceSection({ service }: ServiceSectionProps) {
       {service?.related_faqs?.length > 0 && (
         <Faq faqs={service?.related_faqs} />
       )}
+
+      <Testimonials />
     </>
   );
 }
