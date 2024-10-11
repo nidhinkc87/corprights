@@ -30,7 +30,7 @@ const ClientsMarquee = () => {
             alt={client?.title}
             width={245.56}
             height={76.4}
-            className="w-full"
+            className="w-full invert"
             sizes="25vw"
           />
         </div>
