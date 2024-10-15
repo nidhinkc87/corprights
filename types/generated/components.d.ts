@@ -35,6 +35,17 @@ export interface ElementsMarkdownContentBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsLink extends Struct.ComponentSchema {
+  collectionName: 'components_elements_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    path: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ElementsImage extends Struct.ComponentSchema {
   collectionName: 'components_elements_images';
   info: {
@@ -151,6 +162,23 @@ export interface CustomHomeBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomFooter extends Struct.ComponentSchema {
+  collectionName: 'components_custom_footers';
+  info: {
+    displayName: 'Footer';
+    description: '';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'elements.link', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+  };
+}
+
 export interface CustomBenefit extends Struct.ComponentSchema {
   collectionName: 'components_custom_benefits';
   info: {
@@ -169,6 +197,7 @@ declare module '@strapi/strapi' {
       'elements.phrase': ElementsPhrase;
       'elements.markdown-tile': ElementsMarkdownTile;
       'elements.markdown-content-block': ElementsMarkdownContentBlock;
+      'elements.link': ElementsLink;
       'elements.image': ElementsImage;
       'elements.feature-tile': ElementsFeatureTile;
       'elements.feature-image-tile': ElementsFeatureImageTile;
@@ -178,6 +207,7 @@ declare module '@strapi/strapi' {
       'custom.phrase-block': CustomPhraseBlock;
       'custom.home-card': CustomHomeCard;
       'custom.home-banner': CustomHomeBanner;
+      'custom.footer': CustomFooter;
       'custom.benefit': CustomBenefit;
     }
   }

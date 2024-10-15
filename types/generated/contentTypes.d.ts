@@ -750,6 +750,31 @@ export interface ApiFaqFaq extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
+  collectionName: 'globals';
+  info: {
+    singularName: 'global';
+    pluralName: 'globals';
+    displayName: 'Global';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    footer: Schema.Attribute.Component<'custom.footer', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::global.global'>;
+  };
+}
+
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -1385,6 +1410,7 @@ declare module '@strapi/strapi' {
       'api::cost-calculator-enquiry.cost-calculator-enquiry': ApiCostCalculatorEnquiryCostCalculatorEnquiry;
       'api::email-subscription.email-subscription': ApiEmailSubscriptionEmailSubscription;
       'api::faq.faq': ApiFaqFaq;
+      'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::lead.lead': ApiLeadLead;
       'api::license.license': ApiLicenseLicense;
