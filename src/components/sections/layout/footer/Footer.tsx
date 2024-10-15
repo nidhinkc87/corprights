@@ -6,31 +6,29 @@ import React from "react";
 import footerImage from "@/assets/home/footer-image.png";
 import footerLogo from "@/assets/logo/footer-logo.png";
 
+interface FooterProps {
+  footer?: Footer;
+}
+
 const quickLinks = [
   { href: "/", name: "Home" },
   {
-    href: "/about-us",
+    href: "/about",
     name: "About Us",
   },
   {
-    href: "/services",
-    name: "Services",
+    href: "/blogs",
+    name: "Blogs",
   },
-  {
-    href: "/licenses",
-    name: "Licenses",
-  },
-];
-
-const companyLinks = [
-  { href: "/blog", name: "Blog" },
   {
     href: "/contact-us",
     name: "Contact Us",
   },
 ];
 
-function Footer() {
+function Footer({ footer }: FooterProps) {
+  const footerLinks = footer?.links;
+
   return (
     <footer className="bg-foreground pb-[70px]">
       <div className="container space-y-6 md:space-y-12 2xl:space-y-[100px]">
@@ -65,14 +63,18 @@ function Footer() {
 
         <div className="">
           <div className="flex flex-col md:flex-row justify-between border-b border-dark pb-6 md:pb-10 2xl:pb-[46px]">
-            <div className="space-y-8 w-min">
+            <div className="space-y-8 max-w-[242.55px]">
               <div>
-                <Image src={footerLogo} alt="" />
+                <Image
+                  src={footerLogo}
+                  alt="footer logo"
+                  width={166}
+                  height={48}
+                />
               </div>
 
               <p className="font-normal text-base text-gray-100">
-                Lorem ipsum dolor sit amet consectetur. Lectus sed tempus enim
-                lorem.
+                #7004, Aseel Plaza, Tawbah Street, Ash, Sharafeyah, Jeddah, KSA
               </p>
 
               <ul className="flex gap-4 items-center">
@@ -114,14 +116,14 @@ function Footer() {
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="20"
-                      height="17"
-                      viewBox="0 0 20 17"
+                      height="18"
+                      viewBox="0 0 20 18"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M20 1.90716C19.2504 2.23454 18.4565 2.4492 17.644 2.54416C18.4968 2.0434 19.138 1.24927 19.448 0.310164C18.64 0.780492 17.7587 1.11177 16.841 1.29016C16.4545 0.88537 15.9897 0.563551 15.4748 0.344342C14.9598 0.125133 14.4056 0.0131294 13.846 0.0151639C11.58 0.0151639 9.743 1.82516 9.743 4.05516C9.743 4.37116 9.779 4.68016 9.849 4.97516C8.22358 4.89786 6.63212 4.48257 5.17617 3.7558C3.72022 3.02903 2.43176 2.00674 1.393 0.754164C1.02883 1.36857 0.837415 2.06994 0.839 2.78416C0.839697 3.45213 1.00683 4.10939 1.32529 4.69656C1.64375 5.28372 2.1035 5.78228 2.663 6.14716C2.01248 6.12616 1.37602 5.95249 0.805 5.64016V5.69016C0.805 7.64816 2.22 9.28116 4.095 9.65316C3.74261 9.74666 3.37958 9.79406 3.015 9.79416C2.75 9.79416 2.493 9.76916 2.242 9.71916C2.51008 10.5271 3.02311 11.2315 3.70982 11.7345C4.39653 12.2375 5.22284 12.5142 6.074 12.5262C4.61407 13.6507 2.82182 14.2582 0.979 14.2532C0.647 14.2532 0.321 14.2332 0 14.1972C1.88125 15.3879 4.06259 16.0184 6.289 16.0152C13.836 16.0152 17.962 9.85816 17.962 4.51916L17.948 3.99616C18.7529 3.42983 19.4481 2.72201 20 1.90716Z"
-                        fill="#E0E0E0"
+                        d="M0.523601 0L7.94704 9.92792L0.477356 18H2.15897L8.69932 10.9331L13.9833 18H19.7048L11.864 7.51363L18.8172 0H17.1356L11.1129 6.50843L6.24627 0H0.524716H0.523601ZM2.99582 1.23873H5.62369L17.2303 16.7613H14.6024L2.99582 1.23873Z"
+                        fill="white"
                       />
                     </svg>
                   </li>
@@ -173,7 +175,9 @@ function Footer() {
 
             <div className="grid md:grid-cols-3 gap-6 lg:gap-12 2xl:gap-16">
               <div>
-                <h6 className="text-white p-4">Quick Links</h6>
+                <h6 className="text-white p-4 capitalize font-bold">
+                  Quick Links
+                </h6>
 
                 <ul className="text-gray-100">
                   {quickLinks.map((quickLink, index) => (
@@ -193,19 +197,21 @@ function Footer() {
               </div>
 
               <div>
-                <h6 className="text-white p-4">Company</h6>
+                <h6 className="text-white p-4 capitalize font-bold">
+                  Services & Licences
+                </h6>
 
                 <ul className="text-gray-100">
-                  {companyLinks.map((link, index) => (
+                  {footerLinks?.map((link, index) => (
                     <li
-                      key={`companylink-${index}`}
+                      key={`service-${index}`}
                       className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px] capitalize"
                     >
                       <Link
-                        href={link.href ?? "#"}
+                        href={link.path}
                         className="text-base font-normal hover:text-primary ease-linear duration-300"
                       >
-                        {link.name}
+                        {link.title}
                       </Link>
                     </li>
                   ))}
@@ -213,21 +219,14 @@ function Footer() {
               </div>
 
               <div>
-                <h6 className="text-white p-4">Get in Touch</h6>
+                <h6 className="text-white p-4 capitalize font-bold">
+                  Policies
+                </h6>
 
                 <ul className="text-gray-100">
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href="/about"
-                      className="text-base font-normal hover:text-primary ease-linear duration-300 "
-                    >
-                      About
-                    </Link>
-                  </li>
-
-                  <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
-                    <Link
-                      href="##"
+                      href="/terms"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       Term of use
@@ -236,19 +235,10 @@ function Footer() {
 
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href="#"
+                      href="/privacy-policy"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       Privacy Policy
-                    </Link>
-                  </li>
-
-                  <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
-                    <Link
-                      href="#"
-                      className="text-base font-normal hover:text-primary ease-linear duration-300 "
-                    >
-                      Feedback
                     </Link>
                   </li>
                 </ul>
@@ -264,10 +254,10 @@ function Footer() {
                   Corprights
                 </p>
 
-                <ul className="text-gray-100 hidden md:flex">
+                {/* <ul className="text-gray-100 hidden md:flex">
                   <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
                     <Link
-                      href="#"
+                      href="/privacy-policy"
                       className="text-base font-normal hover:text-primary ease-linear duration-300 "
                     >
                       Privacy Policy
@@ -282,7 +272,7 @@ function Footer() {
                       Terms & Uses
                     </Link>
                   </li>
-                </ul>
+                </ul> */}
               </div>
 
               <p className="text-base font-normal text-gray-100 flex items-center justify-center gap-2 ">
@@ -300,10 +290,12 @@ function Footer() {
                   />
                 </svg>
                 by
-                <span className="font-bold text-white">
-                  {" "}
-                  Pixbit Solutions.com
-                </span>
+                <Link href={"https://pixbitsolutions.com/"} target="_blank">
+                  <span className="font-bold text-white">
+                    {" "}
+                    Pixbit Solutions.com
+                  </span>
+                </Link>
               </p>
             </div>
           </div>
