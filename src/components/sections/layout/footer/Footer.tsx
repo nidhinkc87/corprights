@@ -208,7 +208,7 @@ function Footer({ footer }: FooterProps) {
                       className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px] capitalize"
                     >
                       <Link
-                        href={link.path}
+                        href={link.path ?? "#"}
                         className="text-base font-normal hover:text-primary ease-linear duration-300"
                       >
                         {link.title}
