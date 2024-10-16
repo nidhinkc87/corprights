@@ -23,7 +23,9 @@ interface LicenseSectionProps {
 export default function LicenseSection({ license }: LicenseSectionProps) {
   return (
     <>
-      <HeroSection banner={license?.banner} />
+      <div className="pt-[72px] lg:pt-[106px]">
+        <HeroSection banner={license?.banner} />
+      </div>
 
       <Overview overview={license?.overview} />
 

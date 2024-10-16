@@ -47,7 +47,7 @@ function Services({ services }: ServicesProps) {
           </div>
 
           <div className="lg:w-1/2">
-            <div className="w-full flex flex-col max-h-[375.21px] xl:max-h-[554px] flex-nowrap [mask-image:_linear-gradient(to_top,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <div className="w-full flex flex-col h-full max-h-[375.21px] xl:max-h-[554px] flex-nowrap [mask-image:_linear-gradient(to_top,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
               <ServicesMarquee services={services} />
             </div>
           </div>

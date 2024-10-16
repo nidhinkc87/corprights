@@ -14,7 +14,7 @@ const buttonVariants = cva(
         outline:
           "bg-transparent border border-primary-50 h-12 flex items-center justify-center px-6 py-4 text-primary text-base font-bold hover:text-background hover:bg-primary-gradient hover:border-transparent transition-[background-image]",
         secondary:
-          " bg-white flex items-center justify-center px-6 py-4 text-primary text-base font-bold hover:bg-gradient-to-r from-primary-700 to-primary-700 transition-[background-image]",
+          " bg-white flex items-center justify-center px-6 py-4 text-primary text-base font-bold hover:text-white hover:bg-gradient-to-r from-primary-700 to-primary-700 transition-[background-image]",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {

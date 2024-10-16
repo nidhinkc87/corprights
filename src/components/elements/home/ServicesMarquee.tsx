@@ -51,7 +51,6 @@ const ServicesMarquee = ({ services }: ServicesMarqueeProps) => {
           />
         ))}
       </motion.div>
-      /
     </div>
   );
 };
