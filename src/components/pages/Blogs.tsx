@@ -25,7 +25,7 @@ function Blogs() {
   }, []);
 
   return (
-    <>
+    <div className=" pt-[72px] xl:pt-[105px]">
       <Hero />
 
       {latestBlogs && latestBlogs?.length > 0 && (
@@ -33,7 +33,7 @@ function Blogs() {
       )}
 
       <BlogListingSection />
-    </>
+    </div>
   );
 }
 
