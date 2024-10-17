@@ -70,8 +70,6 @@ const Hero = ({ banner, phone }: HeroProps) => {
           </div>
         </div>
       </BackgroundImage>
-
-      <div className="absolute inset-0 w-full h-full bg-black/60 z-0"></div>
     </section>
   );
 };
