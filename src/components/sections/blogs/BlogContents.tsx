@@ -39,7 +39,7 @@ function BlogContents({ blog }: BlogContentsProps) {
         </Link>
       </div>
 
-      <div className="grid pt-5 lg:pt-10 xl:pt-14">
+      <div className="grid pt-4 lg:pt-6 ">
         <div className="xl:max-w-4xl">
           <h2>{title}</h2>
         </div>
@@ -52,7 +52,7 @@ function BlogContents({ blog }: BlogContentsProps) {
               {blog?.author}
             </span>
 
-            <span className="flex mx-4 w-[6px] h-[6px] bg-[#D9D9D9] rounded-full"></span>
+            <span className="flex ms-2 md:ms-4 w-[6px] h-[6px] bg-[#D9D9D9] rounded-full "></span>
           </div>
 
           <span className="text-base font-light text-gray-400">
