@@ -58,7 +58,7 @@ function OurClients() {
     <div className="container">
       <h3 className="text-center">Building the Best teams.</h3>
 
-      <p className="text-xl xl:text-3xl font-normal text-gray-400 mt-4 xl:mt-6 xl:max-w-5xl mx-auto text-center">
+      <p className="text-xl xl:text-3xl font-normal text-gray-100 mt-4 xl:mt-6 xl:max-w-5xl mx-auto text-center">
         From next-gen startups to established enterprises.
       </p>
 

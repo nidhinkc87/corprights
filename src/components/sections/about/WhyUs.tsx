@@ -7,7 +7,7 @@ const WhyUs = () => {
       <BackgroundImage
         src={BgImg}
         alt="why us bg-img"
-        imageClass="object-center "
+        imageClass="object-center !object-fill "
       >
         <div className="container">
           <div className="">
@@ -35,7 +35,7 @@ const WhyUs = () => {
             </p>
 
             <div className="mt-10 flex flex-col md:flex-row gap-2 md:gap-[10px] mx-auto">
-              <div className="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start">
+              <div className="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start bg-[#181818]">
                 <div>
                   <svg
                     width="20"
@@ -175,7 +175,7 @@ const WhyUs = () => {
                 </div>
               </div>
 
-              <div className="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start">
+              <div className="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start bg-[#181818]">
                 <div>
                   <svg
                     width="20"
@@ -315,7 +315,7 @@ const WhyUs = () => {
                 </div>
               </div>
 
-              <div className="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start">
+              <div className="flex-1 border border-dark p-5 xl:p-6 flex gap-5 lg:gap-6 items-start bg-[#181818]">
                 <div>
                   <svg
                     width="20"
