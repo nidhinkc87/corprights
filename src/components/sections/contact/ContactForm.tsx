@@ -50,14 +50,14 @@ export default function ContactForm() {
     first_name: Yup.string()
       .transform((value) => value.trim())
       .strict(true)
-      .matches(/.*\S.*/, "Name is required")
-      .min(1, "The name needs to be at least 1 char")
+      .matches(/.*\S.*/, "Field is required")
+      .min(1, "The field needs to be at least 1 char")
       .required("Field is required"),
     last_name: Yup.string()
       .transform((value) => value.trim())
       .strict(true)
-      .matches(/.*\S.*/, "Name is required")
-      .min(1, "The name needs to be at least 1 char")
+      .matches(/.*\S.*/, "Field is required")
+      .min(1, "The field needs to be at least 1 char")
       .required("Field is required"),
     email: Yup.string()
       .email("Invalid email address")
@@ -93,7 +93,7 @@ export default function ContactForm() {
     message: Yup.string()
       .transform((value) => value.trim())
       .strict(true)
-      .matches(/.*\S.*/, "Name is required")
+      .matches(/.*\S.*/, "Field is required")
       .required("Field is required"),
   });
 
