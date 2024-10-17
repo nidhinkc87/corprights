@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import vector1 from "@/assets/home/bg/download-vector-1.png";
-import vector2 from "@/assets/home/bg/download-vector-1.png";
+import vector2 from "@/assets/home/bg/download-vector-2.png";
 import { getBrochure } from "@/api/brochure";
 import { getStrapiURL } from "@/api";
 
@@ -45,16 +45,18 @@ const BrochureBanner = () => {
           <Image
             src={vector1}
             alt="brochure-banner-bg-1"
-            className="absolute left-0 bottom-0 -z-[1]"
+            className="absolute left-0 bottom-0 "
+            placeholder="blur"
           />
 
           <Image
             src={vector2}
             alt="brochure-banner-bg-1"
-            className="absolute right-0 bottom-0 -z-[1]"
+            className="absolute right-0 bottom-0 z-[1]"
+            placeholder="blur"
           />
 
-          <div className="container">
+          <div className="container relative z-10">
             <div className="flex flex-col gap-4 xl:gap-5 text-center xl:max-w-4xl mx-auto text-white">
               <h2 className="">Ready to get started?</h2>
 
