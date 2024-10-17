@@ -57,8 +57,8 @@ const ApplicationProcess = ({ process }: ApplicationProcessProps) => {
   }, []);
 
   return (
-    <div className="relative max-w-4xl mx-auto mt-16">
-      <div className="text-center xl:max-w-xl mx-auto mb-6">
+    <div className="container relative xl:max-w-4xl mx-auto mt-16">
+      <div className="xl:text-center max-xl: xl:max-w-4xl mx-auto mb-6">
         <h3>{process?.title}</h3>
 
         <p className="text-xl font-normal text-gray-400 mt-3 xl:mt-4">
@@ -69,13 +69,13 @@ const ApplicationProcess = ({ process }: ApplicationProcessProps) => {
       <div className="relative flex flex-col items-center">
         <div
           ref={lineRef}
-          className="absolute top-0 left-1/2 w-0.5 dashed transform -translate-x-1/2 h-full z-0"
+          className="absolute top-0 left-4 xl:left-1/2 w-0.5 dashed transform xl:-translate-x-1/2 h-full z-0"
           style={{ borderLeft: "2px dashed rgba(112, 111, 111, 0.2)" }}
         ></div>
 
         <div
           ref={greenLineRef}
-          className="absolute top-0 left-1/2 w-0.5 bg-[#2BB162] transform -translate-x-1/2 h-[5%] z-1"
+          className="absolute top-0 left-4 xl:left-1/2 w-0.5 bg-[#2BB162] transform xl:-translate-x-1/2 h-[5%] z-1"
           style={{ borderLeft: "0.5px solid #2BB162" }}
         ></div>
 
@@ -86,20 +86,20 @@ const ApplicationProcess = ({ process }: ApplicationProcessProps) => {
             }}
             key={`process-${step?.id}`}
             className={`relative flex items-center my-6 ${
-              index % 2 === 0 ? "flex-row-reverse" : "flex-row"
+              index % 2 !== 0 ? "xl:flex-row-reverse" : "flex-row"
             } w-full`}
           >
             <div
-              className="absolute left-1/2 transform -translate-x-1/2 bg-primary w-[18px] h-[18px] rounded-full z-0"
+              className="absolute left-2 xl:left-1/2 transform xl:-translate-x-1/2 bg-primary w-[18px] h-[18px] rounded-full z-0"
               style={{ top: "25px" }}
             ></div>
 
-            <div className="w-1/2 p-6 relative z-0">
+            <div className="w-full xl:w-1/2 p-6 relative z-0">
               <div
-                className={`order-2 md:order-1 flex flex-col ${
-                  index % 2 !== 0
-                    ? "md:text-end md:items-end"
-                    : "md:items-start md:text-start"
+                className={`order-2 xl:order-1 flex flex-col max-xl:ps-3 ${
+                  index % 2 === 0
+                    ? "xl:text-end xl:items-end"
+                    : "xl:items-start xl:text-start"
                 }`}
               >
                 <div className="h-6 w-6 bg-primary-gradient text-center mb-6 ">

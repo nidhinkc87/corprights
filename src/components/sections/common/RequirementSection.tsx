@@ -5,7 +5,7 @@ export default function RequirementSection({
   requirement,
 }: RequirementSectionProps) {
   return (
-    <section className="pt-16 2xl:pt-20">
+    <section>
       <div className="container pt-16 lg:py-20 2xl:pt-[160px]">
         <div className="flex flex-col lg:flex-row gap-6 md:gap-8 xl:gap-14">
           <div className="lg:w-1/2">
