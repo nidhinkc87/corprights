@@ -34,7 +34,7 @@ const options = [
 ];
 
 export default function Jurisdiction() {
-  const { setFieldValue, errors, touched } =
+  const { setFieldValue, errors, touched, values } =
     useFormikContext<CalculatorFormProps>();
 
   return (
@@ -59,6 +59,7 @@ export default function Jurisdiction() {
                   onChange={(e) =>
                     setFieldValue("jurisdiction", e.target?.value)
                   }
+                  checked={option?.value == values?.jurisdiction}
                   value={option?.value}
                 />
 

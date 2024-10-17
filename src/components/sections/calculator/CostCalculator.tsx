@@ -114,7 +114,7 @@ const validationSchema = [
     office_size: Yup.string().required("Field is required"),
   }),
   Yup.object({
-    business_name: Yup.string().required("Field is required"),
+    business_name: Yup.string().trim().required("Field is required"),
   }),
   Yup.object({
     first_name: Yup.string()
@@ -143,7 +143,7 @@ const validationSchema = [
         test(value, ctx) {
           if (!value) {
             return ctx.createError({
-              message: "Phone is required",
+              message: "Field is required",
             });
           }
 
@@ -158,7 +158,7 @@ const validationSchema = [
           return true;
         },
       })
-      .required("Phone is required"),
+      .required("Field is required"),
     nationality: Yup.string().required("Field is required"),
     message: Yup.string()
       .transform((value) => value.trim())
@@ -247,7 +247,9 @@ export default function CostCalculator() {
 
                   <h4 className="font-bold pb-4">
                     Calculate Your{" "}
-                    <span className="text-primary">Business Setup Cost</span>
+                    <span className="text-transparent bg-clip-text bg-primary-gradient">
+                      Business Setup Cost
+                    </span>
                   </h4>
 
                   <p className="text-xl xl:text-3xl font-normal text-gray-400">

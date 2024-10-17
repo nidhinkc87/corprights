@@ -19,9 +19,10 @@ const options = [
 ];
 
 export default function Visa() {
-  const { setFieldValue, errors, touched } =
+  const { setFieldValue, errors, touched, values } =
     useFormikContext<CalculatorFormProps>();
 
+  const currentValueText = values?.visa_required ? "yes" : "no";
   return (
     <div className="tabs">
       <div className="w-full">
@@ -47,6 +48,7 @@ export default function Visa() {
                       e.target?.value === "yes" ? true : false
                     )
                   }
+                  checked={option?.value == currentValueText}
                   value={option?.value}
                 />
 

@@ -29,7 +29,7 @@ const options = [
 ];
 
 export default function Office() {
-  const { setFieldValue, errors, touched } =
+  const { setFieldValue, errors, touched, values } =
     useFormikContext<CalculatorFormProps>();
 
   return (
@@ -54,6 +54,7 @@ export default function Office() {
                   onChange={(e) =>
                     setFieldValue("office_size", e.target?.value)
                   }
+                  checked={option?.value == values?.office_size}
                   value={option?.value}
                 />
 

@@ -24,7 +24,7 @@ const options = [
 ];
 
 export default function Owners() {
-  const { setFieldValue, errors, touched } =
+  const { setFieldValue, errors, touched, values } =
     useFormikContext<CalculatorFormProps>();
 
   return (
@@ -47,6 +47,7 @@ export default function Owners() {
                   type="radio"
                   className="sr-only peer"
                   onChange={(e) => setFieldValue("owners", e.target?.value)}
+                  checked={option?.value == values?.owners}
                   value={option?.value}
                 />
 
