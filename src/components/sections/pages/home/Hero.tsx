@@ -20,9 +20,9 @@ const Hero = ({
   buttonLink,
 }: HeroProps) => {
   return (
-    <section className="pt-[89px] lg:pt-[106px] container mx-auto relative">
-      <BackgroundImage src={bannerImg} alt="hero-banner">
-        <div className="grid">
+    <section className="container">
+      <BackgroundImage src={bannerImg} alt="hero-banner" className="relative">
+        <div className="grid ">
           <div className="container">
             <div className="lg:max-w-xl xl:max-w-4xl mx-auto text-center self-center pt-52 pb-48 2xl:pt-[137px] 2xl:pb-[213px]">
               {title}
