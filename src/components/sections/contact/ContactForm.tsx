@@ -251,7 +251,7 @@ export default function ContactForm() {
             </div>
 
             <div className="sm:col-span-full">
-              <Label htmlFor="service">Select Service</Label>
+              <Label htmlFor="service">Select service</Label>
 
               <div className="mt-4 relative">
                 <Select

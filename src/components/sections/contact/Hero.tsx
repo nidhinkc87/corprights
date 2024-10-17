@@ -11,11 +11,11 @@ export default function Hero() {
             </h3>
 
             <p className="text-gray-400 font-bold text-xl xl:text-3xl">
-              For More Enquiries:
+              For More Enquiries:{" "}
               <a
                 href="mailto:services@corprights.com"
                 target="_blank"
-                className="md:flex text-primary font-normal text-xl xl:text-2xl"
+                className="lg:flex text-primary font-normal text-xl xl:text-2xl"
               >
                 services@corprights.com
               </a>

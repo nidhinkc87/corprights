@@ -34,7 +34,7 @@ export default function CountryPhoneInput({
       <PhoneInput
         defaultCountry="in"
         className={cn(
-          "flex h-10 w-full items-center space-x-1 ps-1 bg-input",
+          "flex h-10  w-full items-center space-x-1 ps-1 bg-input",
           "[&>div>button]:!rounded [&>div>button]:!border-none [&>div>button]:p-1 [&>div>button]:!bg-transparent",
           "[&>input]:!w-full [&>input]:!bg-transparent [&>input]:!border-none [&>input]:!font-normal [&>input]:!text-base [&>input]:!text-gray-600",
           "[&>div>ul]:!z-40",
