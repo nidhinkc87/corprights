@@ -7,7 +7,7 @@ const WhyUs = () => {
       <BackgroundImage
         src={BgImg}
         alt="why us bg-img"
-        imageClass="object-center !object-fill "
+        imageClass="object-center !object-fill max-lg:!object-cover max-lg:!object-right"
       >
         <div className="container">
           <div className="">
