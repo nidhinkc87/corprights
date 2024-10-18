@@ -927,6 +927,36 @@ export interface ApiRoadMapRoadMap extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSeoPageSeoPage extends Struct.CollectionTypeSchema {
+  collectionName: 'seo_pages';
+  info: {
+    singularName: 'seo-page';
+    pluralName: 'seo-pages';
+    displayName: 'SeoPage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    path: Schema.Attribute.UID & Schema.Attribute.Required;
+    meta_title: Schema.Attribute.String & Schema.Attribute.Required;
+    meta_description: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::seo-page.seo-page'
+    >;
+  };
+}
+
 export interface ApiServiceService extends Struct.CollectionTypeSchema {
   collectionName: 'services';
   info: {
@@ -1421,6 +1451,7 @@ declare module '@strapi/strapi' {
       'api::lead.lead': ApiLeadLead;
       'api::license.license': ApiLicenseLicense;
       'api::road-map.road-map': ApiRoadMapRoadMap;
+      'api::seo-page.seo-page': ApiSeoPageSeoPage;
       'api::service.service': ApiServiceService;
       'api::team.team': ApiTeamTeam;
       'api::testimonial.testimonial': ApiTestimonialTestimonial;
