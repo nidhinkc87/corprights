@@ -75,9 +75,13 @@ function BlogListingSection() {
           <>
             {blogs.length > 0 ? (
               <>
-                <div className="grid md:grid-cols-2 xl:grid-cols-3 divide-y md:divide-x divide-gray-100">
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 ">
                   {blogs?.map((blog, i) => (
-                    <Link key={`blogs-${i}`} href={`/blogs/${blog?.slug}`}>
+                    <Link
+                      key={`blogs-${i}`}
+                      href={`/blogs/${blog?.slug}`}
+                      className={`border-b md:border-r border-gray-100 md:max-xl:even:border-r-0 xl:[&:nth-child(3n)]:border-r-0`}
+                    >
                       <div className="group py-6 px-4 md:px-6 hover:shadow-card-20dp ease-linear duration-700">
                         <div className="group-hover:xl:scale-x-95 xl:scale-y-110 group-hover:xl:scale-y-100 origin-top ease-in-out duration-300">
                           <Image
