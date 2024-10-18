@@ -57,6 +57,14 @@
       "relation": "manyToMany",
       "target": "api::blog-category.blog-category",
       "mappedBy": "blogs"
+    },
+    "meta_title": {
+      "type": "string",
+      "required": true
+    },
+    "meta_description": {
+      "type": "text",
+      "required": true
     }
   }
 }

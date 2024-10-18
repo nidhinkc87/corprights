@@ -562,6 +562,8 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::blog-category.blog-category'
     >;
+    meta_title: Schema.Attribute.String & Schema.Attribute.Required;
+    meta_description: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -670,7 +672,7 @@ export interface ApiCostCalculatorEnquiryCostCalculatorEnquiry
       ]
     > &
       Schema.Attribute.Required;
-    owners: Schema.Attribute.Enumeration<['single', 'multiple', 'others']> &
+    owners: Schema.Attribute.Enumeration<['single', 'multiple', 'other']> &
       Schema.Attribute.Required;
     visa_required: Schema.Attribute.Boolean;
     office_size: Schema.Attribute.Enumeration<
@@ -870,6 +872,8 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
       'elements.markdown-content-block',
       false
     >;
+    meta_title: Schema.Attribute.String & Schema.Attribute.Required;
+    meta_description: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -949,6 +953,8 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     overview: Schema.Attribute.Component<'elements.markdown-tile', false>;
     benefit: Schema.Attribute.Component<'custom.benefit', false>;
     stage: Schema.Attribute.Component<'custom.stage', true>;
+    meta_title: Schema.Attribute.String & Schema.Attribute.Required;
+    meta_description: Schema.Attribute.Text & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

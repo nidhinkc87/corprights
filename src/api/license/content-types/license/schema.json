@@ -75,6 +75,13 @@
       "type": "component",
       "repeatable": false,
       "component": "elements.markdown-content-block"
+    },
+    "meta_title": {
+      "type": "string",
+      "required": true
+    },
+    "meta_description": {
+      "type": "text"
     }
   }
 }
