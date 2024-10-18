@@ -53,3 +53,17 @@ export async function getServiceBySlug(slug: string) {
     { next: { tags: ["service"] } }
   );
 }
+
+export async function getServiceSEOBySlug(slug: string) {
+  return await fetchAPI<Array<Service>>(
+    `/services`,
+    {
+      filters: {
+        slug: {
+          $eq: slug,
+        },
+      },
+    },
+    { next: { tags: ["service"] } }
+  );
+}

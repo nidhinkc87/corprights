@@ -13,6 +13,8 @@ interface LicenseAttributes {
   process: Process;
   related_licenses: License[];
   related_faqs: Faq[];
+  meta_title: string;
+  meta_description: string;
 }
 
 type License = {} & LicenseAttributes;

@@ -51,3 +51,17 @@ export async function getBlogBySlug(slug: string) {
     { next: { tags: ["blog", "blog-category"] } }
   );
 }
+
+export async function getBlogSEOBySlug(slug: string) {
+  return await fetchAPI<Array<Blog>>(
+    `/blogs`,
+    {
+      filters: {
+        slug: {
+          $eq: slug,
+        },
+      },
+    },
+    { next: { tags: ["blog"] } }
+  );
+}

@@ -65,3 +65,17 @@ export async function getLicenseBySlug(slug: string) {
     { next: { tags: ["license"] } }
   );
 }
+
+export async function getLicenseSEOBySlug(slug: string) {
+  return await fetchAPI<Array<License>>(
+    `/licenses`,
+    {
+      filters: {
+        slug: {
+          $eq: slug,
+        },
+      },
+    },
+    { next: { tags: ["license"] } }
+  );
+}
