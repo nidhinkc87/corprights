@@ -54,7 +54,7 @@ function Footer({ footer }: FooterProps) {
             </p>
 
             <div className="mt-4 flex justify-center">
-              <div className="relative w-full md:max-w-md">
+              <div className="w-full md:max-w-md">
                 <EmailSubscriptionForm />
               </div>
             </div>

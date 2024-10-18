@@ -1,6 +1,7 @@
 "use client";
 import { addEmailSubscription } from "@/api/email-subscription";
 import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "react-toastify";
 
@@ -53,25 +54,26 @@ const EmailSubscriptionForm = () => {
   };
 
   return (
-    <form className="h-12" onSubmit={handleSubmit}>
-      <input
+    <form
+      className="h-12 border !outline-gray-300 outline-[2px] ps-5 pe-2 py-2 border-dark flex gap-2 items-center justify-between"
+      onSubmit={handleSubmit}
+    >
+      <Input
         type="email"
         placeholder="Email"
         onChange={handleEmailChange}
         value={email}
         required
-        className="border !outline-gray-300 outline-[2px] border-dark bg-transparent placeholder:text-gray-100 px-5 py-2 w-full h-full"
+        className=" bg-transparent placeholder:text-gray-100  w-full h-full outline-none py-0 px-0 text-xl"
       />
 
-      <div className="absolute right-2 top-1/2 -translate-y-1/2">
-        <Button
-          type="submit"
-          className="h-[34px]"
-          disabled={!email || !isValidEmail || isSubmitting}
-        >
-          Get started
-        </Button>
-      </div>
+      <Button
+        type="submit"
+        className="h-[34px]"
+        disabled={!email || !isValidEmail || isSubmitting}
+      >
+        Get started
+      </Button>
     </form>
   );
 };
