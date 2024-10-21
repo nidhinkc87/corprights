@@ -24,10 +24,10 @@ const Hero = ({
       <BackgroundImage src={bannerImg} alt="hero-banner" className="relative">
         <div className="grid ">
           <div className="container">
-            <div className="lg:max-w-xl xl:max-w-4xl mx-auto text-center self-center pt-52 pb-48 2xl:pt-[137px] 2xl:pb-[213px]">
+            <div className="lg:max-w-xl xl:max-w-4xl mx-auto text-center self-center pt-52 pb-48 2xl:pt-[137px] 2xl:pb-[213px] capitalize">
               {title}
 
-              <p className="text-base md:text-3xl font-normal text-gray-200 mt-7 capitalize">
+              <p className="text-base md:text-3xl font-normal text-white mt-7 capitalize">
                 {description}
               </p>
 

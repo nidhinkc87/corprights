@@ -23,10 +23,11 @@ const Hero = ({ banner, phone }: HeroProps) => {
               <HighlightTitle
                 title={banner?.title}
                 highlightText={banner?.highlight_text}
+                className="capitalize "
               />
             </h1>
 
-            <p className="text-base md:text-3xl font-normal text-gray-200 mt-7">
+            <p className="text-base md:text-3xl font-normal text-white mt-7">
               {banner?.description}
             </p>
 

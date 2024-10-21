@@ -21,9 +21,11 @@ export default function HeroSection({ banner, className }: HeroSectionProps) {
     >
       <div className="container grid">
         <div className="lg:max-w-xl xl:max-w-3xl self-center text-center xl:text-start max-xl:mx-auto pt-32 pb-48 2xl:pt-[200px] 2xl:pb-[213px]">
-          <h1 className="xl:text-[48px] xl:leading-[60px]">{banner?.title}</h1>
+          <h1 className="xl:text-[48px] xl:leading-[60px] capitalize">
+            {banner?.title}
+          </h1>
 
-          <p className="text-base md:text-3xl font-normal text-primary-100 mt-7">
+          <p className="text-base md:text-3xl font-normal text-white mt-7">
             {banner?.description}
           </p>
 
