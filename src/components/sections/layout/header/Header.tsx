@@ -57,7 +57,7 @@ function Header() {
                 <Image
                   src={LogoImg}
                   alt="corprights-logo"
-                  className="w-[128.67px] lg:w-auto"
+                  className="w-[128.67px] lg:w-[165.5px]"
                 />
               </div>
             </Link>
