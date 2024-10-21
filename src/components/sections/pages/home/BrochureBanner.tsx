@@ -52,7 +52,7 @@ const BrochureBanner = () => {
           <Image
             src={vector2}
             alt="brochure-banner-bg-1"
-            className="absolute right-0 bottom-0 z-[1]"
+            className="absolute right-0 bottom-0 z-[1] mix-blend-multiply"
             placeholder="blur"
           />
 
