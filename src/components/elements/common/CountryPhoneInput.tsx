@@ -30,7 +30,7 @@ export default function CountryPhoneInput({
   };
 
   return (
-    <div className="relative flex w-full items-center">
+    <div className="relative flex w-full items-center" data-lenis-prevent>
       <PhoneInput
         defaultCountry="in"
         className={cn(
