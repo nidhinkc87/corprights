@@ -1,11 +1,13 @@
 "use client";
+
+import React, { useEffect, useState } from "react";
+
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import vector1 from "@/assets/home/bg/download-vector-1.png";
-import vector2 from "@/assets/home/bg/download-vector-2.png";
 import { getBrochure } from "@/api/brochure";
 import { getStrapiURL } from "@/api";
+import vector1 from "@/assets/home/bg/download-vector-1.png";
+import vector2 from "@/assets/home/bg/download-vector-2.png";
 
 const BrochureBanner = () => {
   const [brochure, setBrochure] = useState<Image>();
@@ -45,28 +47,34 @@ const BrochureBanner = () => {
           <Image
             src={vector1}
             alt="brochure-banner-bg-1"
-            className="absolute left-0 bottom-0 "
+            className="absolute left-0 bottom-0 pointer-events-none"
             placeholder="blur"
           />
 
           <Image
             src={vector2}
             alt="brochure-banner-bg-1"
-            className="absolute right-0 bottom-0 z-[1] mix-blend-multiply"
+            className="absolute right-0 bottom-0 z-[1] mix-blend-multiply pointer-events-none"
             placeholder="blur"
           />
 
           <div className="container relative z-10">
             <div className="flex flex-col gap-4 xl:gap-5 text-center xl:max-w-4xl mx-auto text-white">
-              <h2 className="">Ready to get started?</h2>
+              <h2>Starting a Business in Saudi Arabia?</h2>
 
               <p className="text-base xl:text-3xl font-normal">
-                Get personal learning recommendations. Subscribe Us for new
-                courses, application notifications, downloads etc
+                Your Step-by-Step Guide
+              </p>
+
+              <p className="text-base xl:text-xl">
+                An Increasing Number of Foreign Investors Are Showing Interest
+                in Saudi Arabia: Avoid Common Pitfalls with Our Comprehensive
+                Guide!
               </p>
 
               <p className="text-base xl:text-xl font-bold">
-                Get detailed about our business ideas. Download brochure now!
+                All you need to know about setting up a business in Saudi
+                Arabia. Download Our Guide
               </p>
 
               <Button

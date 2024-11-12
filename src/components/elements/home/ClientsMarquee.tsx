@@ -1,8 +1,9 @@
 "use client";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
 
 import { useEffect, useState } from "react";
+
+import Image from "next/image";
+import Marquee from "react-fast-marquee";
 import { getClientLogo } from "@/api/clients-logo";
 import { getStrapiURL } from "@/api";
 
@@ -30,7 +31,7 @@ const ClientsMarquee = () => {
             alt={client?.title}
             width={245.56}
             height={76.4}
-            className="w-full invert"
+            className="w-full invert pointer-events-none"
             sizes="25vw"
           />
         </div>

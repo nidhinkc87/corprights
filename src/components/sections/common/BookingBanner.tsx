@@ -30,7 +30,11 @@ export default function BookingBanner({ className }: BookingBannerProps) {
             </Button>
           </div>
 
-          <Image src={lines} alt="lines" className="absolute bottom-0 end-0" />
+          <Image
+            src={lines}
+            alt="lines"
+            className="absolute bottom-0 end-0 pointer-events-none"
+          />
 
           <Image
             src={banner}

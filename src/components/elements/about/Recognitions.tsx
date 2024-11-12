@@ -1,10 +1,12 @@
 "use client";
-import { getAwardByLimit } from "@/api/award";
-import Image from "next/image";
+
 import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+
+import Image from "next/image";
 import Loading from "@/components/elements/common/Loading";
+import { getAwardByLimit } from "@/api/award";
 import { getStrapiURL } from "@/api";
+import { useInView } from "react-intersection-observer";
 
 const Recognitions = () => {
   const { ref, inView } = useInView();
@@ -70,8 +72,7 @@ const Recognitions = () => {
                 src={getStrapiURL(award?.image?.url)}
                 alt={award?.title}
                 fill
-                sizes=""
-                className="w-full grayscale hover:grayscale-0 ease-linear duration-300"
+                className="w-full grayscale hover:grayscale-0 ease-linear duration-300 pointer-events-none"
               />
             </div>
           ))}

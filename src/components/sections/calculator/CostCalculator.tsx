@@ -347,7 +347,12 @@ export default function CostCalculator() {
               <AlertDialogContent>
                 <div className="w-full flex flex-col items-center space-y-6">
                   <div className="relative aspect-square w-[18%] mt-6">
-                    <Image src={gif} alt="success" className="mx-auto" fill />
+                    <Image
+                      src={gif}
+                      alt="success"
+                      className="mx-auto pointer-events-none"
+                      fill
+                    />
                   </div>
 
                   <div className="flex flex-col items-center space-y-4 lg:space-y-6 w-full">

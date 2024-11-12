@@ -1,11 +1,13 @@
 "use client";
-import { getStrapiURL } from "@/api";
-import { getBlogs } from "@/api/blogs";
-import Loading from "@/components/elements/common/Loading";
-import { formatDate } from "date-fns";
+
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import Loading from "@/components/elements/common/Loading";
+import { formatDate } from "date-fns";
+import { getBlogs } from "@/api/blogs";
+import { getStrapiURL } from "@/api";
 import { useInView } from "react-intersection-observer";
 
 function BlogListingSection() {
@@ -89,7 +91,7 @@ function BlogListingSection() {
                             alt={blog?.image?.name ?? blog?.title}
                             width={374}
                             height={374}
-                            className="w-full aspect-square h-[320px] lg:h-[374px] object-cover"
+                            className="w-full aspect-square h-[320px] lg:h-[374px] object-cover pointer-events-none"
                           />
                         </div>
 

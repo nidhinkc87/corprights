@@ -14,12 +14,15 @@ export default function ScheduleSection() {
         <div className="flex flex-col max-lg:space-y-4 max-lg:px-6">
           <div className="flex flex-col space-y-6 max-w-4xl mx-auto">
             <h2 className="text-background text-center">
-              Let&apos;s achieve Best results of your future Business Growth!
+              Book Free Business Consultation with Business Advisors!
             </h2>
 
             <p className="text-background text-center text-2xl">
-              Lorem ipsum dolor sit amet consectetur. Tempor cursus risus nulla
-              imperdiet. Egestas enim lectus id nullam. Quis amet lectus.
+              Looking to set up your business in Saudi Arabia? Get tailored
+              guidance from our seasoned business advisors to turn your vision
+              into a reality. With a team of professionals, finance advisors,
+              and qualified practitioners, we provide expert services to cater
+              to all your business needs.
             </p>
 
             <div className="w-full flex justify-center">

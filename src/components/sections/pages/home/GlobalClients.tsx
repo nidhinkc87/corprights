@@ -1,6 +1,5 @@
-import React from "react";
-
 import ClientsMarquee from "@/components/elements/home/ClientsMarquee";
+import React from "react";
 
 const GlobalClients = () => {
   return (
@@ -15,8 +14,8 @@ const GlobalClients = () => {
           </h2>
 
           <p className="text-xl xl:text-3xl font-normal text-gray-400 xl:max-w-2xl mx-auto mt-4">
-            Lorem ipsum dolor sit amet consectetur. Urna sed elementum morbi
-            amet. Nec sociis fusce ullamcorper blandit vitae diam.
+            Corprights welcomes the world to KSA, partnering with organizations
+            of all sizes and various diverse industries.
           </p>
         </div>
       </div>

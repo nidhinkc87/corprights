@@ -1,7 +1,7 @@
-import { getStrapiURL } from "@/api";
-import { formatDate } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+import { formatDate } from "date-fns";
+import { getStrapiURL } from "@/api";
 
 interface LatestUpdatesProps {
   blogs: Blog[];
@@ -27,7 +27,7 @@ function LatestUpdates({ blogs }: LatestUpdatesProps) {
                     alt={blog?.image?.name ?? blog?.title}
                     width={420}
                     height={420}
-                    className="w-full h-[320px] lg:h-[420px] aspect-square"
+                    className="w-full h-[320px] lg:h-[420px] aspect-square pointer-events-none"
                   />
                 </div>
 

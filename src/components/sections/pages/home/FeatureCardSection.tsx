@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-
 import { getStrapiURL } from "@/api";
 import networkVector from "@/assets/home/network-vector.png";
 
@@ -16,25 +15,28 @@ const FeatureCardSection = ({ features }: FeatureCardSectionProps) => {
           <Image
             src={networkVector}
             alt="network-image"
-            className="mx-auto"
+            className="mx-auto pointer-events-none"
             placeholder="blur"
           />
         </div>
 
         <div className="mx-auto text-center mb-8 xl:mb-12 2xl:mb-20">
-          <h2 className="xl:max-w-3xl mx-auto">
-            Expand your business Network in{" "}
+          <h2 className="xl:max-w-3xl mx-auto capitalize">
+            Expand Your Business to{" "}
             <span className="text-transparent bg-clip-text bg-primary-gradient">
-              Saudi Arabia
+              Saudi Arabia with Ease
             </span>
           </h2>
 
           <p className="text-xl xl:text-3xl font-normal text-gray-400 xl:max-w-5xl mx-auto mt-4">
-            We&apos;re your on-the-ground partner in Saudi Arabia. Our team of
-            local business experts help you set up and grow. Explore the unique
-            advantages of establishing your business in Saudi Arabia. Discover
-            how Saudi&;apos;s Business environment and strategic location can
-            boost your business growth.
+            Expanding your business into Saudi Arabia can open doors to new
+            markets (local and international), revenue streams, and global
+            platforms. However, navigating the complexities of market entry,
+            legal frameworks, and local regulations can be overwhelming.
+            That&apos;s where Corprights comes in. Our team of business experts
+            helps to set up and grow your business. We offer a comprehensive
+            end-to-end support, a business-friendly atmosphere, and complete
+            legal services to boost your business in Saudi Arabia.
           </p>
         </div>
       </div>
@@ -50,7 +52,7 @@ const FeatureCardSection = ({ features }: FeatureCardSectionProps) => {
                   width={414}
                   height={403}
                   sizes="(min-width: 768px) 33vw, 100vw"
-                  className="w-full object-cover"
+                  className="w-full object-cover pointer-events-none"
                 />
               </div>
 

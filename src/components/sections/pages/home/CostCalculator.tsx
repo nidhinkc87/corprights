@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import costCalculator from "@/assets/home/cost-calculator.png";
 
@@ -20,11 +21,13 @@ const CostCalculator = () => {
               </h2>
 
               <p className="text-xl xl:text-3xl font-normal text-gray-400 mt-4 xl:mt-7">
-                Get an estimated cost of your company setup in under a minute
-                with our interactive cost calculator
+                The business setup cost calculator helps you to give an estimate
+                for the type of business you want to start in Saudi Arabia.
               </p>
 
-              <Button className="mt-10 px-8">Cost Calculator</Button>
+              <Link href="/cost-calculator">
+                <Button className="mt-10 px-8">Cost Calculator</Button>
+              </Link>
             </div>
           </div>
 
@@ -36,7 +39,7 @@ const CostCalculator = () => {
               height={519}
               placeholder="blur"
               sizes="(max-width: 768px) 100vw,50vw"
-              className="w-full object-cover"
+              className="w-full object-cover pointer-events-none"
             />
           </div>
         </div>

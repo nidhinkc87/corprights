@@ -1,8 +1,13 @@
 "use client";
-import { formatDate } from "date-fns";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import Markdown from "react-markdown";
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/BreadCrumb";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -10,19 +15,15 @@ import {
   WhatsappShareButton,
 } from "react-share";
 
-import { getStrapiURL } from "@/api";
 import { BackgroundImage } from "@/components/ui/BackgroundImage";
+import Image from "next/image";
+import Link from "next/link";
+import Markdown from "react-markdown";
 import { Separator } from "@/components/ui/Seperator";
 import { cn } from "@/lib/utils";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  BreadcrumbPage,
-} from "@/components/ui/BreadCrumb";
-import Image from "next/image";
+import { formatDate } from "date-fns";
+import { getStrapiURL } from "@/api";
+import { usePathname } from "next/navigation";
 
 interface BlogContentsProps {
   blog: Blog;
@@ -298,7 +299,7 @@ function BlogContents({ blog }: BlogContentsProps) {
                     width={224}
                     height={224}
                     alt={blog?.title}
-                    className="w-full h-full"
+                    className="w-full h-full pointer-events-none"
                   />
                 </div>
                 <div className="col-span-3 bg-card px-[14px] py-[18px] xl:px-6 xl:py-[30px]">

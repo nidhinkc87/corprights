@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import bgVector from "@/assets/about/vector.png";
 import iconImage from "@/assets/about/icons/values.svg";
 
@@ -12,7 +11,7 @@ const OurValues = () => {
         width={459}
         height={552}
         placeholder="blur"
-        className="absolute left-0 top-1/2  -translate-y-1/2 hidden lg:block lg:w-[340px] lg:h-[438px] 2xl:w-[459px] 2xl:h-[552] -z-[1]"
+        className="absolute left-0 top-1/2  -translate-y-1/2 hidden lg:block lg:w-[340px] lg:h-[438px] 2xl:w-[459px] 2xl:h-[552] -z-[1] pointer-events-none"
       />
 
       <div className="container">
@@ -38,7 +37,11 @@ const OurValues = () => {
             <div className="mt-16">
               <div className="border border-gray-100 grid md:grid-cols-2">
                 <div className="p-6 md:border-r border-b border-gray-100">
-                  <Image src={iconImage} alt="mission-icon" />
+                  <Image
+                    src={iconImage}
+                    alt="mission-icon"
+                    className="pointer-events-none"
+                  />
 
                   <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5">
                     Mission
@@ -51,7 +54,11 @@ const OurValues = () => {
                 </div>
 
                 <div className="p-6 border-b border-gray-100">
-                  <Image src={iconImage} alt="vision-icon" />
+                  <Image
+                    src={iconImage}
+                    alt="vision-icon"
+                    className="pointer-events-none"
+                  />
 
                   <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5">
                     Vision
@@ -64,7 +71,11 @@ const OurValues = () => {
                 </div>
 
                 <div className="p-6 border-b md:border-b-0 md:border-r border-gray-100">
-                  <Image src={iconImage} alt="icon" />
+                  <Image
+                    src={iconImage}
+                    alt="icon"
+                    className="pointer-events-none"
+                  />
 
                   <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5">
                     Our Core Values
@@ -77,7 +88,11 @@ const OurValues = () => {
                 </div>
 
                 <div className="p-6">
-                  <Image src={iconImage} alt="icon" />
+                  <Image
+                    src={iconImage}
+                    alt="icon"
+                    className="pointer-events-none"
+                  />
 
                   <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5">
                     What we delivers

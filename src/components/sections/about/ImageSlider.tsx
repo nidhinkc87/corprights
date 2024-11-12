@@ -1,7 +1,6 @@
-import { getStrapiURL } from "@/api";
 import Image from "next/image";
-import React from "react";
 import Marquee from "react-fast-marquee";
+import { getStrapiURL } from "@/api";
 
 interface ImageSliderProps {
   slides: Slide[];
@@ -20,7 +19,7 @@ const ImageSlider = ({ slides }: ImageSliderProps) => {
               src={getStrapiURL(slide?.image?.url)}
               alt={slide?.title}
               fill
-              className="w-full object-cover"
+              className="w-full object-cover pointer-events-none"
             />
           </div>
         ))}

@@ -83,7 +83,7 @@ const Teams = () => {
                   alt={member?.name}
                   fill
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                  className="object-cover"
+                  className="object-cover pointer-events-none"
                 />
               </div>
 

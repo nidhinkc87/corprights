@@ -1,9 +1,9 @@
-import React from "react";
-import Img from "@/assets/home/logo-vector.png";
 import Image from "next/image";
-import visionSaudiLogo from "@/assets/home/vision-saudi-logo.png";
+import Img from "@/assets/home/logo-vector.png";
+import React from "react";
 import investSaudi from "@/assets/home/invest-saudi.png";
 import review from "@/assets/home/review.png";
+import visionSaudiLogo from "@/assets/home/vision-saudi-logo.png";
 
 interface OverviewProps {
   opportunityCount: number;
@@ -29,17 +29,27 @@ const Overview = ({
             />
           </div>
 
-          <div>
-            <p className="text-base xl:text-3xl font-light text-dark mb-10">
-              Lorem ipsum dolor sit amet consectetur. Elementum et amet
-              suspendisse viverra egestas sapien vivamus tristique hac. Nisl et
-              amet facilisis morbi eu. Massa blandit quis aliquam ut odio
-              viverra donec arcu. Elementum quam mauris tempor habitasse aliquet
-              proin euismod mauris risus. Quam risus turpis elementum arcu
-              tincidunt scelerisque euismod at. Felis orci pharetra egestas est.
-              Porta nec etiam aenean tempus elementum integer elementum et.
-              Elementum tincidunt neque mauris neque. Tincidunt nam tortor sed
-              sed semper.
+          <div className="mb-10 space-y-6">
+            <p className="text-base xl:text-3xl font-light text-dark">
+              Corprights - one of the leading business management consultancies
+              in Saudi Arabia, combines global expertise with Saudi roots to
+              transform the business, finance, tax, and legal landscape for
+              foreign direct investment. We simplify business formation and
+              provide end-to-end support tailored to your unique needs, ensuring
+              accessibility, professionalism, and quality at every step. As
+              trusted advisors to founders in 20+ countries, Corprights is the
+              strategic business partner that offers everything you need to
+              launch, operate, and grow your business in Saudi Arabia&apos;s
+              dynamic market.
+            </p>
+
+            <p className="text-base xl:text-3xl font-light text-dark">
+              From company formation to business legal services in KSA, we guide
+              the clients through a wide range of consulting services. Our
+              expert advisory empowers and optimizes the business workflow and
+              ensures compliance with Saudi laws and regulations to achieve
+              operational excellence, strategic growth and sustainability in
+              their businesses.
             </p>
 
             <div className="flex gap-5 xl:gap-12">
@@ -54,13 +64,17 @@ const Overview = ({
               <div className="">
                 <Image
                   src={investSaudi}
-                  alt=""
+                  alt="invest saudi logo"
                   className="mix-blend-multiply"
                 />
               </div>
 
               <div className="">
-                <Image src={review} alt="" className="mix-blend-multiply" />
+                <Image
+                  src={review}
+                  alt="google review"
+                  className="mix-blend-multiply"
+                />
               </div>
             </div>
           </div>
@@ -69,15 +83,15 @@ const Overview = ({
         <div className="flex flex-col md:flex-row justify-between">
           <div className="">
             <h6 className="text-9xl 2xl:text-10xl font-righteous text-transparent bg-clip-text bg-primary-gradient">
-              {opportunityCount}
+              {opportunityCount}+
             </h6>
 
             <p className="text-base xl:text-3xl font-bold text-dark mt-3">
-              Hyper Qualified Opportunities
+              Company Formations
             </p>
 
             <p className="text-[10px] md:text-xl font-normal text-gray-400 mt-1">
-              Hyper Qualified Opportunities
+              Across Gulf Countries
             </p>
           </div>
 
@@ -87,25 +101,25 @@ const Overview = ({
             </h6>
 
             <p className="text-base xl:text-3xl font-bold text-dark mt-3">
-              Hyper Qualified Opportunities
+              Years of Experience
             </p>
 
             <p className="text-[10px] md:text-xl font-normal text-gray-400 mt-1">
-              Hyper Qualified Opportunities
+              Global Expertise with Saudi Roots
             </p>
           </div>
 
           <div className="">
             <h6 className="text-9xl 2xl:text-10xl font-righteous text-transparent bg-clip-text bg-primary-gradient">
-              {opportunityPercent}%
+              {opportunityPercent}+
             </h6>
 
             <p className="text-base xl:text-3xl font-bold text-dark mt-3">
-              Hyper Qualified Opportunities
+              Professionals
             </p>
 
             <p className="text-[10px] md:text-xl font-normal text-gray-400 mt-1">
-              Hyper Qualified Opportunities
+              Chartered Accountants & Lawyers
             </p>
           </div>
         </div>

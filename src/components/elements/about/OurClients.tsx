@@ -1,10 +1,12 @@
 "use client";
+
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
+import Loading from "@/components/elements/common/Loading";
 import { getClientLogoByLimit } from "@/api/clients-logo";
 import { getStrapiURL } from "@/api";
-import Loading from "@/components/elements/common/Loading";
+import { useInView } from "react-intersection-observer";
 
 function OurClients() {
   const { ref, inView } = useInView();
@@ -71,9 +73,8 @@ function OurClients() {
             <Image
               src={getStrapiURL(client?.image?.url)}
               fill
-              sizes=""
               alt={client?.title}
-              className="object-cover"
+              className="object-cover pointer-events-none"
             />
           </div>
         ))}

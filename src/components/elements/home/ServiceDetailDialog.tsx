@@ -1,11 +1,10 @@
-import { X } from "lucide-react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import Image from "next/image";
-import React from "react";
-
 import { DialogClose, DialogContent } from "@/components/ui/Dialog";
-import { ScrollArea } from "@/components/ui/ScrollArea";
+
+import Image from "next/image";
 import Markdown from "react-markdown";
+import { ScrollArea } from "@/components/ui/ScrollArea";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { X } from "lucide-react";
 
 interface ServiceDetailDialogProps {
   title: string;
@@ -26,7 +25,7 @@ const ServiceDetailDialog = ({
           alt={title}
           fill
           className="w-full object-cover"
-          sizes="(min-width: 768px) 50vw, 100vw"
+          sizes="(min-width: 768px) 50vw, 100vw pointer-events-none"
         />
       </div>
 

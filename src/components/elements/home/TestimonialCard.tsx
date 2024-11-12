@@ -1,7 +1,7 @@
 "use client";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 import Image from "next/image";
-import React from "react";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 interface TestimonialCardProps {
   name: string;
@@ -25,7 +25,7 @@ const TestimonialCard = ({
             alt={`${name}-profile-image`}
             width={39}
             height={39}
-            className="w-full h-full object-cover rounded-full"
+            className="w-full h-full object-cover rounded-full pointer-events-none"
           />
         </div>
 
