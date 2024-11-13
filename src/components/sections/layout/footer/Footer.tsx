@@ -42,18 +42,18 @@ function Footer({ footer }: FooterProps) {
             />
           </div>
 
-          <div className="flex flex-col gap-4 text-center text-gray-100 mt-6 xl:mt-14">
-            <h2 className="text-transparent bg-clip-text bg-primary-gradient">
-              Get Started In Minutes
+          <div className="flex flex-col gap-4 text-center text-gray-100 mt-6 xl:mt-14 items-center">
+            <h2 className="text-transparent bg-clip-text bg-primary-gradient capitalize max-w-4xl">
+              Ready for a New Way of Doing Business?
             </h2>
 
             <p className="text-base xl:text-2xl font-normal xl:max-w-3xl mx-auto">
-              Transform your business with Corprights — expert cold emailing
-              team that boosts your company growth and expands your market reach
-              efficiently.
+              Subscribe to receive our latest updates, features, founder guides,
+              and success stories about doing business in Saudi Arabia,
+              delivered to your inbox!
             </p>
 
-            <div className="mt-4 flex justify-center">
+            <div className="mt-4 flex justify-center w-full">
               <div className="w-full md:max-w-md">
                 <EmailSubscriptionForm />
               </div>
@@ -63,7 +63,7 @@ function Footer({ footer }: FooterProps) {
 
         <div className="">
           <div className="flex flex-col md:flex-row justify-between border-b border-dark pb-6 md:pb-10 2xl:pb-[46px]">
-            <div className="space-y-8 max-w-[242.55px]">
+            <div className="space-y-8 max-w-72">
               <div>
                 <Image
                   src={footerLogo}
@@ -74,7 +74,10 @@ function Footer({ footer }: FooterProps) {
               </div>
 
               <p className="font-normal text-base text-gray-100">
-                #7004, Aseel Plaza, Tawbah Street, Ash, Sharafeyah, Jeddah, KSA
+                Al Rowad Management Consulting Company
+                <br /> Address: #104, 1st Floor, Iwan Center, North Building,
+                Above Starbucks, King Abdullah Branch Rd
+                <br /> Al-Ruwais, Jeddah - 23214
               </p>
 
               <ul className="flex gap-4 items-center">

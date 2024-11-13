@@ -19,11 +19,11 @@ const OurValues = () => {
           <div></div>
 
           <div>
-            <p className="text-xl font-normal text-primary mb-2">
+            <p className="text-xl font-normal text-primary mb-2 capitalize">
               What we value
             </p>
 
-            <h3 className="xl:max-w-xl">
+            <h3 className="xl:max-w-xl capitalize">
               Our values are the catalyst for all of our endeavors
             </h3>
 
@@ -43,13 +43,17 @@ const OurValues = () => {
                     className="pointer-events-none"
                   />
 
-                  <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5">
+                  <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5 capitalize">
                     Mission
                   </h6>
 
                   <p className="text-base xl:text-2xl font-normal text-gray-400 mt-3">
-                    We help businesses succeed by giving them practical advice
-                    and harnessing the latest technology.
+                    To deliver expert business consulting services to encourage
+                    people to do business in Saudi Arabia more effectively. With
+                    latest technologies, we drive transformation, improve
+                    performance and provide a long-term success to the clients.
+                    Corprights strive to be the trusted global partner for doing
+                    business in the Middle East.
                   </p>
                 </div>
 
@@ -60,13 +64,15 @@ const OurValues = () => {
                     className="pointer-events-none"
                   />
 
-                  <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5">
+                  <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5 capitalize">
                     Vision
                   </h6>
 
                   <p className="text-base xl:text-2xl font-normal text-gray-400 mt-3">
-                    We help businesses succeed by giving them practical advice
-                    and harnessing the latest technology.
+                    To be the first choice for global businesses to start,
+                    manage, and grow in Saudi Arabia, where everyone has the
+                    opportunity to succeed. By providing a supportive business
+                    environment for businesses of all sizes.
                   </p>
                 </div>
 
@@ -77,14 +83,17 @@ const OurValues = () => {
                     className="pointer-events-none"
                   />
 
-                  <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5">
+                  <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5 capitalize">
                     Our Core Values
                   </h6>
 
-                  <p className="text-base xl:text-2xl font-normal text-gray-400 mt-3">
-                    We help businesses succeed by giving them practical advice
-                    and harnessing the latest technology.
-                  </p>
+                  <ul className="text-base xl:text-2xl font-normal text-gray-400 mt-3 list-disc ps-5">
+                    <li>Integrity</li>
+                    <li>Transparency</li>
+                    <li>Collaboration</li>
+                    <li>Expertise</li>
+                    <li>Customer-Centric</li>
+                  </ul>
                 </div>
 
                 <div className="p-6">
@@ -94,13 +103,17 @@ const OurValues = () => {
                     className="pointer-events-none"
                   />
 
-                  <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5">
+                  <h6 className="text-3xl lg:text-4xl font-bold text-dark mt-5 capitalize">
                     What we delivers
                   </h6>
 
                   <p className="text-base xl:text-2xl font-normal text-gray-400 mt-3">
-                    We help businesses succeed by giving them practical advice
-                    and harnessing the latest technology.
+                    We&apos;re your on-site business partner in Saudi Arabia,
+                    offering comprehensive business, finance, tax, and legal
+                    consulting services to help you set up, manage, and grow.
+                    Our team of local experts goes beyond traditional consulting
+                    – we partner with your business, providing personalised
+                    solutions that drive long-term success.
                   </p>
                 </div>
               </div>

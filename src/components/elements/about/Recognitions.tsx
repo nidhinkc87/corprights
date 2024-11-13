@@ -66,13 +66,13 @@ const Recognitions = () => {
           {awards?.map((award, i) => (
             <div
               key={`award-image-${i}`}
-              className="w-[26%] md:w-[9%] aspect-square relative"
+              className="w-[26%] md:w-[9%] aspect-square relative grayscale hover:grayscale-0 ease-linear duration-300"
             >
               <Image
                 src={getStrapiURL(award?.image?.url)}
                 alt={award?.title}
                 fill
-                className="w-full grayscale hover:grayscale-0 ease-linear duration-300 pointer-events-none"
+                className="w-full pointer-events-none"
               />
             </div>
           ))}

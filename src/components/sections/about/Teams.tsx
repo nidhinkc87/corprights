@@ -64,14 +64,12 @@ const Teams = () => {
   return (
     <section className="py-16 xl:py-24 2xl:py-[120px] relative bg-white">
       <div className="container">
-        <h2 className="mx-auto text-center">Meet our leadership team</h2>
+        <h2 className="mx-auto text-center">Meet Our Expert Leadership Team</h2>
 
         <p className="text-xl xl:text-3xl font-normal text-gray-400 mt-4 xl:mt-6 xl:max-w-5xl mx-auto text-center">
-          Our approach to Nearbound extends the concept of a trusted ecosystem
-          to a global scale. We adopt the speed, efficiency and scale of digital
-          solutions and combine it with the personal connections that are best
-          delivered through traditional face to face relationships and
-          interactions.
+          Led by visionary experts with a proven track record and deep
+          understanding of the Middle East market, our leadership team delivers
+          innovative solutions to your business needs.
         </p>
 
         <div className="mt-10 xl:mt-16 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-[18px] lg:gap-x-4 gap-y-7">

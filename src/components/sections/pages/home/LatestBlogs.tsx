@@ -11,14 +11,14 @@ const LatestBlogs = ({ blogs }: LatestBlogsProps) => {
   return (
     <section className="py-16 xl:py-24 2xl:py-[130px]">
       <div className="container">
-        <h2 className="mx-auto text-center">Check our latest blogs.</h2>
+        <h2 className="mx-auto text-center">Saudi Business Blogs .</h2>
 
         <p className="text-xl xl:text-3xl font-normal text-gray-400 mt-4 xl:mt-6 xl:max-w-5xl mx-auto text-center">
-          Our approach to Nearbound extends the concept of a trusted ecosystem
-          to a global scale. We adopt the speed, efficiency and scale of digital
-          solutions and combine it with the personal connections that are best
-          delivered through traditional face to face relationships and
-          interactions.
+          Tips, updates, and guides on starting and growing a business in Saudi
+          Arabia. From market trends to legal basics, our blog covers what every
+          common man, entrepreneur, investor, and business owner needs to know
+          to succeed in Saudi Arabia. Stay informed and gets practical advice to
+          help you navigate the Saudi business landscape smoothly.
         </p>
 
         <div className="mt-10 xl:mt-16 grid md:grid-cols-2 gap-[14px] lg:gap-6">

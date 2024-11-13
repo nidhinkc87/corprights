@@ -12,7 +12,7 @@ const WhyUs = () => {
         <div className="container">
           <div className="">
             <h2 className="text-white">
-              Why{" "}
+              Why choose{" "}
               <span className="text-transparent bg-clip-text bg-primary-gradient">
                 Corprights{" "}
               </span>
@@ -20,18 +20,21 @@ const WhyUs = () => {
             </h2>
 
             <p className="text-xl md:text-3xl font-normal text-gray-200 mt-7 lg:max-w-lg xl:max-w-4xl">
-              vOur approach to Nearbound extends the concept of a trusted
-              ecosystem to a global scale. We adopt the speed, efficiency and
-              scale of digital solutions and combine it with the personal
-              connections that are best delivered through traditional face to
-              face relationships and interactions.
+              In today&apos;s rapidly evolving business landscape in KSA,
+              organizations need skillful guidance to navigate challenges and
+              unlock new opportunities. At Corprights, we provide end-to-end
+              transparent solutions that help you achieve remarkable business
+              growth.
             </p>
 
             <p className="text-xl md:text-3xl font-normal text-gray-200 mt-4 xl:mt-9 lg:max-w-lg xl:max-w-4xl">
-              Our approach to Nearbound extends the concept of a trusted
-              ecosystem to a global scale. We adopt the speed, efficiency and
-              scale of digital solutions and combine it with the personal
-              connections that are best delivered .
+              We streamline corporate governance across Saudi and have deep
+              knowledge about the local as well as international market. A
+              personalized client-centric approach is taken to analyze the
+              business activities in each sector which helps to understand
+              commercial needs and risk areas of business. We focus on improving
+              the operational efficiency at reduced costs. Thus our
+              collaborative and strategic services help to grow your business.
             </p>
 
             <div className="mt-10 flex flex-col md:flex-row gap-2 md:gap-[10px] mx-auto">
