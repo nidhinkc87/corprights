@@ -2,234 +2,211 @@ export default function PrivacyPolicy() {
   return (
     <>
       <div className="container pt-[72px] xl:pt-[178px] pb-[80px]">
-        <div className="text-center space-y-3  lg:space-y-6 ">
-          <h3 className="capitalize text-primary">Privacy Policy</h3>
+        <div className="text-center space-y-2.5 lg:space-y-4">
+          <h3 className="font-bold text-transparent bg-clip-text bg-primary-gradient">
+            Privacy Policy
+          </h3>
 
-          <p className="text-base xl:text-2xl font-normal text-gray-400 ">
-            Lorem ipsum dolor sit amet consectetur. Eget viverra sagittis
-            curabitur enim eget rhoncus etiam. Ac malesuada sollicitudin ut quis
-            nibh pretium. Orci nunc massa elit elit ac est viverra. Cras
-            faucibus odio libero tempus commodo tortor.
+          <p className="text-base xl:text-2xl font-normal text-gray-400">
+            This Privacy Policy governs the manner in which Corprights (Al Rowad
+            Management Consulting Company) collects, uses, maintains, and
+            discloses information collected from users (each, a
+            &ldquo;User&rdquo;) of the Corprights.sa website
+            (&ldquo;Site&rdquo;). This privacy policy applies to the Site and
+            all products and services offered by Corprights.
           </p>
         </div>
 
-        <div className="mt-6 xl:mt-12 space-y-6 xl:space-y-12 ">
-          <div className="text-gray-400 space-y-3">
+        <div className="mt-6 xl:mt-12 space-y-6 xl:space-y-8">
+          <div className="text-gray-400 space-y-2.5">
             <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
-              Terms & Conditions
+              1. Personal Identification Information
             </h6>
-            <p className="text-base xl:text-xl font-normal ">
-              Lorem ipsum dolor sit amet consectetur. Elit nibh aliquam duis
-              egestas viverra. Varius nunc auctor ridiculus neque nulla varius.
-              Adipiscing interdum sem egestas egestas urna. Velit amet erat
-              fermentum ultricies ut turpis nibh ornare. Mauris nec quam auctor
-              lorem. Vestibulum porttitor tincidunt cursus enim nulla eget sit
-              malesuada. Lacus mattis felis fusce porta eu. Nec lorem cursus
-              vestibulum habitasse cras arcu morbi arcu. Sed tristique viverra
-              elementum non ornare mauris dolor et sagittis. Quis in proin
-              tortor sed et. Elit accumsan velit integer eleifend vulputate
-              lectus semper purus nunc. Aliquet quam at congue nulla euismod
-              cursus.Non amet vel tempus pellentesque sit et proin. Aliquam cum
-              vitae gravida donec nibh tempus. Est in a rutrum sollicitudin
-              cursus amet at. Eu imperdiet proin enim lorem pellentesque
-              facilisi id id congue. Sapien urna eget aliquam in. Malesuada nunc
-              tincidunt nec nunc fermentum malesuada. Egestas nunc integer
-              ullamcorper in interdum. Metus condimentum amet quam sagittis
-              donec.
-            </p>
-            <p className="text-base xl:text-xl font-normal ">
-              Quisque leo scelerisque diam est. Aenean lectus pharetra maecenas
-              mauris magna. Turpis pellentesque enim viverra tristique in. Etiam
-              viverra imperdiet tristique velit ut urna elit cras quis. Arcu
-              enim fermentum senectus suspendisse lorem lacinia ipsum.
-              Scelerisque faucibus turpis vestibulum nisl nulla a luctus. Nibh
-              adipiscing tempus ut suspendisse integer felis risus. Dolor sem
-              sit bibendum vulputate semper posuere vel duis. Sed amet sit neque
-              volutpat fames mollis fames. Tellus magna enim lobortis amet.
-              Vitae tincidunt egestas diam sed quis amet quis. Netus cras tellus
-              sed dolor tincidunt. Tellus interdum in egestas gravida commodo in
-              pellentesque scelerisque. In viverra sit est morbi et. Tortor nisi
-              id risus morbi facilisi pretium nec gravida
-            </p>
-            <p className="text-base xl:text-xl font-normal ">
-              Ultricies posuere scelerisque aliquet leo scelerisque integer
-              venenatis. Sit vulputate enim posuere purus fusce ut laoreet
-              elementum nec. Ut amet nec adipiscing ornare dolor lacinia eu est
-              in. Dignissim mattis at et vel. Orci porttitor pharetra pulvinar
-              tellus penatibus massa. Diam cursus ac fermentum dui amet molestie
-              bibendum. Facilisi maecenas morbi leo sit gravida. Id malesuada in
-              feugiat diam nulla eget. Hendrerit suspendisse consequat sed sed
-              pellentesque mauris dignissim. Tellus venenatis purus nec in nunc.
-              Molestie purus in sit praesent leo eget in viverra pulvinar.
-              Bibendum vulputate arcu risus at quis est congue quis. Posuere sit
-              volutpat auctor ut. Lorem hac et scelerisque eget cursus mattis.
-              Facilisi in phasellus consequat tortor.
-            </p>
+
             <p className="text-base xl:text-xl font-normal">
-              Proin non pharetra faucibus orci nam purus risus et. Nullam nisi
-              amet vestibulum nisl aenean maecenas est feugiat ipsum. Semper
-              faucibus praesent quam consectetur. Ac egestas tellus sed mi vel
-              congue. Lectus vel leo ipsum sit malesuada arcu malesuada
-              accumsan. Urna erat tincidunt enim duis eu elementum ut. A sit
-              faucibus viverra enim semper ultricies massa dis. Massa et gravida
-              id dui dictum lorem et nibh. Amet elit in fusce quis. Orci
-              sagittis donec ut maecenas viverra. Turpis nunc elit congue vitae
-              amet proin. A convallis quis elit bibendum tellus egestas. A et id
-              duis proin blandit mi eleifend. Molestie ut faucibus in justo ac
-              est et dolor. Sagittis sit risus sed aliquet ac lectus duis
-              tempus. Tincidunt arcu neque at mollis. Ut elementum pharetra quis
-              aliquam sem diam vitae enim. Etiam suspendisse id posuere dui
-              arcu.
+              We may collect personal identification information from Users in
+              various ways, including, but not limited to, when Users visit our
+              Site, register on the Site, place an order, subscribe to the
+              newsletter, respond to a survey, fill out a form, or engage in
+              other activities, services, features, or resources available on
+              the Site. Users may be asked for, as appropriate, their name,
+              email address, phone number, and other relevant details.
             </p>
+
             <p className="text-base xl:text-xl font-normal ">
-              Id diam commodo leo sit condimentum eu magna a. Diam dolor ut
-              gravida gravida et mattis ac. Pretium consequat pretium sed
-              volutpat vulputate. Quam fringilla nulla orci eget integer montes
-              malesuada. Ornare ac sit imperdiet risus nec quis. Diam pulvinar
-              malesuada viverra id at dignissim est senectus non. Faucibus magna
-              suspendisse mattis risus morbi ornare. Massa porttitor tincidunt
-              hendrerit enim massa. Viverra lacus varius orci turpis mauris.
-              Egestas sed urna nibh tincidunt amet ultrices integer dictumst.
-              Imperdiet sed pretium scelerisque eu viverra nisl justo. Ac nunc
-              scelerisque sed quisque sed aliquet. Est consectetur purus ut
-              ornare. Lacus nisi vel placerat lorem. Eu aliquet nisl nulla erat
-              mi integer nibh arcu. Scelerisque sed aliquet sit odio mi. Leo eu
-              volutpat congue pulvinar id a integer ac. Placerat ipsum tellus
-              risus massa nascetur imperdiet duis. Tellus tempus gravida.
+              Users can always refuse to supply personally identifiable
+              information, though this may limit their ability to engage in
+              certain activities on the Site.
             </p>
           </div>
 
-          <div className="text-gray-400 space-y-3">
+          <div className="text-gray-400 space-y-2.5">
             <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
-              Collection Of Information
+              2. Non-Personal Identification Information
             </h6>
+
             <p className="text-base xl:text-xl font-normal ">
-              As a visitor, you can browse our Website to find out more about
-              our Website. You are not required to provide us with any Personal
-              Information as a visitor. When you visit the Website, we collect
-              and store certain information to improve security, analyze trends
-              and administer the Website to assist us in improving customer
-              experience. We use this information to evaluate traffic patterns
-              on our Website so that we can make it more useful to our visitors.
-            </p>
-            <div className="text-base xl:text-xl font-normal ">
-              When you register with us, you generally provide;
-              <ol className="list-decimal list-inside indent-1">
-                <li>
-                  your name, age, email address, location, phone number,
-                  password, and your ward’s educational interests;
-                </li>
-                <li>
-                  transaction-related information, such as when you make
-                  purchases, respond to any offers, or download or use
-                  applications from us;
-                </li>
-                <li>
-                  information you provide us when you contact us for help;
-                </li>
-                <li>
-                  information you provide us when you contact us for help;
-                </li>
-              </ol>
-            </div>
-            <p className="text-base xl:text-xl font-normal ">
-              The said information collected from the users could be categorized
-              as “Personal Information”, “Sensitive Personal Information” and
-              “Associated Information”. Personal Information, Sensitive Personal
-              Information and Associated Information (each as individually
-              defined under this Information Technology (Reasonable security
-              practices and procedures and sensitive personal data or
-              information) Rules, 2011 (the “Data Protection Rules”)) shall
-              collectively be referred to as ‘Information’ in this Policy. We
-              may use the Information to contact you from time to time, to
-              provide you with the Services, important information, required
-              notices, and marketing promotions. We will ask you when we need
-              more information that personally identifies you (personal
-              information) or allows us to contact you. We will not
-              differentiate between who is using the device to access the
-              Application, Website, or Services or products, so long as the
-              log-in/access credentials match with yours. To make the best use
-              of the Website/Services/products and enable your Information to be
-              captured accurately on the Website/Services/products, it is
-              essential that you have logged in using your credentials. In
-              addition, the products/Services may collect certain information
-              automatically, including, but not limited to, the type of mobile
-              device you use, your mobile device unique device ID, the IP
-              address of your mobile device, your mobile operating system, the
-              type of mobile Internet browsers you use, and information about
-              the way you use the Services/products. As is true of most Mobile
-              applications, we also collect other relevant information as per
-              the permissions that you provide. We use an outside credit card
-              processing company to bill you for goods and services. These
-              companies do not retain, share, store or use personally
-              identifiable information for any other purpose
+              We may collect non-personal identification information about Users
+              whenever they interact with our Site. This includes information
+              such as browser type, Internet Service Providers (ISPs),
+              referring/exit pages, operating system, and date/time stamps. This
+              information helps us analyze trends and improve user experience.
             </p>
           </div>
 
-          <div className="text-gray-400 space-y-3">
+          <div className="text-gray-400 space-y-2.5">
             <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
-              Collection Of Information
+              3. Web Browser Cookies
             </h6>
+
             <p className="text-base xl:text-xl font-normal ">
-              As a visitor, you can browse our Website to find out more about
-              our Website. You are not required to provide us with any Personal
-              Information as a visitor. When you visit the Website, we collect
-              and store certain information to improve security, analyze trends
-              and administer the Website to assist us in improving customer
-              experience. We use this information to evaluate traffic patterns
-              on our Website so that we can make it more useful to our visitors.
+              The Site may use cookies to enhance User experience. Cookies are
+              small files placed on your device by your web browser. You may
+              choose to set your browser to refuse cookies or alert you when
+              cookies are being sent. If you disable cookies, some parts of the
+              Site may not function properly.
             </p>
+          </div>
+
+          <div className="text-gray-400 space-y-2.5">
+            <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
+              4. How We Use Collected Information
+            </h6>
+
             <div className="text-base xl:text-xl font-normal ">
-              When you register with us, you generally provide;
-              <ol className="list-decimal list-inside indent-1">
+              Corprights may use the information we collect for the following
+              purposes:
+              <ol className="list-decimal list-inside indent-1 space-y-2 ps-4">
                 <li>
-                  your name, age, email address, location, phone number,
-                  password, and your ward’s educational interests;
+                  <b>To Improve Customer Service:</b> Information you provide
+                  helps us respond more effectively to customer service requests
+                  and support needs.
                 </li>
+
                 <li>
-                  transaction-related information, such as when you make
-                  purchases, respond to any offers, or download or use
-                  applications from us;
+                  <b>To Personalize User Experience:</b> We may aggregate
+                  information to understand how Users use our services and
+                  resources to improve user experience.
                 </li>
+
                 <li>
-                  information you provide us when you contact us for help;
+                  <b>To Improve the Site:</b> Feedback from Users helps us
+                  enhance our products and services.
                 </li>
+
                 <li>
-                  information you provide us when you contact us for help;
+                  <b>To Process Transactions:</b> Information provided by Users
+                  when placing orders will be used solely for the completion of
+                  the order.
+                </li>
+
+                <li>
+                  <b>To Run Promotions, Contests, or Surveys:</b> We may use
+                  information to send users details about events, contests, or
+                  surveys that may interest them.
+                </li>
+
+                <li>
+                  <b>To Send Periodic Emails:</b> Users may receive emails
+                  regarding their orders, requests, or updates related to our
+                  services. Users can opt-out of receiving such emails by
+                  following the unsubscribe instructions provided in each
+                  communication.
                 </li>
               </ol>
             </div>
+          </div>
+
+          <div className="text-gray-400 space-y-2.5">
+            <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
+              5. How We Protect Your Information
+            </h6>
+
             <p className="text-base xl:text-xl font-normal ">
-              The said information collected from the users could be categorized
-              as “Personal Information”, “Sensitive Personal Information” and
-              “Associated Information”. Personal Information, Sensitive Personal
-              Information and Associated Information (each as individually
-              defined under this Information Technology (Reasonable security
-              practices and procedures and sensitive personal data or
-              information) Rules, 2011 (the “Data Protection Rules”)) shall
-              collectively be referred to as ‘Information’ in this Policy. We
-              may use the Information to contact you from time to time, to
-              provide you with the Services, important information, required
-              notices, and marketing promotions. We will ask you when we need
-              more information that personally identifies you (personal
-              information) or allows us to contact you. We will not
-              differentiate between who is using the device to access the
-              Application, Website, or Services or products, so long as the
-              log-in/access credentials match with yours. To make the best use
-              of the Website/Services/products and enable your Information to be
-              captured accurately on the Website/Services/products, it is
-              essential that you have logged in using your credentials. In
-              addition, the products/Services may collect certain information
-              automatically, including, but not limited to, the type of mobile
-              device you use, your mobile device unique device ID, the IP
-              address of your mobile device, your mobile operating system, the
-              type of mobile Internet browsers you use, and information about
-              the way you use the Services/products. As is true of most Mobile
-              applications, we also collect other relevant information as per
-              the permissions that you provide. We use an outside credit card
-              processing company to bill you for goods and services. These
-              companies do not retain, share, store or use personally
-              identifiable information for any other purpose
+              We adopt appropriate data collection, storage, and processing
+              practices and security measures to protect against unauthorized
+              access, alteration, disclosure, or destruction of your personal
+              information. Sensitive data is exchanged securely over SSL-secured
+              communication channels and encrypted with digital signatures.
+            </p>
+          </div>
+
+          <div className="text-gray-400 space-y-2.5">
+            <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
+              6. Sharing Your Information
+            </h6>
+
+            <p className="text-base xl:text-xl font-normal ">
+              We do not sell, trade, or rent personal identification information
+              to others. We may share aggregated, non-personal information with
+              our business partners, trusted affiliates, and advertisers for the
+              purposes outlined above. We may also engage third-party service
+              providers to assist with tasks such as sending out newsletters or
+              conducting surveys. We will only share your information with these
+              third parties after obtaining your consent.
+            </p>
+          </div>
+
+          <div className="text-gray-400 space-y-2.5">
+            <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
+              7. Third-Party Websites
+            </h6>
+
+            <p className="text-base xl:text-xl font-normal ">
+              The Site may contain links to external websites operated by third
+              parties. We do not control these sites or their practices. We
+              encourage you to review the privacy policies of any third-party
+              websites linked to our Site. We are not responsible for their
+              content, policies, or practices.
+            </p>
+          </div>
+
+          <div className="text-gray-400 space-y-2.5">
+            <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
+              8. Changes to This Privacy Policy
+            </h6>
+
+            <p className="text-base xl:text-xl font-normal ">
+              Corprights reserves the right to update this Privacy Policy at any
+              time. When we make updates, we will revise the date at the top of
+              this page. We encourage Users to review this Privacy Policy
+              periodically to stay informed on how we are protecting their
+              information. By continuing to use the Site after such updates, you
+              accept the changes.
+            </p>
+          </div>
+
+          <div className="text-gray-400 space-y-2.5">
+            <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
+              9. Your Acceptance of These Terms
+            </h6>
+
+            <p className="text-base xl:text-xl font-normal ">
+              By using this Site, you signify your acceptance of this Privacy
+              Policy. If you do not agree with the terms, please refrain from
+              using the Site. Your continued use of the Site after changes to
+              this policy will be considered your acceptance of those changes.
+            </p>
+          </div>
+
+          <div className="text-gray-400 space-y-2.5">
+            <h6 className="text-base xl:text-xl font-bold text-foreground capitalize">
+              10. Contacting Us
+            </h6>
+
+            <p className="text-base xl:text-xl font-normal ">
+              If you have any questions regarding this Privacy Policy or the
+              practices of this Site, please contact us at:
+            </p>
+
+            <p>
+              <b>Al Rowad Management Consulting Company</b>
+              <br />
+              #104, 1st Floor, Iwan Center, North Building,
+              <br />
+              Above Starbucks, King Abdullah Branch Rd,
+              <br />
+              Al-Ruwais, Jeddah - 23214, Saudi Arabia
             </p>
           </div>
         </div>

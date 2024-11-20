@@ -4,85 +4,84 @@ import bg from "@/assets/bg/contact-bg.jpg";
 const addresses = [
   {
     key: 1,
-    title: "Dubai",
+    title: "UAE",
     content: (
       <div>
         <p>
-          222, Maeen 4, he Lakes, Dubai,
-          <br /> United Arab Emirates
+          Block C VL06-106, SRTI Park, University City, P.O Box 66636, Sharjah,
+          UAE
         </p>
         <br />
         <a
-          href="tel:+971 12345 6778"
+          href="tel:+971527275214"
           target="_blank"
           className="hover:text-primary"
         >
-          +971 12345 6778
-        </a>
-        <br />
-        <a
-          href="mailTo:corprightsdubai@corprights.com"
-          target="_blank"
-          className="hover:text-primary"
-        >
-          corprightsdubai@corprights.com
+          +971 52727 5214
         </a>
       </div>
     ),
   },
   {
     key: 2,
-    title: "Saudi Arabia",
+    title: "Jeddah",
     content: (
       <div>
         <p>
-          222, Maeen 4, he Lakes, Dubai,
-          <br /> United Arab Emirates
+          Iwan Center, North Building, Above Starbucks, King Abdullah Branch Rd
+          Al-Ruwais, Jeddah 23214
         </p>
         <br />
         <a
-          href="tel:+971 12345 6778"
+          href="tel:+966552784002"
           target="_blank"
           className="hover:text-primary"
         >
-          +971 12345 6778
+          +966 55 278 4002
         </a>
         <br />
-        <a
-          href="mailTo:corprightsdubai@corprights.com"
-          target="_blank"
-          className="hover:text-primary"
-        >
-          corprightsdubai@corprights.com
-        </a>
       </div>
     ),
   },
   {
     key: 3,
-    title: "Egypt",
+    title: "Makkah",
     content: (
       <div>
         <p>
-          222, Maeen 4, he Lakes, Dubai,
-          <br /> United Arab Emirates
+          Al-Sarraj Building , Above Pure Clinic, Al Shoqiyah, Dr Abdul Qadir
+          Koshak St, Makkah 24353
         </p>
         <br />
         <a
-          href="tel:+971 12345 6778"
+          href="tel:+966550038903"
           target="_blank"
           className="hover:text-primary"
         >
-          +971 12345 6778
+          +966 55 003 8903
         </a>
         <br />
+      </div>
+    ),
+  },
+  {
+    key: 4,
+    title: "India",
+    content: (
+      <div>
+        <p>
+          17/1487 D, Second Floor, Erakh Sons Square, behind Malabar Gold and
+          Diamonds Calicut, Kerala 673004, India
+        </p>
+        <br />
         <a
-          href="mailTo:corprightsdubai@corprights.com"
+          href="tel:+919526119248"
           target="_blank"
           className="hover:text-primary"
         >
-          corprightsdubai@corprights.com
+          +91 95261 19248
         </a>
+        <br />
       </div>
     ),
   },

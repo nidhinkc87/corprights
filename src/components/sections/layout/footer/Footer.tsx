@@ -74,14 +74,16 @@ function Footer({ footer }: FooterProps) {
               </div>
 
               <p className="font-normal text-base text-gray-100">
-                Al Rowad Management Consulting Company
-                <br /> Address: #104, 1st Floor, Iwan Center, North Building,
-                Above Starbucks, King Abdullah Branch Rd
-                <br /> Al-Ruwais, Jeddah - 23214
+                Iwan Center, North Building, Above Starbucks, King Abdullah
+                Branch Rd
+                <br /> Al-Ruwais, Jeddah 23214
               </p>
 
               <ul className="flex gap-4 items-center">
-                <Link href="#" target="_blank">
+                <a
+                  href="https://www.youtube.com/@CorprightsBiz"
+                  target="_blank"
+                >
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="21"
@@ -96,9 +98,12 @@ function Footer({ footer }: FooterProps) {
                       />
                     </svg>
                   </li>
-                </Link>
+                </a>
 
-                <Link href="#" target="_blank">
+                <a
+                  href="https://www.facebook.com/people/Corprights/61560103435382/?mibextid=LQQJ4d"
+                  target="_blank"
+                >
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="10"
@@ -113,9 +118,9 @@ function Footer({ footer }: FooterProps) {
                       />
                     </svg>
                   </li>
-                </Link>
+                </a>
 
-                <Link href="#" target="_blank">
+                <a href="https://x.com/CorprightsKSA" target="_blank">
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="20"
@@ -130,9 +135,9 @@ function Footer({ footer }: FooterProps) {
                       />
                     </svg>
                   </li>
-                </Link>
+                </a>
 
-                <Link href="#" target="_blank">
+                <a href="https://www.instagram.com/corprights" target="_blank">
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="24"
@@ -155,9 +160,12 @@ function Footer({ footer }: FooterProps) {
                       />
                     </svg>
                   </li>
-                </Link>
+                </a>
 
-                <Link href="#" target="_blank">
+                <a
+                  href="https://www.linkedin.com/company/corprights/"
+                  target="_blank"
+                >
                   <li className="p-1 hover:bg-white/20 ease-linear duration-300">
                     <svg
                       width="24"
@@ -172,7 +180,7 @@ function Footer({ footer }: FooterProps) {
                       />
                     </svg>
                   </li>
-                </Link>
+                </a>
               </ul>
             </div>
 
@@ -256,26 +264,6 @@ function Footer({ footer }: FooterProps) {
                   Copyrights © {<CurrentYear />} All Rights Reserved By
                   Corprights
                 </p>
-
-                {/* <ul className="text-gray-100 hidden md:flex">
-                  <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
-                    <Link
-                      href="/privacy-policy"
-                      className="text-base font-normal hover:text-primary ease-linear duration-300 "
-                    >
-                      Privacy Policy
-                    </Link>
-                  </li>
-
-                  <li className="p-4 w-fit h-[42px] flex items-center hover:bg-gray-100/10 ease-linear duration-300 rounded-[45px]">
-                    <Link
-                      href="#"
-                      className="text-base font-normal hover:text-primary ease-linear duration-300 "
-                    >
-                      Terms & Uses
-                    </Link>
-                  </li>
-                </ul> */}
               </div>
 
               <p className="text-base font-normal text-gray-100 flex items-center justify-center gap-2 ">
@@ -295,7 +283,6 @@ function Footer({ footer }: FooterProps) {
                 by
                 <Link href={"https://pixbitsolutions.com/"} target="_blank">
                   <span className="font-bold text-white">
-                    {" "}
                     Pixbit Solutions.com
                   </span>
                 </Link>

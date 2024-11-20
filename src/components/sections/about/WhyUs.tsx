@@ -168,12 +168,11 @@ const WhyUs = () => {
 
                 <div className="space-y-4 xl:space-y-5">
                   <p className="font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-primary-gradient">
-                    Lorem ipsum dolor sit
+                    900+ Company Formations
                   </p>
 
                   <p className="text-sm xl:text-xl font-normal text-gray-100">
-                    Lorem ipsum dolor sit amet consectetur. Lectus sed tempus
-                    enim lorem.
+                    Across Gulf Countries
                   </p>
                 </div>
               </div>
@@ -308,12 +307,11 @@ const WhyUs = () => {
 
                 <div className="space-y-4 xl:space-y-5">
                   <p className="font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-primary-gradient">
-                    Lorem ipsum dolor sit
+                    7+ Years of Experience
                   </p>
 
                   <p className="text-sm xl:text-xl font-normal text-gray-100">
-                    Lorem ipsum dolor sit amet consectetur. Lectus sed tempus
-                    enim lorem.
+                    Global Expertise with Saudi Roots
                   </p>
                 </div>
               </div>
@@ -448,12 +446,11 @@ const WhyUs = () => {
 
                 <div className="space-y-4 xl:space-y-5">
                   <p className="font-bold text-xl lg:text-4xl text-transparent bg-clip-text bg-primary-gradient">
-                    Lorem ipsum dolor sit
+                    100+ Professionals
                   </p>
 
                   <p className="text-sm xl:text-xl font-normal text-gray-100">
-                    Lorem ipsum dolor sit amet consectetur. Lectus sed tempus
-                    enim lorem.
+                    Chartered Accountants & Lawyers
                   </p>
                 </div>
               </div>
